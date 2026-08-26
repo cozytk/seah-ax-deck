@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "slidev slides.md",
-    "build": "slidev build slides.md --out dist",
-    "build:base": "slidev build slides.md --base /seah-ax-deck/ --out dist && node scripts/strip-dead-preload.mjs dist",
+    "build": "slidev build slides.md --out dist && node scripts/copy-images.mjs dist",
+    "build:base": "slidev build slides.md --base /seah-ax-deck/ --out dist && node scripts/copy-images.mjs dist && node scripts/strip-dead-preload.mjs dist",
     "test": "node --test tests/*.test.mjs",
     "qa": "node scripts/visual-qa.mjs",
     "qa:gate": "node scripts/visual-qa.mjs --check-review",
