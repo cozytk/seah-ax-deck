@@ -1,0 +1,181 @@
+/* ============================================================
+   THEME: seah-ax — 세아 AX 실무 과정
+   출처: 우리가 만든 두 앱의 팔레트를 그대로 가져왔다.
+        수주 레이더의 상단 바(#12293F), 강조색(#1B4A7A), 판정 4단계 색.
+   시각 관습: 한국 조달 포털 목록 표 — 얇은 괘선, 남색 상단선,
+             세로선 없음, 숫자 우측 정렬.
+   시그니처: 왼쪽 3px 세로 스트라이프 (수주 레이더의 판정 스트라이프).
+            색이 뜻을 가진다 — 파랑=실습, 빨강=조용히 틀리는 것, 초록=확인됨.
+   frontmatter: colorSchema: light
+   ============================================================ */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
+
+:root {
+  --display: 'Space Grotesk', 'Pretendard', sans-serif;
+  --sans: 'Pretendard', 'IBM Plex Sans KR', sans-serif;
+  --mono: 'IBM Plex Mono', monospace;
+
+  /* 수주 레이더의 바탕·글자를 그대로 */
+  --paper: #F5F6F8;
+  --ink: #1A1D21;
+  --dim: #5F6772;
+  --rule: #E3E6EA;
+  --card: #FFFFFF;
+
+  --accent: #1B4A7A;
+  --accent-text: #16405F;   /* paper·accent-soft 위 작은 글자 AA */
+  --accent-soft: #EAF1F8;
+
+  --chip-bg: #EBEEF2;
+  --shadow: none;           /* 업무 도구다. 그림자로 띄우지 않는다 */
+  --shot-bar: #EDF0F3;
+  --shot-dots: #C3CCD4;
+
+  /* 판정 4단계. 덱 전체에서 같은 뜻으로 쓴다. */
+  --ok: #1B7A4B;   --ok-soft: #E7F2EC;
+  --warn: #B26A00; --warn-soft: #FCF3E2;
+  --bad: #B3261E;  --bad-soft: #FBEAE8;
+
+  /* 앱 상단 바. 표지와 디바이더에만 쓴다. */
+  --navy: #12293F;
+}
+
+/* ── 시그니처: 왼쪽 3px 세로 스트라이프 ────────────────────────────────
+   수주 레이더에서 담당자가 색 띠만 세로로 훑는 그 장치다.
+   덱에서는 증거 블록과 디바이더에 붙어 "이 장이 무엇에 관한 것인가"를 알린다. */
+.slidev-layout .pane { box-shadow: none; }
+
+/* ::before 는 코어가 창 크롬(점 세 개)에 쓰고 있다. 띠는 ::after 로 붙인다. */
+.slidev-layout .figure,
+.slidev-layout .shot {
+  position: relative;
+}
+.slidev-layout .figure::after,
+.slidev-layout .shot::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--accent);
+  pointer-events: none;
+}
+.slidev-layout .figure.mark-bad::after,
+.slidev-layout .shot.mark-bad::after { background: var(--bad); }
+.slidev-layout .figure.mark-ok::after,
+.slidev-layout .shot.mark-ok::after { background: var(--ok); }
+.slidev-layout .figure.mark-warn::after,
+.slidev-layout .shot.mark-warn::after { background: var(--warn); }
+.slidev-layout .figure.mark-none::after,
+.slidev-layout .shot.mark-none::after { display: none; }
+
+/* 표를 잘라낸 가로로 긴 증거. 창 크롬 없이 이미지와 캡션만 둔다.
+   높이로 맞추면 좌우가 비어 글자가 작아진다. 폭으로 채운다. */
+.slidev-layout .shot.strip::before { display: none; }
+.slidev-layout .shot.strip img {
+  max-height: none;
+  width: 100%;
+  height: auto;
+}
+.slidev-layout .shot.strip figcaption { padding: 0.28rem 0.65rem; }
+
+/* ── 표지·디바이더는 앱 상단 바와 같은 남색 ──────────────────────────── */
+.slidev-layout.cover,
+.slidev-layout.divider {
+  background: var(--navy);
+  color: #F2F5F8;
+}
+.slidev-layout.cover h1,
+.slidev-layout.divider h2 { color: #FFFFFF; }
+.slidev-layout.cover em,
+.slidev-layout.divider em { color: #8FC0EE; }
+.slidev-layout.cover .cover-sub,
+.slidev-layout.divider .div-sub { color: #B7C4D2; }
+.slidev-layout.cover .cover-telemetry span,
+.slidev-layout.cover .cover-foot span,
+.slidev-layout.divider .div-no,
+.slidev-layout.divider .div-file { color: #7E93A8; }
+.slidev-layout.cover .latin-mark { color: #5B7793; }
+
+/* ── 조달 포털 표 관습: 상단 2px 남색선, 세로선 없음 ──────────────────── */
+.slidev-layout table {
+  border-top: 2px solid var(--accent);
+}
+
+/* ── 도구 두 개 ────────────────────────────────────────────────────────
+   계약: <div class="tools">
+           <div class="tool" style="--brand:#D97757"><b>이름</b><span>한 줄</span></div>…
+         </div>
+
+   두 도구를 나란히 둘 때만 쓴다. 각자의 브랜드 색을 왼쪽 띠로 받는다 —
+   덱의 시그니처(왼쪽 3px 스트라이프)를 그대로 쓰되 색만 도구 것으로 바꾼다.
+   출처: Claude 코럴 #D97757 · Antigravity 로크업 SVG 의 #3186FF.
+
+   색은 띠와 이름에만 쓴다. 카드 전체를 브랜드 색으로 칠하면
+   두 장이 서로 싸우고, 정작 본문이 안 읽힌다. */
+.slidev-layout .tools {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 0.9rem 0;
+}
+.slidev-layout .tool {
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  padding: 0.85rem 1rem 0.85rem 1.35rem;
+}
+.slidev-layout .tool::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  border-radius: 10px 0 0 10px;
+  background: var(--brand, var(--accent));
+}
+.slidev-layout .tool b {
+  display: block;
+  font-family: var(--display);
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--brand, var(--accent));
+  margin-bottom: 0.2rem;
+}
+.slidev-layout .tool span {
+  display: block;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--dim);
+}
+.slidev-layout .tool em {
+  font-style: normal;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* 가로로 아주 긴 증거(2:1 이상). 폭이 아니라 높이로 맞춘다.
+   계약: <figure class="figure wide"><img …><figcaption>…</figcaption></figure>
+
+   .figure img 은 폭 100% 에 높이 auto 라서, 2.1:1 짜리를 넣으면
+   슬라이드 아래로 넘친다. 이런 건 높이를 먼저 정하고 폭을 따라오게 한다. */
+.slidev-layout .figure.wide img {
+  max-height: 23.5rem;
+  width: auto;
+  margin: 0 auto;
+}
+
+/* 인용 출처 한 줄. 어디서 가져온 문장인지 바로 아래 붙인다.
+   계약: <p class="src">docs.example.com/path</p> */
+.slidev-layout .src {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.02em;
+  color: var(--dim);
+  margin: 0.3rem 0 0;
+}
+.slidev-layout .src::before { content: '↳ '; }
