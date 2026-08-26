@@ -1,0 +1,1 @@
+var e=`/seah-ax-deck/assets/stitch-good-crop-JVeOHEef.png`;export{e as t};

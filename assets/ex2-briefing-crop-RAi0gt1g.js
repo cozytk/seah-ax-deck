@@ -1,0 +1,1 @@
+var e=`/seah-ax-deck/assets/ex2-briefing-crop-Biqx3-2i.png`;export{e as t};

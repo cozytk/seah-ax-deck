@@ -1,0 +1,1 @@
+var e=`/seah-ax-deck/assets/ex1-crop-BbCIN8xa.png`;export{e as t};
