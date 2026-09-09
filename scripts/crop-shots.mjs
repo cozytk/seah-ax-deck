@@ -46,6 +46,24 @@ const CROPS = [
      왼쪽 대화창을 버리고 계획 본문만 — 우리가 보여줄 건
      「기술 스택과 알고리즘을 사람에게 확인받는다」는 부분이다. */
   ["docs/ag-plan", "docs/ag-plan-crop", { left: 3060, top: 40, width: 1320, height: 1010 }],
+
+  /*
+    실습 캡처는 세로로 길다(1.1~1.6:1). 16:9 슬라이드에 제목까지 얹으면
+    쓸 수 있는 높이가 380px 남짓이라, 세로로 긴 그림은 손톱만 해진다.
+
+    그래서 「가장 가르칠 만한 띠」만 가로로 잘라낸다.
+    답 전체를 다 보여주는 게 목적이 아니다 — 답이 어떤 모양으로 오는지가 목적이다.
+  */
+  ["lab/q1-what-can-do", "lab/q1-crop", { left: 0, top: 30, width: 1632, height: 700 }],
+  ["lab/q2-followup", "lab/q2-crop", { left: 0, top: 300, width: 1602, height: 520 }],
+  ["lab/q3-select-menu", "lab/q3-menu-crop", { left: 0, top: 60, width: 1590, height: 460 }],
+  ["lab/q3-side-chat", "lab/q3-chat-crop", { left: 0, top: 650, width: 1618, height: 500 }],
+  ["lab/q4-search", "lab/q4-crop", { left: 0, top: 250, width: 1588, height: 520 }],
+  ["lab/q5-artifact", "lab/q5-crop", { left: 0, top: 30, width: 1152, height: 620 }],
+
+  /* 공식 릴리스 노트 자산은 장식 여백이 넓다.
+     슬라이드에서는 그 여백만큼 앱이 작아지므로 창만 남긴다. */
+  ["official/desktop-browser", "official/desktop-browser-crop", { left: 150, top: 25, width: 965, height: 670 }],
 ];
 
 for (const [src, out, region] of CROPS) {

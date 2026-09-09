@@ -536,9 +536,17 @@ const readArg = (args, key, fallback) => {
   return index >= 0 ? args[index + 1] : fallback
 }
 
+/* 덱이 둘이다 — 전체판(slides.md)과 요약판(summary.md).
+   DECK_ENTRY 로 어느 쪽을 캡처할지 고르고, 캡처·리뷰도 각자 폴더에 따로 쌓는다.
+   같은 폴더에 쌓으면 요약판 리뷰가 전체판 리뷰를 덮어쓴다.
+     pnpm qa                     → slides.md  → .omx/qa
+     DECK_ENTRY=summary.md pnpm qa → summary.md → .omx/qa-summary */
+const DECK_ENTRY = process.env.DECK_ENTRY || 'slides.md'
+const QA_DIR = DECK_ENTRY === 'slides.md' ? 'qa' : `qa-${DECK_ENTRY.replace(/\.md$/, '')}`
+
 export async function runVisualQa({ root = defaultRoot, args = [] } = {}) {
   const { chromium } = await import('playwright-chromium')
-  const outDir = path.join(root, '.omx', 'qa')
+  const outDir = path.join(root, '.omx', QA_DIR)
   const maxSlidesValue = readArg(args, 'slides', null)
   const maxSlides = maxSlidesValue == null ? null : Number(maxSlidesValue)
   const viewport = {
@@ -566,7 +574,7 @@ export async function runVisualQa({ root = defaultRoot, args = [] } = {}) {
   try {
     const port = await getFreePort()
     const base = `http://localhost:${port}`
-    slidevServer = spawn('pnpm', ['exec', 'slidev', 'slides.md', '--port', String(port), '--log', 'warn'], {
+    slidevServer = spawn('pnpm', ['exec', 'slidev', DECK_ENTRY, '--port', String(port), '--log', 'warn'], {
       cwd: root,
       stdio: ['ignore', 'ignore', 'pipe'],
     })
@@ -686,7 +694,7 @@ export async function runVisualQa({ root = defaultRoot, args = [] } = {}) {
 }
 
 export async function checkReview({ root = defaultRoot } = {}) {
-  const outDir = path.join(root, '.omx', 'qa')
+  const outDir = path.join(root, '.omx', QA_DIR)
   let report
   let review
   try {

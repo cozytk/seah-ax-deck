@@ -46,30 +46,33 @@
    덱에서는 증거 블록과 디바이더에 붙어 "이 장이 무엇에 관한 것인가"를 알린다. */
 .slidev-layout .pane { box-shadow: none; }
 
-/* ::before 는 코어가 창 크롬(점 세 개)에 쓰고 있다. 띠는 ::after 로 붙인다. */
+/* 그림 액자에 왼쪽 세로 띠를 두던 것을 뺐다. 장표마다 같은 자리에 같은 띠가
+   반복되니 장식으로만 읽히고, 「이 장이 무엇에 관한 것인가」는 캡션이 이미 말한다.
+   대신 네 모서리 모두 얇은 선과 옅은 그림자만 준다. mark-ok·mark-bad 는 캡션 색으로 남긴다. */
 .slidev-layout .figure,
 .slidev-layout .shot {
   position: relative;
 }
 .slidev-layout .figure::after,
-.slidev-layout .shot::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background: var(--accent);
-  pointer-events: none;
+.slidev-layout .shot::after { display: none; }
+.slidev-layout .shot,
+.slidev-layout .embed {
+  border: 1px solid var(--rule);
+  box-shadow: 0 1px 2px rgba(20, 20, 19, 0.06), 0 6px 18px rgba(20, 20, 19, 0.08);
 }
-.slidev-layout .figure.mark-bad::after,
-.slidev-layout .shot.mark-bad::after { background: var(--bad); }
-.slidev-layout .figure.mark-ok::after,
-.slidev-layout .shot.mark-ok::after { background: var(--ok); }
-.slidev-layout .figure.mark-warn::after,
-.slidev-layout .shot.mark-warn::after { background: var(--warn); }
-.slidev-layout .figure.mark-none::after,
-.slidev-layout .shot.mark-none::after { display: none; }
+/* 점 세 개짜리 창 크롬도 같은 이유로 끈다. 캡처에 이미 창 테두리가 찍혀 있다. */
+.slidev-layout .shot::before { display: none; }
+.slidev-layout .shot.mark-ok figcaption { color: var(--ok); }
+.slidev-layout .shot.mark-bad figcaption { color: var(--bad); }
+.slidev-layout .shot.mark-warn figcaption { color: var(--warn); }
+
+/* 실습 캡처. 이 장의 주인공이므로 높이 상한(11.2rem)을 풀고 칸을 폭으로 채운다.
+   계약: <figure class="shot lab"><img …><figcaption>…</figcaption></figure>
+   가로 2:1 이상으로 잘라둔 것에만 쓴다 — 세로로 긴 그림에 쓰면 슬라이드를 넘긴다. */
+.slidev-layout .shot.lab img {
+  max-height: none;
+  width: 100%;
+}
 
 /* 표를 잘라낸 가로로 긴 증거. 창 크롬 없이 이미지와 캡션만 둔다.
    높이로 맞추면 좌우가 비어 글자가 작아진다. 폭으로 채운다. */
@@ -81,28 +84,71 @@
 }
 .slidev-layout .shot.strip figcaption { padding: 0.28rem 0.65rem; }
 
-/* ── 표지·디바이더는 앱 상단 바와 같은 남색 ──────────────────────────── */
-.slidev-layout.cover,
+/* ── 디바이더는 앱 상단 바와 같은 남색 ─────────────────────────────────
+   표지는 바탕을 깔지 않는다(아래 블록에서 되돌린다). */
 .slidev-layout.divider {
   background: var(--navy);
   color: #F2F5F8;
 }
-.slidev-layout.cover h1,
 .slidev-layout.divider h2 { color: #FFFFFF; }
-.slidev-layout.cover em,
 .slidev-layout.divider em { color: #8FC0EE; }
-.slidev-layout.cover .cover-sub,
 .slidev-layout.divider .div-sub { color: #B7C4D2; }
-.slidev-layout.cover .cover-telemetry span,
-.slidev-layout.cover .cover-foot span,
 .slidev-layout.divider .div-no,
 .slidev-layout.divider .div-file { color: #7E93A8; }
-.slidev-layout.cover .latin-mark { color: #5B7793; }
+
+/* ── 표지 ──────────────────────────────────────────────────────────────
+   면으로 색을 깔지 않는다. 본문과 같은 종이 위에 제목만 둔다.
+   대신 글자가 흐려지지 않게 각 요소의 색을 따로 잡는다 —
+   바탕색을 지우면 코어의 밝은 글자색이 그대로 남아 안 보인다.
+   계약: class: cover brand-cc (코럴 토큰을 쓰기 위해) */
+.slidev-layout.cover {
+  background: var(--paper);
+  color: var(--ink);
+}
+.slidev-layout.cover h1 { color: var(--ink); }
+.slidev-layout.cover em { color: var(--accent); }
+.slidev-layout.cover .cover-sub { color: var(--dim); }
+.slidev-layout.cover .cover-telemetry span { color: var(--dim); }
+.slidev-layout.cover .latin-mark { color: var(--accent-text); }
 
 /* ── 조달 포털 표 관습: 상단 2px 남색선, 세로선 없음 ──────────────────── */
 .slidev-layout table {
   border-top: 2px solid var(--accent);
 }
+
+/* ── 도구 구간별 색 ────────────────────────────────────────────────────
+   Claude Code 를 설명하는 장은 Anthropic 브랜드 색을 쓴다.
+   출처: Claude 코럴 #D97757 · Anthropic 아이보리 #F0EEE6 · 잉크 #141413.
+   Antigravity 장은 로크업 SVG 에서 뽑은 #3186FF.
+
+   계약: 슬라이드 frontmatter 에 `class: top-led brand-cc` (또는 brand-ag).
+   덱 전체의 남색은 그대로 두고, 이 두 구간에서만 강조색을 바꾼다 —
+   구간이 바뀐 걸 학생이 색으로 먼저 안다. */
+.slidev-layout.brand-cc {
+  --accent: #D97757;
+  --accent-text: #A84F30;      /* 아이보리 위 작은 글자 AA */
+  --accent-soft: #F7EDE7;
+  --paper: #F5F2EC;
+  background: var(--paper);
+}
+.slidev-layout.brand-ag {
+  --accent: #3186FF;
+  --accent-text: #1B5FBF;
+  --accent-soft: #E8F1FF;
+  --paper: #F4F7FC;
+  background: var(--paper);
+}
+
+/* 구간 표지. 브랜드 색을 면으로 쓰는 유일한 자리다.
+   계약: class: divider brand-cc-solid (또는 brand-ag-solid) */
+.slidev-layout.divider.brand-cc-solid { background: #141413; }
+.slidev-layout.divider.brand-cc-solid .div-no,
+.slidev-layout.divider.brand-cc-solid .div-file { color: #D97757; }
+.slidev-layout.divider.brand-cc-solid em { color: #E9A184; }
+.slidev-layout.divider.brand-ag-solid { background: #202124; }
+.slidev-layout.divider.brand-ag-solid .div-no,
+.slidev-layout.divider.brand-ag-solid .div-file { color: #3186FF; }
+.slidev-layout.divider.brand-ag-solid em { color: #86B4FF; }
 
 /* ── 도구 두 개 ────────────────────────────────────────────────────────
    계약: <div class="tools">
@@ -169,13 +215,210 @@
   margin: 0 auto;
 }
 
-/* 인용 출처 한 줄. 어디서 가져온 문장인지 바로 아래 붙인다.
-   계약: <p class="src">docs.example.com/path</p> */
+/* ── 스크린샷 액자 ─────────────────────────────────────────────────────
+   코어의 .shot 은 칸 폭을 전부 쓰고 img 는 object-fit:contain 이라,
+   그림 비율이 칸과 다르면 액자 안쪽 좌우가 텅 빈다. 그림은 작은데 액자만 크다.
+   높이 상한(11.2rem)까지 걸려 있어서 넣을 수 있는 것보다 늘 작게 들어갔다.
+
+   고친 방식: 액자를 그림에 맞춰 줄이고(width:fit-content), 크기는 높이로 정한다.
+   폭은 max-width:100% 가 막아주므로 높이 상한을 올려도 칸 밖으로 안 나간다.
+   결국 좁은 칸에서는 폭이, 넓은 칸에서는 높이가 한계가 된다 — 둘 중 작은 쪽. */
+.slidev-layout .shot {
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
+}
+.slidev-layout .shot img {
+  width: auto;
+  max-width: 100%;
+  max-height: 15rem;
+}
+.slidev-layout .split .shot img { max-height: 16rem; }
+/* 출처 한 줄이 흐름 안으로 들어오면서 아래가 그만큼 좁아졌다. 그림에서 덜어낸다. */
+.slidev-layout .split.evidence .shot img { max-height: 17.5rem; }
+/* compact 는 「내용은 그대로, 자리만 줄인다」는 뜻이다. 여백만 깎아서는 한 줄도 못 줄이는
+   장표가 있다 — 그림 두 장이 나란한 장에서는 높이의 대부분이 그림이라 그림을 같이 줄여야 한다. */
+.slidev-layout.compact .split .shot img { max-height: 12.8rem; }
+.slidev-layout.compact .split.evidence .shot img { max-height: 15.5rem; }
+/* 본문 없이 그림 한 장으로 가는 장. 캡션까지 슬라이드 안에 들어와야 한다 —
+   캡션도 증거의 일부라 잘리면 안 된다. 제목·리드 두 줄을 쓰고 남는 높이가 이만큼이다. */
+.slidev-layout .shot.hero img { max-height: 17.5rem; }
+
+/* 이미 자기 창 테두리를 갖고 있는 캡처. 점 세 개 막대를 또 씌우면 액자가 겹친다.
+   계약: <figure class="shot nochrome"> */
+.slidev-layout .shot.nochrome::before { display: none; }
+
+/* 터미널 화면을 가로로 길게 오려낸 띠(2.7:1 ~ 8.4:1).
+   계약: <figure class="shot band nochrome">  — 본문 폭을 통째로 쓴다.
+
+   .shot 기본값은 fit-content 라 폭이 그림 원본에 묶이고, 높이 상한(15rem)에 먼저 걸려
+   가로로 긴 그림이 가운데 작게 놓인다. 이런 띠는 폭을 다 쓰는 게 맞다 —
+   터미널 글자는 가로로 늘어서 있어서 폭이 곧 가독성이다. */
+/* ── 영상 임베드 ─────────────────────────────────────────────────────────
+   계약: <figure class="embed"><Youtube id="…" /><figcaption>…</figcaption></figure>
+
+   발표 영상은 링크만 걸면 수업 중에 아무도 안 연다. 화면에 띄워 두고 그 자리에서
+   재생하는 게 목적이라 iframe 을 그대로 쓴다. PDF 로 뽑으면 재생 대신 섬네일이
+   찍히므로, 무엇을 트는 영상인지는 figcaption 에 글자로 남긴다. */
+.slidev-layout .embed {
+  margin: 0; border: 1px solid var(--rule); border-radius: 10px;
+  overflow: hidden; background: #000; box-shadow: var(--shadow); flex-shrink: 0;
+}
+.slidev-layout .embed iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; }
+.slidev-layout .embed figcaption {
+  font-family: var(--mono); font-size: var(--type-meta); color: var(--dim);
+  background: var(--card); padding: 0.36rem 0.65rem; border-top: 1px solid var(--rule);
+}
+/* 영상 한 편을 본문으로 삼는 장표. 16:9 라 폭이 아니라 높이가 한계다. */
+.slidev-layout.embed-page .embed { width: fit-content; max-width: 100%; margin-inline: auto; }
+.slidev-layout.embed-page .embed iframe { width: auto; height: 20.6rem; aspect-ratio: 16 / 9; }
+/* 두 편을 나란히. 각자 절반 폭을 쓰므로 높이도 절반 남짓으로 떨어진다. */
+.slidev-layout .embed-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.9rem; margin: 0.2rem 0 0; }
+
+/* 터미널 캡처. 계약: <figure class="shot … term">
+   contain 으로 넣으면 남는 자리가 흰 띠로 뜬다. 검은 화면 옆의 흰 띠는
+   잘려 나간 것처럼 보이므로, 여백을 터미널 바탕색으로 채운다. */
+.slidev-layout .shot.term img { background: #16181C; }
+
+.slidev-layout .shot.band { width: 100%; }
+.slidev-layout .shot.band img { width: 100%; height: auto; max-height: 21rem; object-fit: contain; }
+/* 띠 두 장을 위아래로 놓거나, 본문과 같이 놓을 때. 폭은 그대로 두고 높이만 낮춘다. */
+.slidev-layout .shot.band.thin img { max-height: 8.5rem; }
+.slidev-layout .shot.band + .shot.band { margin-top: 0.6rem; }
+
+/* 절차가 다섯 단계를 넘는 장표. 계약: <div class="steps tight">
+
+   기본 .steps 는 제목과 설명을 위아래로 쌓아 한 칸이 두 줄이다. 다섯 칸이면
+   그것만으로 화면 높이를 다 쓴다. 설명이 한 줄로 끝나는 절차라면 옆에 붙여
+   한 칸을 한 줄로 만든다 — 단계 수를 줄이는 것보다 이쪽이 낫다.
+   설명이 길어 줄바꿈이 나는 절차에는 쓰지 않는다. */
+.slidev-layout .steps.tight > div {
+  grid-template-columns: 1.9rem auto 1fr;
+  align-items: baseline;
+  padding: 0.42rem 0.85rem;
+  gap: 0.6rem;
+}
+.slidev-layout .steps.tight > div::before { grid-row: auto; }
+.slidev-layout .steps.tight b { grid-column: 2; white-space: nowrap; }
+.slidev-layout .steps.tight span { grid-column: 3; }
+
+/* 띠를 본문으로 삼는 장표. 계약: class: … band-page
+
+   띠는 폭이 곧 가독성이라 폭을 줄일 수 없고, 폭을 고정하면 높이는 비율이 정한다.
+   그러니 남는 자리는 제목·리드에서 빼야 한다. 안 그러면 .shot 이 flex 안에서 눌려
+   캡션이 통째로 잘린다(overflow:hidden 이라 소리 없이 사라진다). */
+.slidev-layout.band-page { padding-top: 3.9rem; padding-bottom: 1.3rem; }
+.slidev-layout.band-page h1 { font-size: 1.34rem; margin: 0 0 0.3rem; }
+.slidev-layout.band-page .lead { font-size: 0.92rem; line-height: 1.55; margin: 0 0 0.5rem; }
+.slidev-layout.band-page .thesis { font-size: 0.84rem; margin-top: 0.5rem; }
+.slidev-layout.band-page .deflist { font-size: 0.84rem; }
+.slidev-layout.band-page .deflist > div { padding: 0.34rem 0; }
+.slidev-layout.band-page .shot { flex-shrink: 0; }
+/* 21rem 은 리드 한 줄짜리 장표 기준이다. 여기에 thesis 나 src 가 붙으면
+   그만큼 넘친다 — 띠를 본문으로 쓰는 장표에서는 상한을 한 단 낮춘다. */
+.slidev-layout.band-page .shot.band img { max-height: 19.4rem; }
+/* 띠를 둘 쌓는 장표. 둘이 각자 19.4rem 을 잡으면 두 배로 넘친다. */
+.slidev-layout.band-page:has(.shot.band + .shot.band) .shot.band:not(.thin) img { max-height: 11.4rem; }
+/* 바로 위 두 규칙이 무게가 같거나 더 높아 .thin 의 8.5rem 을 덮는다.
+   띠는 width:100% 라 상한이 풀리면 폭에 맞춰 키가 늘어난다 — 여기서 다시 못 박는다. */
+.slidev-layout.band-page .shot.band.thin img { max-height: 8.1rem; }
+
+/* ── 표 ────────────────────────────────────────────────────────────────
+   코어는 세로선 없는 조달 포털 관습을 따르는데, 칸이 다섯 줄 넘게 늘어나면
+   어느 줄을 읽고 있는지 놓친다. 머리행을 면으로 띄우고 좌우 여백을 준다.
+   첫 칸(이름)은 줄바꿈을 막아 줄이 흔들리지 않게 한다. */
+.slidev-layout table {
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+}
+.slidev-layout th {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--display);
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  border-bottom: 1px solid var(--ink);
+  padding: 0.55rem 0.7rem;
+}
+.slidev-layout td {
+  padding: 0.46rem 0.7rem;
+  border-bottom: 1px solid var(--rule);
+}
+.slidev-layout tbody tr:nth-child(even) td { background: color-mix(in srgb, var(--accent-soft) 45%, transparent); }
+.slidev-layout td:first-child { white-space: nowrap; color: var(--ink); }
+.slidev-layout tbody tr:last-child td { border-bottom: none; }
+
+/* 출처 한 줄. 공식 문서에서 가져온 내용이면 어느 문서 어느 절인지 남긴다.
+   계약: <p class="src">출처 — …</p>  (장표당 하나, 위치 무관)
+
+   처음에는 absolute 로 슬라이드 바닥에 못박았는데, 그러면 본문이 길어졌을 때
+   본문이 출처 위로 흘러내려 글자가 포개진다(「CLI vs Desktop」이 그랬다).
+   겹침은 캡처를 눈으로 봐야만 보이고 자동 검사에도 안 걸린다.
+
+   그래서 흐름 안에 두되 위쪽 여백을 auto 로 줘서 남는 높이를 밀어낸다.
+   자리가 남으면 바닥에 붙고, 모자라면 겹치는 대신 넘친다 — 넘침은 QA 가 잡아 준다. */
 .slidev-layout .src {
+  margin: 0.5rem 0 0;
   font-family: var(--mono);
-  font-size: 0.62rem;
+  font-size: 0.6rem;
+  line-height: 1.3;
   letter-spacing: 0.02em;
   color: var(--dim);
-  margin: 0.3rem 0 0;
 }
+/* 위에서 아래로 읽는 장표에서만 바닥에 붙인다.
+   세로 중앙정렬 장표에 auto 여백을 주면 본문까지 위로 딸려 올라간다. */
+.slidev-layout.top-led .src { margin-top: auto; padding-top: 0.25rem; }
 .slidev-layout .src::before { content: '↳ '; }
+
+/* ── 실습 캡처 한 장 ────────────────────────────────────────────────────
+   계약: class: … shot-page  +  <figure class="shot full">
+
+   실습 화면은 세로로 길다(1.1~1.6:1). 지금까지는 「가장 가르칠 만한 띠」만
+   가로로 잘라 넣었는데, 잘라낸 위아래가 정작 학생이 찾아야 할 화면 요소였다.
+   자르지 않고 통째로 넣되, 대신 이 장표에서 제목·리드를 줄여 높이를 그림에 몰아준다.
+   액자 장식(점 세 개 막대)은 여기서 끈다 — 세로 높이를 먹고, 이미 창 테두리가 찍혀 있다. */
+.slidev-layout.shot-page { padding-top: 4.1rem; padding-bottom: 1.2rem; }
+.slidev-layout.shot-page h1 { font-size: 1.42rem; margin: 0 0 0.2rem; }
+.slidev-layout.shot-page .lead { font-size: 0.92rem; line-height: 1.55; margin: 0 0 0.55rem; }
+.slidev-layout.shot-page .shot::before { display: none; }
+.slidev-layout.shot-page .shot figcaption { padding: 0.28rem 0.6rem; }
+.slidev-layout.shot-page .shot.full { width: fit-content; max-width: 100%; margin-inline: auto; }
+.slidev-layout.shot-page .shot.full img {
+  width: auto;
+  max-width: 100%;
+  max-height: 24.2rem;
+  object-fit: contain;
+}
+/* 출처까지 있는 실습 장표는 위 :has 규칙이 하단을 3.6rem 잡아먹는다. 그만큼 그림을 줄인다. */
+.slidev-layout.shot-page:has(.src) .shot.full img { max-height: 22.6rem; }
+
+/* ── 실습 캡처 + 설명 나란히 ─────────────────────────────────────────────
+   계약: class: … lab-page  +  <div class="split"><div>설명</div><figure class="shot">…</figure></div>
+
+   설명을 옆에 두면서도 그림을 최대로 키우는 배치. 제목·리드를 눌러 남는 높이를
+   전부 그림 칸에 준다. 세로로 긴 실습 캡처(1.1~1.6:1)에서는 이쪽이
+   그림 한 장만 크게 놓는 것보다 오히려 크게 들어간다 — 폭이 아니라 높이가 한계라서,
+   칸을 좁혀도 손해가 없고 대신 제목 자리를 아낄 수 있기 때문이다. */
+.slidev-layout.lab-page { padding-top: 3.9rem; padding-bottom: 1.3rem; }
+.slidev-layout.lab-page h1 { font-size: 1.34rem; margin: 0 0 0.35rem; }
+.slidev-layout.lab-page .split { margin: 0; grid-template-columns: 0.92fr 1.18fr; align-items: start; }
+.slidev-layout.lab-page .lead { font-size: 0.92rem; line-height: 1.55; margin: 0 0 0.55rem; }
+.slidev-layout.lab-page .deflist { font-size: 0.84rem; gap: 0.34rem; }
+.slidev-layout.lab-page .thesis { font-size: 0.82rem; margin-top: 0.55rem; }
+.slidev-layout.lab-page .shot::before { display: none; }
+.slidev-layout.lab-page .shot figcaption { padding: 0.26rem 0.6rem; }
+.slidev-layout.lab-page .shot { width: fit-content; max-width: 100%; margin-inline: auto; }
+/* .split.evidence 의 높이 상한(0,4,1)을 넘어서야 하므로 선택자를 같은 무게로 맞춘다.
+   이 장표에서는 그림이 본문이라 상한을 따로 둔다. */
+.slidev-layout.lab-page .split .shot img,
+.slidev-layout.lab-page .split.evidence .shot img {
+  width: auto; max-width: 100%; max-height: 24.8rem; object-fit: contain;
+}
+/* 라벨이 ① ② 나 서너 글자라 11.5rem 을 잡아 두면 설명 칸이 반토막 난다.
+   좁은 칸에서는 라벨 폭을 글자에 맞춘다. */
+.slidev-layout.lab-page .deflist > div { grid-template-columns: minmax(0, max-content) 1fr; gap: 0.7rem; }

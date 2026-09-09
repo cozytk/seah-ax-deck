@@ -1,0 +1,68 @@
+[
+  {
+    "_note": "입력은 잘라내기 전 원본이다. 띠로 잘라 넣으면 학생이 화면에서 찾아야 할 위아래가 사라진다 — 통째로 넣고 대신 shot-page 장표에서 높이를 그림에 몰아준다. 좌표는 예전 크롭본 기준값에 크롭 top 오프셋을 더한 것.",
+    "in": "lab/q1-what-can-do.png",
+    "out": "lab/q1-annot.png",
+    "hideTitle": true,
+    "compactLabels": true,
+    "targetWidth": 1632,
+    "callouts": [
+      ["1", 1186, 36, 404, 62, "질문은 이 한 줄"],
+      ["2", 50, 190, 1262, 46, "일반론이 아니라 「지금 이 세션 기준」으로 답합니다"]
+    ]
+  },
+  {
+    "in": "lab/q2-followup.png",
+    "out": "lab/q2-annot.png",
+    "hideTitle": true,
+    "compactLabels": true,
+    "targetWidth": 1602,
+    "callouts": [
+      ["1", 430, 58, 1152, 172, "한 번에 두 가지를 물어도 나눠서 답합니다"],
+      ["2", 42, 798, 1218, 50, "표 아래에 한 줄 요약이 따라옵니다"]
+    ]
+  },
+  {
+    "in": "lab/q3-select-menu.png",
+    "out": "lab/q3-menu-annot.png",
+    "hideTitle": true,
+    "compactLabels": true,
+    "targetWidth": 1590,
+    "callouts": [
+      ["1", 846, 410, 500, 42, "답 위에서 궁금한 부분을 끕니다"],
+      ["2", 918, 346, 356, 50, "「사이드 채팅으로 보내기」"]
+    ]
+  },
+  {
+    "in": "lab/q3-side-chat.png",
+    "out": "lab/q3-chat-annot.png",
+    "hideTitle": true,
+    "compactLabels": true,
+    "targetWidth": 1618,
+    "callouts": [
+      ["1", 920, 678, 652, 692, "오른쪽에 따로 열려 본 대화를 끊지 않습니다"]
+    ]
+  },
+  {
+    "in": "lab/q4-search.png",
+    "out": "lab/q4-annot.png",
+    "hideTitle": true,
+    "compactLabels": true,
+    "targetWidth": 1588,
+    "callouts": [
+      ["1", 20, 432, 1544, 152, "웹을 두 번 검색하고"],
+      ["2", 20, 584, 1544, 140, "공식 문서 두 건을 직접 열어 확인합니다"]
+    ]
+  },
+  {
+    "in": "lab/q5-artifact.png",
+    "out": "lab/q5-annot.png",
+    "hideTitle": true,
+    "compactLabels": true,
+    "targetWidth": 1152,
+    "callouts": [
+      ["1", 516, 48, 618, 84, "「아티팩트로 만들어줘」"],
+      ["2", 28, 286, 650, 78, "웹페이지 한 장이 생깁니다"]
+    ]
+  }
+]

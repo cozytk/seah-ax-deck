@@ -322,7 +322,7 @@
 
 /* ---------- 표 ---------- */
 .slidev-layout table { width: 100%; font-size: 0.86rem; border-collapse: collapse; margin: 0.8rem 0; }
-.slidev-layout th { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--dim); text-align: left; border-bottom: 1.5px solid var(--ink); padding: 0.3rem 0.6rem 0.3rem 0; }
+.slidev-layout th { font-family: var(--display); font-size: 0.86rem; font-weight: 700; letter-spacing: 0.01em; text-transform: none; color: var(--paper); background: var(--ink); text-align: left; border-bottom: 1.5px solid var(--ink); padding: 0.55rem 0.7rem; }
 .slidev-layout td { border-bottom: 1px solid var(--rule); padding: 0.42rem 0.6rem 0.42rem 0; color: var(--ink); vertical-align: top; }
 .slidev-layout td:first-child { font-weight: 600; }
 .slidev-layout tr:last-child td { border-bottom: none; }

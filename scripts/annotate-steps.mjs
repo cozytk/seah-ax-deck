@@ -25,9 +25,12 @@
    ============================================================================ */
 import fs from 'node:fs/promises'
 import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 import sharp from 'sharp'
 
-const root = path.resolve(new URL('..', import.meta.url).pathname)
+// URL.pathname 은 한글 폴더명을 퍼센트 인코딩한 채로 준다(교안 → %EA%B5%90%EC%95%88).
+// 그대로 경로로 쓰면 파일을 못 찾는다. fileURLToPath 로 디코드한다.
+const root = path.resolve(fileURLToPath(new URL('..', import.meta.url)))
 const imgDir = path.join(root, 'images')
 const recipePath = process.argv[2]
   ? path.resolve(process.argv[2])
