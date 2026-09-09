@@ -382,3 +382,22 @@
 .compact .steps > div { padding: 0.42rem 0.75rem; }
 .compact .note, .compact .callout { margin-top: 0.6rem; padding: 0.45rem 0.8rem; }
 .compact .deflist > div { padding: 0.36rem 0; }
+
+/* 2026-09-10: 원래 팔레트와 캡처 프레임을 유지한 가독성 보완 */
+.slidev-layout .lead { text-wrap: pretty; }
+.slidev-layout h1, .slidev-layout h2 { text-wrap: balance; }
+.slidev-layout .eyebrow, .slidev-layout .src, .slidev-layout figcaption {
+  font-family: var(--sans);
+  letter-spacing: 0;
+}
+.slidev-layout .src::before { content: none; }
+.slidev-layout table th, .slidev-layout table td { font-variant-numeric: tabular-nums; }
+
+.slidev-layout.cover .cover-sub { opacity: 1; color: var(--dim); }
+.slidev-layout .lead { opacity: 1; }
+.slidev-layout.lab-page .split .shot img,
+.slidev-layout.lab-page .split.evidence .shot img { max-height: 23.8rem; }
+.slidev-layout.band-page { padding-bottom: 1.8rem; }
+.slidev-layout.band-page .shot.band img { max-height: 18.8rem; }
+.slidev-layout.band-page .shot.band.thin img { max-height: 7.8rem; }
+.slidev-layout.band-page:has(.shot.band + .shot.band) .shot.band:not(.thin) img { max-height: 11rem; }

@@ -6,7 +6,7 @@ class: divider brand-cc-solid
 
 ## 개발 결과 검증
 
-<p class="div-sub">Playwright MCP로 실제 동작을 확인하고, 고친 뒤 다시 확인합니다</p>
+<p class="div-sub">기대값과 실제 동작 대조 · 수정 후 재검증</p>
 
 ---
 class: top-led brand-cc
@@ -16,7 +16,7 @@ class: top-led brand-cc
 
 # 브라우저를 직접 조작
 
-<p class="lead"><em>Playwright MCP</em>는 Claude가 브라우저를 열고 조작하도록 연결합니다.</p>
+<p class="lead">Playwright MCP로 열기 → 조작 → 대조 → 기록</p>
 <div class="steps">
 <div><b>열기</b><span>개발 서버를 실행하고 실제 접속 주소를 확인합니다.</span></div>
 <div><b>조작</b><span>파일을 올리고, 필터와 버튼을 누릅니다.</span></div>
@@ -37,7 +37,7 @@ class: top-led brand-cc
 
 # 검증 시작 전 확인
 
-<p class="lead">지시를 보내기 전에 <em>주소·연결·샘플</em>이 준비돼 있어야 합니다.</p>
+<p class="lead">실행 주소 · MCP 연결 · 샘플 파일</p>
 <div class="deflist">
 <div><b>앱 주소</b><span>Claude가 알려 준 개발 서버 주소를 실제로 열 수 있습니다.</span></div>
 <div><b>MCP 연결</b><span>현재 세션에서 Playwright MCP의 브라우저 도구를 호출할 수 있습니다.</span></div>
@@ -54,7 +54,7 @@ class: top-led brand-cc
 
 # 검증용 파일 준비
 
-<p class="lead">값을 아는 작은 파일로 확인합니다. <em>아래 두 파일을 만들게</em> 하세요.</p>
+<p class="lead">값을 아는 정상 파일과 필수 열이 빠진 파일</p>
 
 ```text
 검증용 엑셀 두 개를 만들어줘. 열 이름은 PRD.md의 정의를 따라줘.
@@ -64,6 +64,8 @@ sample-missing.xlsx: 같은 데이터에서 불량수 열을 뺀 파일.
 ```
 
 <p class="thesis">열어서 확인 · 정상 파일의 두 행이 위 값과 같은지, 오류 파일에 불량수 열이 없는지 봅니다.</p>
+
+<p class="src">바로 사용 · <a href="./downloads/day1-samples.zip" download>수업용 엑셀 2개 + Windows MCP 설정 다운로드</a></p>
 
 <!-- 앱을 통한 계산 전에 검증 자료 자체를 열어서 확인합니다. 강사가 두 파일을 사전 준비해도 됩니다. 이후 Playwright MCP가 읽을 수 있는 경로를 전달합니다. -->
 
@@ -75,7 +77,7 @@ class: top-led brand-cc
 
 # 검증 요청 프롬프트
 
-<p class="lead">「확인해줘」 대신 <em>동작과 기대 결과를 함께</em> 보냅니다.</p>
+<p class="lead">사용자 동작과 기대 결과를 함께 전달</p>
 
 ```text
 실행 중인 앱을 Playwright MCP로 열어 PRD.md의 완료 조건을 검증해줘.
@@ -95,7 +97,7 @@ class: top-led brand-cc
 
 # 통과 판단의 기준
 
-<p class="lead">아래는 <em>수업용 검증표 예시</em>입니다. 실제 실행 결과로 채웁니다.</p>
+<p class="lead">아래 표는 예시. 판정은 실제 실행 결과로</p>
 
 | 동작 | 기대 결과 | 남길 증거 |
 |---|---|---|
@@ -115,7 +117,7 @@ class: top-led brand-cc
 
 # 실패한 동작 다시 확인
 
-<p class="lead">「고쳤다」는 답 뒤에 <em>같은 조건으로 한 번 더</em> 실행합니다.</p>
+<p class="lead">수정 뒤에도 <em>같은 샘플·같은 동작</em>으로 재검증</p>
 
 ```text
 A라인을 선택해도 전체 값 2%가 그대로 보여.
@@ -134,7 +136,7 @@ class: top-led brand-cc
 
 # 완료라고 말할 때
 
-<p class="lead"><em>무엇을 실행했고 무엇이 남았는지</em> 확인하고 마칩니다.</p>
+<p class="lead">실행한 항목과 남은 항목 확인</p>
 <div class="deflist">
 <div><b>기능</b><span>PRD의 완료 조건을 실행 결과로 확인했다.</span></div>
 <div><b>화면</b><span>캡처를 reference와 대조하고 의도한 차이는 설명했다.</span></div>
@@ -151,7 +153,7 @@ class: top-led brand-cc
 
 # 검증 지시 직접 쓰기
 
-<p class="lead"><em>5분 실습</em> · 내 PRD에서 완료 조건 하나를 골라 검증을 시킵니다.</p>
+<p class="lead"><em>5분 실습</em> · 내 PRD의 완료 조건 하나 검증</p>
 
 ```text
 Playwright MCP로 [앱 주소]를 열어줘.

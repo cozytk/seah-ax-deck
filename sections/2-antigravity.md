@@ -21,12 +21,12 @@ class: top-led brand-ag
 <div class="split evidence">
 <div>
 
-<p class="lead">구글이 만든, 에이전트를 <em>여러 개 굴리는</em> 데스크톱 앱입니다.</p>
+<p class="lead">Google의 에이전트 작업용 데스크톱 앱</p>
 
 <div class="deflist">
 <div><b>어디서 도나</b><span>편집기 없이 <em>혼자 도는 앱</em>입니다</span></div>
 <div><b>시킬 수 있는 것</b><span>명령 실행 · 파일 수정 · 웹 검색 · 크롬 조작</span></div>
-<div><b>일하는 단위</b><span>프로젝트. 묶어 둔 폴더 안에서만</span></div>
+<div><b>일하는 단위</b><span>프로젝트에 추가한 폴더. 접근 범위는 권한 설정으로 확인</span></div>
 </div>
 
 <p class="thesis">터미널용 CLI 와 편집기 버전도 따로 있습니다. 이 수업은 <em>데스크톱 앱</em>만 봅니다.</p>
@@ -41,6 +41,23 @@ class: top-led brand-ag
 <p class="src">출처 — Antigravity 공식 문서 「Overview」 antigravity.google/docs/overview</p>
 
 ---
+class: top-led brand-ag compact
+---
+
+<p class="eyebrow">2부 · 설치와 시연</p>
+
+# Antigravity 시작하기
+
+<div class="steps">
+<div><b>설치·로그인</b><span><a href="https://antigravity.google/download">공식 다운로드</a>에서 Windows용 설치 후 Google 계정으로 로그인</span></div>
+<div><b>프로젝트</b><span>New Project → Add Folder에서 실습 폴더 추가 → Create</span></div>
+<div><b>작업 시작</b><span>Local을 선택하고, 이번 시연은 계획을 먼저 요청</span></div>
+<div><b>비교</b><span>Claude Code에서 했던 질문을 보내 계획·승인·결과 확인 위치 찾기</span></div>
+</div>
+<p class="thesis">Claude 구독과 Antigravity 사용량은 별개. 오늘은 강사 시연 25분 후 Claude Code로 돌아갑니다.</p>
+<p class="src">2026-09-10 확인 · <a href="https://antigravity.google/docs/getting-started">Getting Started</a> · <a href="https://antigravity.google/docs/plans">Plans</a></p>
+
+---
 class: top-led brand-ag
 ---
 
@@ -48,14 +65,14 @@ class: top-led brand-ag
 
 # 실행 모드 2종
 
-<p class="lead">대화를 시작할 때 <em>계획을 낼지 말지</em>를 먼저 고릅니다.</p>
+<p class="lead">계획을 먼저 검토할 작업, 바로 실행할 작업</p>
 
 <div class="duo">
 <div class="pane"><h3><span class="latin">PLANNING</span>계획 모드</h3><p>일을 묶음으로 정리하고, 코드를 읽어 조사한 뒤 <em>계획 문서</em>를 냅니다. 처음 보는 코드나 여러 파일을 건드릴 때.</p></div>
 <div class="pane"><h3><span class="latin">FAST</span>바로 실행</h3><p>계획 단계 없이 바로 합니다. 이름 바꾸기, 명령 한 줄, 작은 정리처럼 <em>범위가 뻔한</em> 일.</p></div>
 </div>
 
-<p class="thesis">이름만 다를 뿐, Claude Code 의 <em>Plan 모드와 같은 자리</em>입니다.</p>
+<p class="thesis">계획부터 검토한다는 목적은 Claude Code의 Plan과 같습니다. <em>승인 정책은 별도 설정</em>입니다.</p>
 
 <p class="src">출처 — Antigravity 공식 문서 「Artifact Review」 antigravity.google/docs/artifact-review</p>
 
@@ -70,7 +87,7 @@ class: top-led brand-ag
 <div class="split evidence">
 <div>
 
-<p class="lead">매 단계를 지켜보는 대신 <em>산출물</em>로 확인합니다.</p>
+<p class="lead">계획·변경 내용·검증 결과를 문서와 화면으로 확인</p>
 
 <div class="deflist">
 <div><b>무엇이 나오나</b><span>계획 문서 · 코드 diff · 구조도 · 브라우저 녹화</span></div>
@@ -100,12 +117,12 @@ class: top-led brand-ag
 <div class="split evidence">
 <div>
 
-<p class="lead">코드를 건드리기 전에 <em>사람에게 확인받는</em> 문서입니다.</p>
+<p class="lead">구현 방법과 확인이 필요한 결정 사항</p>
 
 <div class="deflist">
 <div><b>담기는 것</b><span>무엇을 왜 고칠지, 새로 만들 파일 목록</span></div>
 <div><b>따로 표시</b><span>「User Review Required」 로 묶인 갈림길</span></div>
-<div><b>멈추는 자리</b><span>이 문서를 내고 멈춰서 기다립니다</span></div>
+<div><b>승인 정책</b><span>Request Review는 승인 대기, Always Proceed는 계속 실행</span></div>
 </div>
 
 <p class="thesis">3부에서 쓸 PRD 와 다릅니다. PRD 는 <em>무엇을 만들지</em>, 이 문서는 <em>어떻게 고칠지</em>입니다.</p>
@@ -127,7 +144,7 @@ class: top-led brand-ag
 
 # 계획 승인과 반려
 
-<p class="lead">갈림길로 표시된 곳부터 읽고, 그대로 가려면 <em>Proceed</em>.</p>
+<p class="lead">Request Review 설정에서 계획을 검토한 뒤 승인</p>
 
 <div class="steps">
 <div><b>코멘트</b><span>고칠 문장을 골라 「이건 이번엔 빼」 처럼 적습니다</span></div>
@@ -147,12 +164,12 @@ class: top-led brand-ag
 
 # 모델 선택
 
-<p class="lead">안에서 도는 모델을 <em>직접 고릅니다</em>. 구글 것만 있는 게 아닙니다.</p>
+<p class="lead">사용할 수 있는 모델은 요금제와 계정에 따라 차이</p>
 
 <div class="chips">
 <i>Gemini 3.7 Flash</i>
 <i>Gemini 3.6 Flash</i>
-<i>Gemini 3.5 Flash</i>
+<i>Gemini 3.8 Flash</i>
 <i>Gemini 3.1 Pro</i>
 <i>Claude Sonnet 4.6</i>
 <i>Claude Opus 4.6</i>
@@ -171,7 +188,7 @@ class: top-led brand-ag compact
 
 # Claude Code vs Antigravity
 
-<p class="lead">어느 쪽이 나은가가 아니라 <em>어떤 화면이 필요한가</em>입니다.</p>
+<p class="lead">앞에서 배운 개념을 다른 화면에 연결</p>
 
 | | Claude Code | Antigravity |
 |---|---|---|
@@ -181,7 +198,7 @@ class: top-led brand-ag compact
 | 모델 | Claude 계열 | Gemini · Claude · GPT-OSS 중 선택 |
 | 확장 | 스킬 · MCP · 플러그인 · 훅 | 스킬 · MCP · 플러그인 · 훅 |
 
-<p class="thesis">맨 아랫줄이 같습니다. 둘 다 <code>SKILL.md</code> 와 MCP 를 씁니다. <em>갈리는 건 화면</em>입니다.</p>
+<p class="thesis">둘 다 <code>SKILL.md</code>와 MCP를 지원합니다. 설치 경로·권한 정책·사용량은 각각 확인합니다.</p>
 
 <p class="src">출처 — Antigravity 공식 문서 「Feature overview」·「Skills」·「MCP」 / Claude Code 공식 문서 「Overview」</p>
 
@@ -193,7 +210,7 @@ class: top-led brand-ag
 
 # 같은 한 줄
 
-<p class="lead">같은 지시 한 줄을 두 도구에 <em>그대로</em> 넣습니다.</p>
+<p class="lead">같은 업무 요청으로 계획 비교</p>
 
 <div class="deflist">
 <div><b>지시</b><span>「이 폴더의 엑셀을 읽어 월별 합계 화면을 만들어 줘」</span></div>
@@ -217,7 +234,7 @@ class: top-led brand-ag
 <div class="split evidence">
 <div>
 
-<p class="lead">나온 계획 문서를 <em>같이 읽습니다</em>.</p>
+
 
 <div class="deflist">
 <div><b>맨 위</b><span>무엇을 만드는지 한 문단</span></div>
@@ -225,7 +242,7 @@ class: top-led brand-ag
 <div><b>아래</b><span>새로 만들 파일과 각 파일이 하는 일</span></div>
 </div>
 
-<p class="thesis">코드를 못 읽어도 <em>이 문서는 읽힙니다</em>. 확인해야 할 것이 여기 다 있습니다.</p>
+<p class="thesis">목적·범위·미정 항목을 먼저 읽습니다. 구현 뒤에는 실제 동작도 별도로 검증합니다.</p>
 
 </div>
 <figure class="shot nochrome" data-origin="web" data-source="https://antigravity.google/docs/implementation-plan/">
@@ -247,7 +264,7 @@ class: top-led brand-ag
 <div class="split evidence">
 <div>
 
-<p class="lead">Proceed 를 누르기 전까지는 <em>파일이 하나도 안 바뀝니다</em>.</p>
+<p class="lead">Request Review에서 계획에 코멘트를 달고 재검토</p>
 
 <div class="steps">
 <div><b>코멘트</b><span>「이 기능은 이번엔 빼」 처럼 범위를 줄입니다</span></div>
@@ -272,11 +289,11 @@ class: top-led brand-ag
 
 # 선택 기준
 
-<p class="lead">셋 중 어디에 해당하는지로 고릅니다.</p>
+<p class="lead">오늘의 실습 도구와 이후의 비교 후보</p>
 
 <div class="trio">
 <div class="pane key"><h3>Claude Code</h3><p>터미널까지 함께 쓰고, 되돌리기와 권한 모드를 손에 익힌 일. 이 수업의 실습은 전부 여기입니다.</p></div>
-<div class="pane"><h3>Antigravity</h3><p>코드는 안 보고 계획 문서만 읽고 승인하고 싶을 때. 모델을 바꿔 가며 견줘 보고 싶을 때.</p></div>
+<div class="pane"><h3>Antigravity</h3><p>계획·검증 결과를 아티팩트로 검토하고, 다른 모델의 결과와 비교할 때.</p></div>
 <div class="pane"><h3>둘 다 아님</h3><p>엑셀 한 장으로 끝나는 일. 도구를 켜는 시간이 더 듭니다.</p></div>
 </div>
 

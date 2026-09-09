@@ -59,7 +59,7 @@ class: top-led
 
 # 오늘의 결과물
 
-<p class="lead">이틀 뒤 <em>주소 두 개</em>와 저장소 하나가 남습니다.</p>
+<p class="lead">1일차는 작은 앱 한 개, 2일차는 업무 예제로 확장</p>
 
 <div class="split">
 <figure class="shot" data-origin="capture">
@@ -90,7 +90,7 @@ class: top-led brand-cc
 
 # Claude Code란
 
-<p class="lead">코드를 읽고, 파일을 고치고, <em>명령까지 실행</em>합니다.</p>
+<p class="lead">코드 읽기 · 파일 수정 · 명령 실행</p>
 
 <figure class="shot strip" data-origin="web" data-source="https://code.claude.com/docs/en/overview">
 <img src="./images/docs/cc-intro.png" alt="Claude Code 공식 문서 개요. 코드베이스를 읽고 파일을 수정하고 명령을 실행하며 개발 도구와 연동한다고 적혀 있다" />
@@ -112,7 +112,7 @@ class: top-led brand-cc
 <div class="split evidence">
 <div>
 
-<p class="lead">문서는 아홉 가지를 듭니다. 이 수업에서 실제로 쓰는 건 <em>넷</em>입니다.</p>
+<p class="lead">오늘 실습에서 사용할 네 가지 작업</p>
 
 <div class="deflist">
 <div><b>기능·버그</b><span>기능을 만들고 버그를 고칩니다</span></div>
@@ -138,7 +138,7 @@ class: top-led brand-cc
 
 # 실행 환경 4종
 
-<p class="lead">어디서 켜도 <em>같은 엔진</em>입니다. 지침·설정·연결한 도구가 그대로 따라옵니다.</p>
+<p class="lead">같은 Claude Code, <em>환경에 따라 다른 기능과 연결 설정</em></p>
 
 <figure class="figure mark-none">
 <svg viewBox="0 0 900 290" role="img" aria-label="터미널·IDE·데스크톱 앱·웹 네 표면이 같은 엔진 하나로 모이고, 그 아래에 CLAUDE.md·설정 파일·MCP 서버가 공유된다">
@@ -185,7 +185,7 @@ class: top-led brand-cc compact
 
 # CLI vs Desktop
 
-<p class="lead">기능이 다른 게 아니라 <em>화면이 다릅니다</em>. 설정과 지침은 양쪽이 같은 파일을 읽습니다.</p>
+<p class="lead">프로젝트 지침은 공유, 조작 화면과 지원 기능은 차이</p>
 
 <div class="split">
 <figure class="shot nochrome" data-origin="web" data-source="https://code.claude.com/docs/en/whats-new/2026-w20">
@@ -210,7 +210,7 @@ class: top-led brand-cc
 
 # 앱의 세 탭
 
-<p class="lead">Claude 앱을 열면 탭이 셋입니다. 이 수업은 <em>Code 탭</em>만 씁니다.</p>
+<p class="lead">오늘 사용할 곳은 <em>Code 탭</em></p>
 
 <div class="trio">
 <div class="pane"><h3>Chat</h3><p>평소 쓰는 대화. 코드 작업과 무관합니다.</p></div>
@@ -233,7 +233,7 @@ class: top-led brand-cc
 <div class="split evidence">
 <div>
 
-<p class="lead">첫 메시지를 보내기 전에 <em>입력창 주변</em>에서 네 가지를 정합니다.</p>
+<p class="lead">첫 메시지 전에 확인할 네 곳</p>
 
 <div class="deflist">
 <div><b>① 실행 위치</b><span>Local · Cloud · SSH · Windows 라면 WSL</span></div>
@@ -261,7 +261,7 @@ class: top-led brand-cc compact
 
 # 권한 모드 5종 비교
 
-<p class="lead">파일을 고치기 전에 물을지, 명령을 돌리기 전에 물을지, <em>아예 안 물을지</em>를 고릅니다.</p>
+<p class="lead">파일 수정과 명령 실행을 <em>어디까지 맡길지</em></p>
 
 | 모드 | 설정 키 | 동작 |
 |---|---|---|
@@ -286,7 +286,7 @@ class: top-led brand-cc compact
 <div class="split evidence">
 <div>
 
-<p class="lead">코드를 못 읽어도 됩니다. 줄에 대고 <em>「이 줄은 왜 이렇게 했어?」</em> 라고 적으면 답이 옵니다.</p>
+<p class="lead">변경된 줄을 짚어 <em>이유를 질문</em></p>
 
 <div class="steps">
 <div><b>변경 표시</b><span><code>+12 -1</code> 처럼 더한 줄·지운 줄 수</span></div>
@@ -311,7 +311,7 @@ class: top-led brand-cc
 
 # 앱 미리보기
 
-<p class="lead">만든 화면을 앱 안에서 띄우고, <em>스스로 눌러 보며</em> 고칩니다.</p>
+<p class="lead">실행한 화면을 보며 수정</p>
 
 <figure class="shot hero nochrome mark-ok" data-origin="web" data-source="https://code.claude.com/docs/en/whats-new/2026-w28">
 <img src="./images/official/desktop-browser-crop.png" alt="데스크톱 앱 화면. 왼쪽 대화에 브라우저를 조작한 기록과 고친 코드가 쌓여 있고, 오른쪽 브라우저 패널에 만든 주문 화면이 떠 있다" />
@@ -508,7 +508,7 @@ class: top-led brand-cc compact
 <div class="split evidence">
 <div>
 
-<p class="lead"><code>Ctrl+/</code> 를 누르면 전부 나옵니다. 손이 실제로 가는 건 <em>여섯 개</em>입니다.</p>
+<p class="lead">전체 목록은 <code>Ctrl + /</code></p>
 
 | 키 | 하는 일 |
 |---|---|
@@ -551,7 +551,7 @@ class: top-led brand-cc lab-page
 <div class="split evidence">
 <div>
 
-<p class="lead">「Claude Code는 뭘 할 수 있어?」 <em>이 한 줄</em>로 시작합니다.</p>
+
 
 <div class="deflist">
 <div><b>①</b><span>질문은 이 한 줄이 전부입니다</span></div>
@@ -578,7 +578,7 @@ class: top-led brand-cc lab-page
 <div class="split evidence">
 <div>
 
-<p class="lead">답 안에 모르는 단어가 나오면 <em>거기서 다시 묻습니다</em>. 새 대화를 열지 않습니다.</p>
+<p class="lead">낯선 단어가 나오면 <em>같은 대화에서</em> 다시 질문</p>
 
 <div class="deflist">
 <div><b>물어본 것</b><span>「<code>/schedule</code> 이랑 <code>/loop</code> 이랑 뭐가 달라?」</span></div>
@@ -605,7 +605,7 @@ class: top-led brand-cc lab-page
 <div class="split evidence">
 <div>
 
-<p class="lead">본 대화를 흐트리지 않고 <em>궁금한 것만</em> 따로 묻습니다.</p>
+<p class="lead">본 작업을 이어 가면서 별도 질문</p>
 
 <div class="deflist">
 <div><b>①</b><span>답 위에서 궁금한 부분을 마우스로 끕니다</span></div>
@@ -632,7 +632,7 @@ class: top-led brand-cc lab-page
 <div class="split evidence">
 <div>
 
-<p class="lead">답이 <em>오른쪽 패널에만</em> 쌓입니다.</p>
+
 
 <div class="deflist">
 <div><b>물어본 것</b><span>「배포랑 CI가 뭐야?」 — 본 주제와 무관한 질문</span></div>
@@ -659,7 +659,7 @@ class: top-led brand-cc lab-page
 <div class="split evidence">
 <div>
 
-<p class="lead">「확실치 않다」는 답이 오면 <em>찾아보라고 시킵니다</em>.</p>
+<p class="lead">불확실한 답은 출처를 찾아 확인</p>
 
 <div class="deflist">
 <div><b>①</b><span>웹을 두 번 검색하고</span></div>
@@ -686,7 +686,7 @@ class: top-led brand-cc lab-page
 <div class="split evidence">
 <div>
 
-<p class="lead">지금까지 오간 대화를 <em>한 장의 웹페이지</em>로 만듭니다.</p>
+<p class="lead">지금까지의 대화를 한 장의 웹페이지로</p>
 
 <div class="deflist">
 <div><b>①</b><span>「대화내역을 정리해서 아티팩트로 만들어줘」</span></div>
@@ -796,7 +796,7 @@ class: divider brand-cc-solid
 
 ## 질문으로 PRD 작성
 
-<p class="div-sub">모호한 아이디어를 확인 가능한 요구사항으로 바꿉니다</p>
+<p class="div-sub">아이디어에서 확인 가능한 요구사항으로</p>
 
 ---
 class: top-led brand-cc
@@ -806,7 +806,7 @@ class: top-led brand-cc
 
 # 개발 워크플로우
 
-<p class="lead">세 단계를 한 바퀴 돕니다. <em>완료 기준은 첫 단계에서</em> 정합니다.</p>
+<p class="lead">역인터뷰 → 디자인·개발 → 검증</p>
 <figure class="figure">
 <svg viewBox="0 0 900 230" role="img" aria-label="역인터뷰로 PRD 확정, 스킬과 reference 이미지로 개발, Playwright MCP로 검증. 실패하면 해당 단계로 돌아간다">
 <g fill="var(--ink)" style="font-family:var(--sans);font-size:24px;font-weight:600">
@@ -830,7 +830,7 @@ class: top-led brand-cc
 
 # 첫 요청은 역인터뷰
 
-<p class="lead">무엇을 만들지 짧게 말하고, <em>Claude가 질문하게</em> 합니다.</p>
+<p class="lead">업무를 짧게 설명하고 <em>Claude가 질문하도록 요청</em></p>
 
 ```text
 생산실적 엑셀을 올리면 라인별 불량률을 확인하는 화면을 만들고 싶어.
@@ -839,7 +839,7 @@ class: top-led brand-cc
 한 번에 1~2개씩 질문하고, 애매한 답은 예를 들어 다시 물어봐.
 내가 모르는 부분은 선택지와 차이를 설명해줘.
 ```
-<p class="thesis">시작 상태 · Code 탭에서 수업용 프로젝트를 열고 샘플 엑셀을 첨부합니다.</p>
+<p class="thesis">시작 상태 · Code 탭에서 수업용 프로젝트를 열고 <a href="./downloads/day1-samples.zip" download>샘플 엑셀</a>을 첨부합니다.</p>
 
 
 <!--
@@ -855,7 +855,7 @@ class: top-led brand-cc
 
 # 모르는 것도 되묻기
 
-<p class="lead">내가 답하기 어렵다면 <em>예를 들어 설명해 달라</em>고 묻습니다.</p>
+<p class="lead">낯선 기준은 예시와 선택지를 요청</p>
 <div class="deflist">
 <div><b>Claude의 질문</b><span>전체 불량률은 라인별 비율의 평균인가요, 수량 합계로 계산하나요?</span></div>
 <div><b>내가 되묻기</b><span>둘이 어떻게 달라? 생산량이 다른 두 라인으로 설명해줘.</span></div>
@@ -872,7 +872,7 @@ class: top-led brand-cc
 
 # 대화가 기준이 되는 순간
 
-<p class="lead">「불량률을 보여줘」를 <em>값까지 확인할 수 있는 문장</em>으로 바꿉니다.</p>
+<p class="lead">「불량률을 보여줘」에서 <em>검증 가능한 기준</em>으로</p>
 
 | 샘플 | 생산량 | 불량수 | 불량률 |
 |---|---:|---:|---:|
@@ -895,7 +895,7 @@ class: top-led brand-cc
 
 # 합의한 내용을 PRD로
 
-<p class="lead"><em>PRD는 무엇을 만들고 어떻게 확인할지</em> 합의한 문서입니다.</p>
+<p class="lead">무엇을 만들고, 어떻게 확인할지 합의한 문서</p>
 
 ```text
 지금까지 합의한 내용을 PRD.md로 정리해줘.
@@ -914,7 +914,7 @@ class: top-led brand-cc
 
 # PRD에 남길 내용
 
-<p class="lead">개발을 시작하기 전에 <em>완료 조건까지</em> 읽고 확정합니다.</p>
+<p class="lead">목적 · 데이터 · 기능 · 제외 범위 · 완료 조건</p>
 <div class="deflist">
 <div><b>목적·사용자</b><span>생산 담당자가 회의 전에 라인별 불량률을 확인한다.</span></div>
 <div><b>데이터·기능</b><span>라인·생산량·불량수 열을 읽고, 업로드와 라인 필터를 제공한다.</span></div>
@@ -932,7 +932,7 @@ class: top-led brand-cc
 
 # 내 업무로 역인터뷰
 
-<p class="lead"><em>10분 실습</em> · 만들고 싶은 업무 화면 하나로 질문과 답변을 이어갑니다.</p>
+<p class="lead"><em>10분 실습</em> · 업무 화면 하나의 요구사항 정리</p>
 <div class="steps">
 <div><b>시작</b><span>업무 설명 한 문장과 사용할 샘플 자료를 보냅니다.</span></div>
 <div><b>대화</b><span>불명확한 말이 나오면 구체적인 상황과 예시로 답합니다.</span></div>
@@ -953,7 +953,7 @@ class: divider brand-cc-solid
 
 ## 스킬과 레퍼런스
 
-<p class="div-sub">원하는 화면을 보여주고, PRD의 기능을 담아 구현합니다</p>
+<p class="div-sub">PRD의 기능, 레퍼런스의 화면 구성</p>
 
 ---
 class: top-led brand-cc
@@ -963,13 +963,13 @@ class: top-led brand-cc
 
 # 디자인에 쓰는 세 가지
 
-<p class="lead"><em>스킬은 구현을 돕고, 이미지는 원하는 방향을 보여줍니다.</em></p>
+<p class="lead">구현 지침을 담은 스킬, 원하는 방향을 보여 주는 이미지</p>
 <div class="deflist">
 <div><b>frontend-design</b><span>화면 구성·타이포그래피·시각적 완성도를 고려하며 구현합니다.</span></div>
 <div><b>taste-skill</b><span>배치·여백·정보 밀도를 다듬을 때 함께 사용합니다.</span></div>
 <div><b>reference/</b><span>내가 고른 화면 캡처를 넣고, 닮았으면 하는 부분을 짚습니다.</span></div>
 </div>
-<p class="thesis">준비 · 두 스킬이 현재 Claude Code 세션에서 사용 가능한지 확인합니다.</p>
+<p class="thesis">준비 · frontend-design부터 확인. taste-skill은 설치한 경우 함께 사용합니다.</p>
 <p class="src">출처 · <a href="https://github.com/anthropics/skills/tree/main/skills/frontend-design">frontend-design</a> · <a href="https://github.com/Leonxlnx/taste-skill">taste-skill</a></p>
 
 <!--
@@ -980,11 +980,31 @@ taste-skill 저장소의 기본 프런트엔드 스킬 설치 이름은 design-t
 class: top-led brand-cc
 ---
 
+<p class="eyebrow">3-B · 실습 준비</p>
+
+# 디자인 스킬 준비
+
+<p class="lead">처음에는 frontend-design 하나로 시작</p>
+
+```text
+공식 저장소의 frontend-design 스킬을 이 프로젝트에 설치해줘.
+https://github.com/anthropics/skills/tree/main/skills/frontend-design
+.claude/skills/frontend-design/SKILL.md에 저장하고,
+원문의 라이선스와 함께 필요한 파일을 가져와줘.
+설치한 경로와 이 스킬이 하는 일을 알려줘. 아직 앱은 만들지 마.
+```
+<p class="thesis">새 세션에서 스킬을 찾을 수 있는지 확인. 적용할 때는 이름을 명시하고, 작업 기록에서 읽었는지 확인합니다. taste-skill은 선택 확장.</p>
+<p class="src">출처 · <a href="https://github.com/anthropics/skills/tree/main/skills/frontend-design">Anthropic frontend-design</a> · <a href="https://code.claude.com/docs/en/skills">스킬 설치 경로</a></p>
+
+---
+class: top-led brand-cc
+---
+
 <p class="eyebrow">3-B · 스킬과 레퍼런스로 디자인</p>
 
 # 원하는 화면 캡처
 
-<p class="lead"><em>Dribbble 등에서 마음에 드는 화면</em>을 찾아 캡처합니다.</p>
+<p class="lead">만들 화면과 비슷한 레퍼런스 1~3장</p>
 <div class="steps">
 <div><b>찾기</b><span>만드는 것과 비슷한 화면을 검색합니다. 예: dashboard, data table.</span></div>
 <div><b>고르기</b><span>전체 배치가 마음에 드는 화면 1장, 필요한 세부 화면 1~2장을 고릅니다.</span></div>
@@ -1006,7 +1026,7 @@ class: top-led brand-cc
 
 # reference 폴더 구성
 
-<p class="lead">프로젝트 폴더 안에 <em>이미지 파일을 직접</em> 넣습니다.</p>
+
 
 ```text
 내 프로젝트/
@@ -1030,7 +1050,7 @@ class: top-led brand-cc
 
 # 참고할 부분을 짚기
 
-<p class="lead">「이것처럼」에 <em>어디를 닮게 할지</em> 한 문장을 더합니다.</p>
+<p class="lead">레이아웃·숫자 정렬·여백 중 참고할 부분 지정</p>
 
 ```text
 reference/dashboard.png의 왼쪽 메뉴와 상단 지표 배치를 참고해줘.
@@ -1049,11 +1069,12 @@ class: top-led brand-cc
 
 # 스킬을 써서 개발 시작
 
-<p class="lead">PRD와 이미지를 읽은 뒤, <em>핵심 흐름부터 실제로 동작하게</em> 만듭니다.</p>
+<p class="lead">PRD와 레퍼런스를 읽고 <em>핵심 흐름부터 구현</em></p>
 
 ```text
 PRD.md와 reference/의 이미지를 읽어줘.
-frontend-design과 taste-skill(design-taste-frontend)을 사용해 구현해줘.
+frontend-design을 사용해 구현해줘.
+설치했다면 design-taste-frontend도 함께 참고해줘.
 별도의 디자인 문서는 만들지 말고 레퍼런스를 참고해 바로 개발해줘.
 먼저 엑셀 업로드 → 전체 불량률 → 라인 필터 흐름을 완성해줘.
 실행한 뒤 접속 주소와 확인할 동작을 알려줘.
@@ -1069,7 +1090,7 @@ class: top-led brand-cc
 
 # 이미지로 확인 못 하는 것
 
-<p class="lead">레퍼런스에 없는 <em>빈 화면과 오류 상태</em>도 PRD대로 만듭니다.</p>
+<p class="lead">빈 화면 · 오류 안내 · 키보드 조작</p>
 <div class="deflist">
 <div><b>파일 없음</b><span>무엇을 올려야 하는지 보이는가?</span></div>
 <div><b>잘못된 열</b><span>어떤 열을 고쳐야 하는지 알려 주는가?</span></div>
@@ -1085,7 +1106,7 @@ class: divider brand-cc-solid
 
 ## 개발 결과 검증
 
-<p class="div-sub">Playwright MCP로 실제 동작을 확인하고, 고친 뒤 다시 확인합니다</p>
+<p class="div-sub">기대값과 실제 동작 대조 · 수정 후 재검증</p>
 
 ---
 class: top-led brand-cc
@@ -1095,7 +1116,7 @@ class: top-led brand-cc
 
 # 브라우저를 직접 조작
 
-<p class="lead"><em>Playwright MCP</em>는 Claude가 브라우저를 열고 조작하도록 연결합니다.</p>
+<p class="lead">Playwright MCP로 열기 → 조작 → 대조 → 기록</p>
 <div class="steps">
 <div><b>열기</b><span>개발 서버를 실행하고 실제 접속 주소를 확인합니다.</span></div>
 <div><b>조작</b><span>파일을 올리고, 필터와 버튼을 누릅니다.</span></div>
@@ -1116,7 +1137,7 @@ class: top-led brand-cc
 
 # 검증 시작 전 확인
 
-<p class="lead">지시를 보내기 전에 <em>주소·연결·샘플</em>이 준비돼 있어야 합니다.</p>
+<p class="lead">실행 주소 · MCP 연결 · 샘플 파일</p>
 <div class="deflist">
 <div><b>앱 주소</b><span>Claude가 알려 준 개발 서버 주소를 실제로 열 수 있습니다.</span></div>
 <div><b>MCP 연결</b><span>현재 세션에서 Playwright MCP의 브라우저 도구를 호출할 수 있습니다.</span></div>
@@ -1133,7 +1154,7 @@ class: top-led brand-cc
 
 # 검증용 파일 준비
 
-<p class="lead">값을 아는 작은 파일로 확인합니다. <em>아래 두 파일을 만들게</em> 하세요.</p>
+<p class="lead">값을 아는 정상 파일과 필수 열이 빠진 파일</p>
 
 ```text
 검증용 엑셀 두 개를 만들어줘. 열 이름은 PRD.md의 정의를 따라줘.
@@ -1143,6 +1164,8 @@ sample-missing.xlsx: 같은 데이터에서 불량수 열을 뺀 파일.
 ```
 
 <p class="thesis">열어서 확인 · 정상 파일의 두 행이 위 값과 같은지, 오류 파일에 불량수 열이 없는지 봅니다.</p>
+
+<p class="src">바로 사용 · <a href="./downloads/day1-samples.zip" download>수업용 엑셀 2개 + Windows MCP 설정 다운로드</a></p>
 
 <!-- 앱을 통한 계산 전에 검증 자료 자체를 열어서 확인합니다. 강사가 두 파일을 사전 준비해도 됩니다. 이후 Playwright MCP가 읽을 수 있는 경로를 전달합니다. -->
 
@@ -1154,7 +1177,7 @@ class: top-led brand-cc
 
 # 검증 요청 프롬프트
 
-<p class="lead">「확인해줘」 대신 <em>동작과 기대 결과를 함께</em> 보냅니다.</p>
+<p class="lead">사용자 동작과 기대 결과를 함께 전달</p>
 
 ```text
 실행 중인 앱을 Playwright MCP로 열어 PRD.md의 완료 조건을 검증해줘.
@@ -1174,7 +1197,7 @@ class: top-led brand-cc
 
 # 통과 판단의 기준
 
-<p class="lead">아래는 <em>수업용 검증표 예시</em>입니다. 실제 실행 결과로 채웁니다.</p>
+<p class="lead">아래 표는 예시. 판정은 실제 실행 결과로</p>
 
 | 동작 | 기대 결과 | 남길 증거 |
 |---|---|---|
@@ -1194,7 +1217,7 @@ class: top-led brand-cc
 
 # 실패한 동작 다시 확인
 
-<p class="lead">「고쳤다」는 답 뒤에 <em>같은 조건으로 한 번 더</em> 실행합니다.</p>
+<p class="lead">수정 뒤에도 <em>같은 샘플·같은 동작</em>으로 재검증</p>
 
 ```text
 A라인을 선택해도 전체 값 2%가 그대로 보여.
@@ -1213,7 +1236,7 @@ class: top-led brand-cc
 
 # 완료라고 말할 때
 
-<p class="lead"><em>무엇을 실행했고 무엇이 남았는지</em> 확인하고 마칩니다.</p>
+<p class="lead">실행한 항목과 남은 항목 확인</p>
 <div class="deflist">
 <div><b>기능</b><span>PRD의 완료 조건을 실행 결과로 확인했다.</span></div>
 <div><b>화면</b><span>캡처를 reference와 대조하고 의도한 차이는 설명했다.</span></div>
@@ -1230,7 +1253,7 @@ class: top-led brand-cc
 
 # 검증 지시 직접 쓰기
 
-<p class="lead"><em>5분 실습</em> · 내 PRD에서 완료 조건 하나를 골라 검증을 시킵니다.</p>
+<p class="lead"><em>5분 실습</em> · 내 PRD의 완료 조건 하나 검증</p>
 
 ```text
 Playwright MCP로 [앱 주소]를 열어줘.
@@ -1246,9 +1269,140 @@ class: divider brand-cc-solid
 
 <p class="div-no">4-B</p>
 
+## 검증한 앱 배포
+
+<p class="div-sub">Vercel과 Cloud Run · 내 PC 밖에서 실행하기</p>
+<p class="div-file">강사 시연 · 공개 가능한 샘플 데이터</p>
+
+---
+class: top-led brand-cc
+---
+
+<p class="eyebrow">4-B · 배포 선택</p>
+
+# 어디에 배포할까
+
+<p class="lead">화면만 필요한가, 서버에서 처리할 일이 있는가?</p>
+
+| 만들 앱 | 시작할 후보 | 먼저 확인할 것 |
+|---|---|---|
+| 브라우저 안에서 엑셀 분석 | Vercel | 파일이 서버로 전송되는지 |
+| 웹 화면과 짧은 API 처리 | Vercel | 지원 런타임·실행 시간·환경 변수 |
+| Python·Node 서버, 컨테이너 | Cloud Run | 실행 명령·PORT·인증·저장소 |
+
+<p class="thesis">같은 앱도 구조에 따라 배포 방식이 달라집니다. 오늘은 강사가 공개 가능한 샘플 앱으로 두 경로를 보여줍니다.</p>
+<p class="src">공식 안내 · <a href="https://vercel.com/docs/deployments">Vercel deployments</a> · <a href="https://docs.cloud.google.com/run/docs/deploying-source-code">Cloud Run source deployment</a></p>
+
+---
+class: top-led brand-cc compact
+---
+
+<p class="eyebrow">4-B · Vercel</p>
+
+# Vercel에 올리기
+
+<div class="steps">
+<div><b>저장소 준비</b><span>동작을 확인한 앱을 GitHub 저장소에 커밋·푸시</span></div>
+<div><b>가져오기</b><span>Vercel 로그인 → Add New → Project → 저장소 Import</span></div>
+<div><b>설정 확인</b><span>앱 폴더·프레임워크·빌드 명령·출력 폴더·환경 변수 확인</span></div>
+<div><b>배포·검증</b><span>Deploy 후 발급 주소에서 샘플 업로드와 필터 동작 재확인</span></div>
+</div>
+<p class="thesis">첫 프로젝트 배포도 Production이 될 수 있습니다. 실행 전 대상과 공개 범위를 확인합니다. 업무용은 회사가 승인한 플랜 사용.</p>
+<p class="src">공식 안내 · <a href="https://vercel.com/docs/deployments">Git 저장소에서 배포</a> · <a href="https://vercel.com/docs/plans/hobby">Hobby는 개인·비상업 용도</a></p>
+
+---
+class: top-led brand-cc
+---
+
+<p class="eyebrow">4-B · Vercel</p>
+
+# Vercel 배포 요청
+
+<p class="lead">Claude에게 앱 구조를 확인시킨 뒤 배포 설정 작성</p>
+
+```text
+이 앱을 Vercel에 배포할 수 있는지 확인해줘.
+앱 루트, 프레임워크, 빌드 명령, 출력 폴더를 정리해줘.
+필요한 환경 변수는 이름과 용도만 알려줘. 비밀 값은 코드에 넣지 마.
+로컬 빌드가 통과하면 배포할 프로젝트와 공개 범위를 보여줘.
+배포 후에는 발급된 주소에서 정상 파일 업로드,
+전체 2%와 A라인 4%, 필수 열 누락 안내를 다시 확인해줘.
+```
+<p class="thesis">CLI를 쓸 때 · <code>npx.cmd vercel</code>. 연결할 계정·프로젝트와 배포 환경을 확인하고 진행합니다.</p>
+<p class="src">공식 안내 · <a href="https://vercel.com/docs/cli/deploy">vercel deploy</a> · 첫 배포 이후 <code>--prod</code>는 Production 배포</p>
+
+---
+class: top-led brand-cc compact
+---
+
+<p class="eyebrow">4-B · Cloud Run</p>
+
+# Cloud Run 준비
+
+<p class="lead">소스 코드를 빌드해 서버로 실행</p>
+<figure class="figure"><svg viewBox="0 0 900 140" role="img" aria-label="소스 코드가 Cloud Build를 거쳐 Artifact Registry의 컨테이너 이미지로 저장되고 Cloud Run의 HTTPS 서비스로 배포된다">
+<g style="font-family:var(--sans);font-size:21px" fill="var(--ink)" text-anchor="middle"><text x="90" y="55">소스 코드</text><text x="320" y="55">Cloud Build</text><text x="550" y="55">이미지 저장</text><text x="795" y="55">Cloud Run</text></g>
+<g fill="var(--dim)" style="font-family:var(--sans);font-size:15px" text-anchor="middle"><text x="90" y="95">내 프로젝트</text><text x="320" y="95">빌드</text><text x="550" y="95">Artifact Registry</text><text x="795" y="95">HTTPS 주소</text></g>
+<g fill="var(--accent)" style="font-size:25px"><text x="190" y="57">→</text><text x="430" y="57">→</text><text x="665" y="57">→</text></g></svg></figure>
+<div class="deflist">
+<div><b>프로젝트</b><span>결제 계정 연결 · Cloud Run, Cloud Build, Artifact Registry API 활성화</span></div>
+<div><b>권한</b><span>배포 계정과 빌드 서비스 계정의 IAM 권한 확인</span></div>
+<div><b>앱</b><span>실행 명령과 의존성 명시. <code>0.0.0.0</code>에서 <code>PORT</code> 환경 변수 사용</span></div>
+</div>
+<p class="src">공식 안내 · <a href="https://docs.cloud.google.com/run/docs/deploying-source-code">Source deployment와 필요한 역할</a> · <a href="https://docs.cloud.google.com/run/docs/container-contract">Container contract</a></p>
+
+---
+class: top-led brand-cc compact
+---
+
+<p class="eyebrow">4-B · Cloud Run</p>
+
+# Cloud Run에 올리기
+
+<p class="lead">Windows PowerShell · Google Cloud CLI 설치 후 앱 폴더에서 실행</p>
+
+```powershell
+gcloud auth login
+gcloud config set project YOUR_PROJECT_ID
+gcloud run deploy seah-lab --source . --region asia-northeast3
+```
+<div class="deflist">
+<div><b>YOUR_PROJECT_ID</b><span>수업용 GCP 프로젝트 ID로 교체. 프로젝트 이름과 구분</span></div>
+<div><b>인증 선택</b><span>기본 인증 정책 확인. 공개 샘플 시연일 때만 비인증 접근 허용</span></div>
+<div><b>완료 확인</b><span>출력된 서비스 URL에서 샘플 실행. 실패하면 빌드 로그와 서비스 로그 확인</span></div>
+</div>
+<p class="src">공식 안내 · <a href="https://docs.cloud.google.com/sdk/docs/install">Google Cloud CLI 설치</a> · <a href="https://docs.cloud.google.com/run/docs/deploying-source-code">gcloud run deploy --source</a></p>
+<!-- 준비된 프로젝트와 권한이 없으면 강사 시연만 진행. 공개 시연은 비민감 샘플만 사용하며 필요 시 --allow-unauthenticated를 설명한다. 조직 정책에 따라 허용되지 않을 수 있다. -->
+
+---
+class: top-led brand-cc
+---
+
+<p class="eyebrow">4-B · 배포 확인</p>
+
+# 배포 주소에서도 재검증
+
+<p class="lead">로컬에서 통과한 같은 샘플, 같은 사용자 동작</p>
+
+| 확인 | 볼 것 |
+|---|---|
+| 새 브라우저에서 접속 | 로그인 필요 여부, 링크를 받는 사람의 접근 권한 |
+| 정상 샘플 업로드 | 전체 2%, A라인 4% |
+| 누락 열·새로고침 | 오류 안내, 데이터 보존 여부 |
+| 운영 설정 | 비밀 값 분리, 비용 확인, 사용 후 테스트 서비스 정리 |
+
+<p class="thesis">Cloud Run의 로컬 파일은 영구 저장소가 아닙니다. 저장이 필요하면 Cloud Storage나 DB를 별도로 연결합니다.</p>
+<p class="src">공식 안내 · <a href="https://docs.cloud.google.com/run/docs/container-contract#file-system">Cloud Run 파일 시스템</a> · <a href="https://vercel.com/docs/environment-variables">Vercel 환경 변수</a></p>
+
+---
+class: divider brand-cc-solid
+---
+
+<p class="div-no">4-C</p>
+
 ## 두 예제에 적용
 
-<p class="div-sub">같은 세 단계로 데이터와 화면, 실제 동작을 확인합니다</p>
+<p class="div-sub">생산실적 분석과 수주 레이더</p>
 
 ---
 class: top-led brand-cc
@@ -1258,7 +1412,7 @@ class: top-led brand-cc
 
 # 생산실적 분석 흐름
 
-<p class="lead">엑셀의 숫자 뜻부터 <em>역인터뷰로 확정</em>합니다.</p>
+<p class="lead">엑셀의 숫자 뜻부터 역인터뷰로 확정</p>
 <div class="steps">
 <div><b>① 역인터뷰 → PRD</b><span>생산량·불량수의 뜻, 계산식, 라인 필터, 빈 값 처리를 결정합니다.</span></div>
 <div><b>② 디자인·개발</b><span>대시보드 캡처를 reference에 넣고 두 스킬로 구현합니다.</span></div>
@@ -1275,7 +1429,7 @@ class: top-led brand-cc
 
 # 예제 1 결과 화면
 
-<p class="lead">첫 화면에서 <em>조치가 필요한 구간</em>을 먼저 보여줍니다.</p>
+
 
 <figure class="shot hero nochrome" data-origin="capture">
 <img src="./images/ex1-crop.png" alt="기존 생산실적 분석 화면" />
@@ -1290,7 +1444,7 @@ class: top-led brand-cc
 
 # 수주 레이더 흐름
 
-<p class="lead">수집한 값의 뜻과 <em>판정할 수 없는 경우</em>부터 합의합니다.</p>
+<p class="lead">수집 값의 의미와 판정할 수 없는 경우 합의</p>
 <div class="steps">
 <div><b>① 역인터뷰 → PRD</b><span>대상 공고·판정 기준·수집 실패와 판단불가 처리를 정합니다.</span></div>
 <div><b>② 디자인·개발</b><span>목록 화면 캡처를 reference에 넣고 두 스킬로 구현합니다.</span></div>
@@ -1307,7 +1461,7 @@ class: top-led brand-cc
 
 # 새 공고 없음과 수집 실패
 
-<p class="lead">빈 목록 두 개라도 <em>사용자가 해야 할 행동은 다릅니다.</em></p>
+<p class="lead">비어 있는 목록, 서로 다른 후속 조치</p>
 
 | 검증 상황 | 기대 결과 |
 |---|---|
@@ -1330,7 +1484,7 @@ class: top-led brand-cc
 
 # 예제 2 결과 화면
 
-<p class="lead"><em>오늘 볼 공고와 원문 확인이 필요한 건</em>을 구분합니다.</p>
+
 
 <figure class="shot hero nochrome" data-origin="capture">
 <img src="./images/ex2-briefing-crop.png" alt="기존 수주 레이더 브리핑 화면" />
@@ -1345,7 +1499,7 @@ class: divider brand-cc-solid
 
 ## 검증한 뒤 자동 실행
 
-<p class="div-sub">핵심 흐름이 통과한 다음, 반복할 작업을 예약합니다</p>
+<p class="div-sub">동작 확인 후 반복 작업 예약</p>
 
 ---
 class: top-led brand-cc compact
@@ -1358,7 +1512,7 @@ class: top-led brand-cc compact
 <div class="split evidence">
 <div>
 
-<p class="lead">「매일 아침 어제 데이터를 표로 만들어 둬」를 <em>걸어 둡니다</em>.</p>
+<p class="lead">매일 아침 반복할 작업을 Local 예약으로</p>
 
 <div class="steps">
 <div><b>말로 시킨다</b><span>「매일 아침 9시에 도는 작업 하나 만들어 줘」</span></div>
@@ -1388,7 +1542,7 @@ class: top-led brand-cc compact
 <div class="split evidence">
 <div>
 
-<p class="lead">앱이 켜져 있고 컴퓨터가 <em>깨어 있을 때만</em> 돕니다.</p>
+<p class="lead">로컬 예약의 조건 · 앱 실행 중, 컴퓨터 깨어 있음</p>
 
 <div class="deflist narrow">
 <div><b>자고 있으면</b><span>그 회차는 건너뜁니다</span></div>
@@ -1419,7 +1573,7 @@ class: top-led brand-cc compact
 <div class="split evidence">
 <div>
 
-<p class="lead">「이렇게 고쳐」 대신 <em>「이 조건이 될 때까지」</em>를 겁니다.</p>
+<p class="lead">반복 실행을 멈출 조건 지정</p>
 
 <div class="deflist narrow">
 <div><b>거는 법</b><span><code>/goal</code> 뒤에 조건을 씁니다</span></div>
@@ -1447,7 +1601,7 @@ class: top-led brand-cc
 
 # 조건 쓰는 법
 
-<p class="lead">판정하는 모델은 <em>대화에 남은 것만</em> 봅니다. 스스로 명령을 돌리거나 파일을 열지 않습니다.</p>
+<p class="lead">판정에 필요한 실행 결과를 대화에 남기기</p>
 
 <div class="deflist">
 <div><b>되는 조건</b><span>「테스트가 다 통과한다」 — 돌린 결과가 대화에 남습니다</span></div>
@@ -1468,7 +1622,7 @@ class: top-led brand-cc
 
 # 혼자 다시 시작할 때
 
-<p class="lead">다음 프로젝트에서도 <em>같은 세 단계</em>로 시작합니다.</p>
+
 <div class="steps">
 <div><b>① 역인터뷰</b><span>Claude와 묻고 답해 모호한 내용을 PRD.md로 확정합니다.</span></div>
 <div><b>② 디자인·개발</b><span>frontend-design + taste-skill, reference/ 이미지로 구현합니다.</span></div>

@@ -6,7 +6,7 @@ class: divider brand-cc-solid
 
 ## 질문으로 PRD 작성
 
-<p class="div-sub">모호한 아이디어를 확인 가능한 요구사항으로 바꿉니다</p>
+<p class="div-sub">아이디어에서 확인 가능한 요구사항으로</p>
 
 ---
 class: top-led brand-cc
@@ -16,7 +16,7 @@ class: top-led brand-cc
 
 # 개발 워크플로우
 
-<p class="lead">세 단계를 한 바퀴 돕니다. <em>완료 기준은 첫 단계에서</em> 정합니다.</p>
+<p class="lead">역인터뷰 → 디자인·개발 → 검증</p>
 <figure class="figure">
 <svg viewBox="0 0 900 230" role="img" aria-label="역인터뷰로 PRD 확정, 스킬과 reference 이미지로 개발, Playwright MCP로 검증. 실패하면 해당 단계로 돌아간다">
 <g fill="var(--ink)" style="font-family:var(--sans);font-size:24px;font-weight:600">
@@ -40,7 +40,7 @@ class: top-led brand-cc
 
 # 첫 요청은 역인터뷰
 
-<p class="lead">무엇을 만들지 짧게 말하고, <em>Claude가 질문하게</em> 합니다.</p>
+<p class="lead">업무를 짧게 설명하고 <em>Claude가 질문하도록 요청</em></p>
 
 ```text
 생산실적 엑셀을 올리면 라인별 불량률을 확인하는 화면을 만들고 싶어.
@@ -49,7 +49,7 @@ class: top-led brand-cc
 한 번에 1~2개씩 질문하고, 애매한 답은 예를 들어 다시 물어봐.
 내가 모르는 부분은 선택지와 차이를 설명해줘.
 ```
-<p class="thesis">시작 상태 · Code 탭에서 수업용 프로젝트를 열고 샘플 엑셀을 첨부합니다.</p>
+<p class="thesis">시작 상태 · Code 탭에서 수업용 프로젝트를 열고 <a href="./downloads/day1-samples.zip" download>샘플 엑셀</a>을 첨부합니다.</p>
 
 
 <!--
@@ -65,7 +65,7 @@ class: top-led brand-cc
 
 # 모르는 것도 되묻기
 
-<p class="lead">내가 답하기 어렵다면 <em>예를 들어 설명해 달라</em>고 묻습니다.</p>
+<p class="lead">낯선 기준은 예시와 선택지를 요청</p>
 <div class="deflist">
 <div><b>Claude의 질문</b><span>전체 불량률은 라인별 비율의 평균인가요, 수량 합계로 계산하나요?</span></div>
 <div><b>내가 되묻기</b><span>둘이 어떻게 달라? 생산량이 다른 두 라인으로 설명해줘.</span></div>
@@ -82,7 +82,7 @@ class: top-led brand-cc
 
 # 대화가 기준이 되는 순간
 
-<p class="lead">「불량률을 보여줘」를 <em>값까지 확인할 수 있는 문장</em>으로 바꿉니다.</p>
+<p class="lead">「불량률을 보여줘」에서 <em>검증 가능한 기준</em>으로</p>
 
 | 샘플 | 생산량 | 불량수 | 불량률 |
 |---|---:|---:|---:|
@@ -105,7 +105,7 @@ class: top-led brand-cc
 
 # 합의한 내용을 PRD로
 
-<p class="lead"><em>PRD는 무엇을 만들고 어떻게 확인할지</em> 합의한 문서입니다.</p>
+<p class="lead">무엇을 만들고, 어떻게 확인할지 합의한 문서</p>
 
 ```text
 지금까지 합의한 내용을 PRD.md로 정리해줘.
@@ -124,7 +124,7 @@ class: top-led brand-cc
 
 # PRD에 남길 내용
 
-<p class="lead">개발을 시작하기 전에 <em>완료 조건까지</em> 읽고 확정합니다.</p>
+<p class="lead">목적 · 데이터 · 기능 · 제외 범위 · 완료 조건</p>
 <div class="deflist">
 <div><b>목적·사용자</b><span>생산 담당자가 회의 전에 라인별 불량률을 확인한다.</span></div>
 <div><b>데이터·기능</b><span>라인·생산량·불량수 열을 읽고, 업로드와 라인 필터를 제공한다.</span></div>
@@ -142,7 +142,7 @@ class: top-led brand-cc
 
 # 내 업무로 역인터뷰
 
-<p class="lead"><em>10분 실습</em> · 만들고 싶은 업무 화면 하나로 질문과 답변을 이어갑니다.</p>
+<p class="lead"><em>10분 실습</em> · 업무 화면 하나의 요구사항 정리</p>
 <div class="steps">
 <div><b>시작</b><span>업무 설명 한 문장과 사용할 샘플 자료를 보냅니다.</span></div>
 <div><b>대화</b><span>불명확한 말이 나오면 구체적인 상황과 예시로 답합니다.</span></div>

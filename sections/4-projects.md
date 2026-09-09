@@ -2,11 +2,11 @@
 class: divider brand-cc-solid
 ---
 
-<p class="div-no">4-B</p>
+<p class="div-no">4-C</p>
 
 ## 두 예제에 적용
 
-<p class="div-sub">같은 세 단계로 데이터와 화면, 실제 동작을 확인합니다</p>
+<p class="div-sub">생산실적 분석과 수주 레이더</p>
 
 ---
 class: top-led brand-cc
@@ -16,7 +16,7 @@ class: top-led brand-cc
 
 # 생산실적 분석 흐름
 
-<p class="lead">엑셀의 숫자 뜻부터 <em>역인터뷰로 확정</em>합니다.</p>
+<p class="lead">엑셀의 숫자 뜻부터 역인터뷰로 확정</p>
 <div class="steps">
 <div><b>① 역인터뷰 → PRD</b><span>생산량·불량수의 뜻, 계산식, 라인 필터, 빈 값 처리를 결정합니다.</span></div>
 <div><b>② 디자인·개발</b><span>대시보드 캡처를 reference에 넣고 두 스킬로 구현합니다.</span></div>
@@ -33,7 +33,7 @@ class: top-led brand-cc
 
 # 예제 1 결과 화면
 
-<p class="lead">첫 화면에서 <em>조치가 필요한 구간</em>을 먼저 보여줍니다.</p>
+
 
 <figure class="shot hero nochrome" data-origin="capture">
 <img src="./images/ex1-crop.png" alt="기존 생산실적 분석 화면" />
@@ -48,7 +48,7 @@ class: top-led brand-cc
 
 # 수주 레이더 흐름
 
-<p class="lead">수집한 값의 뜻과 <em>판정할 수 없는 경우</em>부터 합의합니다.</p>
+<p class="lead">수집 값의 의미와 판정할 수 없는 경우 합의</p>
 <div class="steps">
 <div><b>① 역인터뷰 → PRD</b><span>대상 공고·판정 기준·수집 실패와 판단불가 처리를 정합니다.</span></div>
 <div><b>② 디자인·개발</b><span>목록 화면 캡처를 reference에 넣고 두 스킬로 구현합니다.</span></div>
@@ -65,7 +65,7 @@ class: top-led brand-cc
 
 # 새 공고 없음과 수집 실패
 
-<p class="lead">빈 목록 두 개라도 <em>사용자가 해야 할 행동은 다릅니다.</em></p>
+<p class="lead">비어 있는 목록, 서로 다른 후속 조치</p>
 
 | 검증 상황 | 기대 결과 |
 |---|---|
@@ -88,7 +88,7 @@ class: top-led brand-cc
 
 # 예제 2 결과 화면
 
-<p class="lead"><em>오늘 볼 공고와 원문 확인이 필요한 건</em>을 구분합니다.</p>
+
 
 <figure class="shot hero nochrome" data-origin="capture">
 <img src="./images/ex2-briefing-crop.png" alt="기존 수주 레이더 브리핑 화면" />

@@ -14,12 +14,11 @@ class: cover brand-cc
 
 <!--
   대상: 세아그룹 실무자. 엑셀은 능숙, 코드는 처음. Windows.
-  시작 상태: 노트북 + Claude 데스크톱 앱(Code 탭). 준비물 없음.
+  시작 상태: Windows 노트북 · Claude 유료 계정. Git과 Node.js는 수업 중 설치 안내.
   종료 수행: PRD 를 채우고, 만든 것이 맞는지 확인할 방법을 붙여 배포한다.
   오개념: (1) 한 줄로 되는데 왜 배우나 (2) 에러가 안 나면 잘 된 것
 
-  장표 제목 규칙 — 제목은 라벨(명사구 8~14자), 결론은 본문 첫 줄(.lead).
-  서술형 종결과 두 문장 제목은 쓰지 않는다.
+  기존 제목과 테마를 유지한다. 제목을 반복하는 부제는 생략하고, 필요한 설명은 짧은 명사구 또는 자연스러운 문장으로 쓴다.
 
   그림 출처 — images/official/* 는 Claude Code 릴리스 노트의 공식 자산
   (영상은 대표 프레임 추출). images/docs/* 는 공식 문서 해당 구간 캡처.
@@ -44,7 +43,7 @@ class: top-led
 
 # 목차
 
-<p class="thesis">다섯 덩어리. 첫 덩어리는 왜, 가운데 둘은 도구, 뒤의 둘은 그 도구로 무엇을 하는가.</p>
+<p class="thesis">사례에서 도구로, 요구사항에서 구현과 검증으로</p>
 
 <div class="steps tight">
 <div><b>0 · AX 사례와 트렌드</b><span>남들은 어디까지 와 있는가</span></div>
@@ -57,6 +56,27 @@ class: top-led
 <!-- 시간 배분은 구두로. 0부는 30분, 1부가 가장 길다. -->
 
 ---
+class: top-led  compact
+---
+
+<p class="eyebrow">COURSE · 1일차</p>
+
+# 1일차 진행 순서
+
+<p class="lead">7시간 · 작은 앱 하나를 직접 만들고 검증하기</p>
+
+| 구간 | 할 일 | 시간 |
+|---|---|---:|
+| 사례와 준비 | AX 사례 · Windows 설치 · 첫 질문 | 70분 |
+| Claude Code | 권한 · 모델 · 파일 · 지침 · 스킬 | 90분 |
+| 도구 비교 | Antigravity 설치·계획 시연 | 25분 |
+| 구현 실습 | 역인터뷰 · PRD · 레퍼런스 · 디자인 스킬 | 120분 |
+| 검증과 배포 | Playwright MCP · 수정 · Vercel·Cloud Run 소개 | 75분 |
+
+<p class="thesis">진행 380분 + 휴식 40분. 점심 별도. 팀·자동 실행·상세 비교 실험은 선택 확장.</p>
+<!-- 10명 기준. 짝끼리 설치 상태를 확인하고, 강사는 막힌 사람을 지원한다. 기존 전체 교안의 흐름은 유지하되 1일차에는 핵심 경로만 진행한다. -->
+
+---
 class: divider
 ---
 
@@ -64,7 +84,7 @@ class: divider
 
 ## AX 사례와 트렌드
 
-<p class="div-sub">남들이 무엇을 만들었는지 보고, 지금 도구가 어디까지 왔는지 확인합니다</p>
+<p class="div-sub">기업 적용 사례와 최근 도구의 변화</p>
 
 <p class="div-file">실습 없음 · 30분</p>
 
@@ -90,7 +110,7 @@ class: top-led
 
 <p class="eyebrow">0부 · AX</p>
 
-# 예시: 단순 AI 도입과 AX 비교
+# AI 도입과 업무 변화
 
 <div class="vs">
 <div class="pane">
@@ -104,7 +124,7 @@ class: top-led
 </div>
 </div>
 
-<p class="thesis">판별법은 하나입니다. <em>일하는 순서가 바뀌었는가</em>.</p>
+<p class="thesis">확인할 질문 · <em>AI를 넣은 뒤 일하는 순서가 어떻게 달라졌는가?</em></p>
 
 ---
 class: top-led compact
@@ -117,7 +137,7 @@ class: top-led compact
 <div class="split evidence">
 <div>
 
-<p class="lead">사내에서 막아 두었던 도구를 <em>임직원 전체에 열었습니다</em>.</p>
+<p class="lead">외부 생성형 AI 세 종, <em>DX부문 임직원에게 도입</em></p>
 
 <div class="deflist">
 <div><b>연 도구</b><span>챗GPT · 제미나이 · 클로드 세 가지 모두</span></div>
@@ -144,7 +164,7 @@ class: top-led embed-page
 
 # 현대차그룹 발표회
 
-<p class="lead">한 그룹이 현장 여섯 곳에 <em>무엇을 만들었는지</em> 발표한 영상입니다. 성과 숫자는 보지 않습니다.</p>
+<p class="lead">연구·생산·정비·고객 응대, 여섯 현장의 적용 사례</p>
 
 <figure class="embed">
 <Youtube id="5WFbSPFbTPA?start=1889" />
@@ -164,7 +184,7 @@ class: top-led compact
 <div class="split evidence">
 <div>
 
-<p class="lead">수십 년치 충돌 시험 리포트·해석 데이터·고속 영상이 <em>흩어져 있어</em> 찾는 데 시간이 갔습니다.</p>
+<p class="lead">흩어진 충돌 시험 리포트·해석 데이터·고속 영상 검색</p>
 
 <div class="deflist">
 <div><b>만든 것</b><span>질문하면 관련 보고서와 근거를 찾아 답하는 검색·질의 도구</span></div>
@@ -192,7 +212,7 @@ class: top-led compact
 <div class="split evidence">
 <div>
 
-<p class="lead">조립 라인에 차가 들어올 때 식별번호와 사양이 맞는지 <em>사람이 일일이 대조</em>하느라 라인이 섰습니다.</p>
+<p class="lead">조립 라인의 <em>식별번호·차량 사양 대조</em></p>
 
 <div class="deflist">
 <div><b>만든 것</b><span>카메라 이미지에서 식별번호를 읽어 시스템 정보와 맞춰 보는 검사</span></div>
@@ -220,7 +240,7 @@ class: top-led compact
 <div class="split evidence">
 <div>
 
-<p class="lead">프레스·차체 공정에서 수백 종의 운반 대차가 오가는 동선이 얽혀 <em>병목</em>이 생겼습니다.</p>
+<p class="lead">프레스·차체 공정의 운반 대차 동선과 병목</p>
 
 <div class="deflist">
 <div><b>만든 것</b><span>대차 이동 순서와 적재 위치를 시뮬레이션으로 다시 짜는 계산</span></div>
@@ -248,7 +268,7 @@ class: top-led compact
 <div class="split evidence">
 <div>
 
-<p class="lead">현장 엔지니어가 공정마다 필요한 AI 도구를 <em>개발자 없이</em> 만들기 어려웠습니다.</p>
+<p class="lead">현장 엔지니어가 직접 만드는 공정용 AI 도구</p>
 
 <div class="deflist">
 <div><b>만든 것</b><span>현장 사람이 코딩 없이 업무용 에이전트를 만들고 나누는 공간</span></div>
@@ -276,7 +296,7 @@ class: top-led compact
 <div class="split evidence">
 <div>
 
-<p class="lead">전동화로 고장 코드가 복잡해져 정비사의 진단이 어려워지고 <em>고객 대기</em>가 길어졌습니다.</p>
+<p class="lead">복잡한 고장 코드와 정비 이력, 진단에 필요한 정보 찾기</p>
 
 <div class="deflist">
 <div><b>만든 것</b><span>정비 이력·센서 데이터·정비 매뉴얼을 읽고 원인을 좁혀 주는 도우미</span></div>
@@ -304,7 +324,7 @@ class: top-led compact
 <div class="split evidence">
 <div>
 
-<p class="lead">전 세계 앱 마켓에 달마다 수천 건씩 쌓이는 리뷰를 <em>사람이 읽고 분류</em>하는 데 한계가 왔습니다.</p>
+<p class="lead">여러 국가의 앱 리뷰를 읽고 분류하는 반복 업무</p>
 
 <div class="deflist">
 <div><b>만든 것</b><span>다국어 리뷰를 감성·기능별로 나누고 개선 요청을 담당 부서로 보내는 처리</span></div>
@@ -329,7 +349,7 @@ class: top-led band-page
 
 # GPT-6 Astra
 
-<p class="lead">발표문 첫 줄이 포지셔닝 전부입니다. <em>컴퓨터로 하는 일</em>을 대신하겠다는 것.</p>
+<p class="lead">발표문이 내세운 용도 · 컴퓨터로 수행하는 업무</p>
 
 <figure class="shot band nochrome" data-origin="web" data-source="https://community.openai.com/t/introducing-gpt-6-astra-the-most-intelligent-and-aligned-model-in-the-world/1394703">
 <img src="./images/trend/astra.png" alt="OpenAI 개발자 커뮤니티의 공지 글. 제목은 Introducing GPT-6-Astra: The most intelligent and aligned model in the world 이고, 본문 첫 줄은 Anything you can do on a computer, Astra can do for you. Fast. 이다" />
@@ -346,14 +366,14 @@ class: top-led band-page
 
 # Claude Fable 5.1
 
-<p class="lead">이틀 먼저 나왔습니다. 내세운 용도는 <em>코딩 · 지식 업무 · 오래 걸리는 일</em>입니다.</p>
+<p class="lead">코딩 · 지식 업무 · 오래 걸리는 작업</p>
 
 <figure class="shot band nochrome" data-origin="web" data-source="https://www.anthropic.com/claude-fable-and-mythos-5-1">
 <img src="./images/trend/fable.png" alt="Anthropic 발표 페이지의 첫 화면. SEPTEMBER 2026 아래에 Claude Fable 5.1 and Mythos 5.1 이라는 제목이 있다" />
 <figcaption>Anthropic 발표 · 2026-09-01 · <a href="https://www.anthropic.com/claude-fable-and-mythos-5-1"><code>anthropic.com</code></a></figcaption>
 </figure>
 
-<p class="thesis">같은 모델을 <em>이름 둘로 갈라</em> 냈습니다. Fable 5.1 은 누구나, Mythos 5.1 은 심사를 거친 조직만.</p>
+<p class="thesis">발표의 핵심은 접근 범위의 차이. Fable도 실제 사용 가능 여부와 크레딧 조건은 계정에서 확인합니다.</p>
 
 ---
 class: top-led compact
@@ -363,7 +383,7 @@ class: top-led compact
 
 # 갈리는 지점
 
-<p class="lead">값도 같고 둘 다 「최고」라고 합니다. 갈리는 건 <em>여는 방식</em>입니다.</p>
+<p class="lead">성능 주장과 함께 볼 것 · <em>이용 경로와 과금 조건</em></p>
 
 | | GPT-6 Astra | Claude Fable 5.1 |
 |---|---|---|
@@ -384,7 +404,7 @@ class: top-led
 
 # 써 본 사람의 말
 
-<p class="lead">발표문 말고 <em>같은 일을 시켜 본</em> 기록을 봅니다.</p>
+<p class="lead">같은 일을 시킨 사용 기록과 결과 비교</p>
 
 <div class="embed-row">
 <figure class="embed">
@@ -405,12 +425,12 @@ class: top-led compact
 
 <p class="eyebrow">0부 · 트렌드</p>
 
-# Astra 에 대한 반응
+# Astra 사용 후기
 
 <div class="split evidence">
 <div>
 
-<p class="lead">발표문·리뷰 영상 다음은 <em>Threads 에 올라온 후기</em>입니다.</p>
+
 
 <div class="deflist">
 <div><b>속도와 사용량</b><span>「Ultra 를 1시간 돌렸는데 2% 소모, 버그인가 싶을 만큼 적다」</span></div>
@@ -437,7 +457,7 @@ class: top-led band-page
 
 # Aside 열풍
 
-<p class="lead">한국인 셋이 만든 브라우저가 X 와 Threads 에서 <em>화제 토픽에 올랐습니다</em>.</p>
+<p class="lead">브라우저 안에서 업무를 처리하는 에이전트</p>
 
 <figure class="shot band nochrome" data-origin="web" data-source="https://aside.com/">
 <img src="./images/trend/aside.png" alt="Aside 공식 사이트 첫 화면. Backed by Y Combinator 배지 아래에 The most intelligent AI assistant, but it's a browser. 라는 한 문장과 Download 버튼이 있다" />
@@ -454,7 +474,7 @@ class: top-led
 
 # 코드 에이전트와 다른 점
 
-<p class="lead">둘 다 대신 일해 주는데 <em>손대는 곳</em>이 다릅니다.</p>
+<p class="lead">직접 수정하는 파일, 로그인한 웹 서비스</p>
 
 <div class="vs">
 <div class="pane">
@@ -476,9 +496,9 @@ class: top-led
 
 <p class="eyebrow">0부 · 트렌드</p>
 
-# Aside 에 대한 반응
+# Aside 사용 후기
 
-<p class="lead">써 본 사람의 말과 만든 사람의 말이 <em>같은 검색 결과</em>에 나란히 있습니다.</p>
+
 
 <div class="shot-row">
 <figure class="shot nochrome" data-origin="capture">
@@ -501,7 +521,7 @@ class: top-led band-page
 
 # 순위표에 붙은 의문
 
-<p class="lead">Artificial Analysis 는 여러 벤치마크를 모아 순위를 매기는 사이트입니다. <em>기사와 발표문이 자주 인용</em>합니다.</p>
+<p class="lead">여러 벤치마크를 합산한 Artificial Analysis 지수</p>
 
 <figure class="shot band nochrome" data-origin="web" data-source="https://artificialanalysis.ai/">
 <img src="./images/trend/aa-chart.png" alt="Artificial Analysis 첫 화면의 세 막대그래프. 지능 지수에서 Claude Fable 5.1 이 57, GPT-6 Astra 가 55, Claude Opus 5 가 54 로 나란히 있고 그 옆에 속도와 과제당 비용 그래프가 있다" />
@@ -521,7 +541,7 @@ class: top-led compact
 <div class="split evidence">
 <div>
 
-<p class="lead">의문이 커지자 사이트는 <em>지수 구성을 바꿨습니다</em>. 그래도 남는 한계가 있습니다.</p>
+<p class="lead">평가 항목이 바뀌면 순위의 의미도 달라진다</p>
 
 <div class="deflist">
 <div><b>어긋난 폭</b><span>같은 과제를 ARC Prize 가 채점하면 62.7%, 발표 수치는 99.9%</span></div>
@@ -548,14 +568,14 @@ class: top-led band-page
 
 # 같은 일에 드는 토큰
 
-<p class="lead">세로는 점수, 가로는 <em>과제 하나에 쓴 출력 토큰</em>입니다. 점수는 비슷한데 토큰은 세 배 가까이 차이 납니다.</p>
+<p class="lead">세로축은 점수, 가로축은 <em>과제당 출력 토큰</em></p>
 
 <figure class="shot band nochrome" data-origin="web" data-source="https://artificialanalysis.ai/models">
 <img src="./images/trend/aa-scatter.png" alt="Artificial Analysis 산점도. 세로축은 지능 지수, 가로축은 과제당 출력 토큰의 로그 눈금. GPT-6 Astra 는 약 2만 7천 토큰에 52점 부근, Claude Fable 5.1 은 약 7만 8천 토큰에 53점 부근에 찍혀 있다. 왼쪽 위 초록 영역이 가장 유리한 사분면으로 표시되어 있다" />
 <figcaption>2026-09 · <a href="https://artificialanalysis.ai/models"><code>artificialanalysis.ai/models</code></a> · 가로축은 로그 눈금</figcaption>
 </figure>
 
-<p class="thesis">Astra 는 과제당 약 2.7만, Fable 5.1 은 약 7.8만 토큰입니다. 값이 같으니 <em>같은 일을 Astra 가 훨씬 싸게</em> 끝냅니다 — Threads 에 「Ultra 를 1시간 돌렸는데 2%」 후기가 올라온 이유입니다.</p>
+<p class="thesis">캡처 시점의 출력 토큰은 약 2.7만과 7.8만. <em>이 지표만으로 실제 업무 비용을 단정할 수는 없습니다.</em> 입력·캐시·도구 비용과 구독 한도는 별도입니다.</p>
 
 ---
 class: top-led
@@ -565,14 +585,14 @@ class: top-led
 
 # 이 수업에서 만드는 것
 
-<p class="lead">현대차 여섯 사례는 결국 두 종류입니다. <em>흩어진 자료를 모아 읽는 것</em>과 <em>사람이 매번 대조하던 일을 대신하는 것</em>. 이 수업에서 그 둘을 하나씩 만듭니다.</p>
+<p class="lead">자료를 모아 읽기, 반복해서 대조하기. 두 업무를 작은 앱으로 구현합니다.</p>
 
 <div class="deflist">
 <div><b>모아 읽기</b><span>예제 1 — 엑셀을 올리면 볼 곳을 짚어 주는 화면. 충돌안전 어시스턴트와 같은 종류</span></div>
 <div><b>대신 대조하기</b><span>예제 2 — 공고를 훑어 조건에 맞는 것만 골라내는 화면. 차량 식별번호 인식과 같은 종류</span></div>
 </div>
 
-<p class="thesis">현대차와 다른 건 <em>규모와 데이터의 양</em>뿐입니다. 만드는 순서는 같습니다.</p>
+<p class="thesis">출발점은 비슷합니다. <em>필요한 자료와 판단 기준</em>부터 정하고, 수업에서는 작은 범위로 구현합니다.</p>
 
 <!-- 여기서 "우리 팀에서 이 두 종류에 해당하는 일"을 한 명씩 말하게 하고 1부로 넘어간다. -->
 
@@ -584,7 +604,7 @@ class: top-led
 
 # 오늘의 결과물
 
-<p class="lead">이틀 뒤 <em>주소 두 개</em>와 저장소 하나가 남습니다.</p>
+<p class="lead">1일차는 작은 앱 한 개, 2일차는 업무 예제로 확장</p>
 
 <div class="split">
 <figure class="shot" data-origin="capture">
@@ -607,7 +627,7 @@ class: top-led compact
 
 # 준비물 3가지
 
-<p class="lead">Windows 에서 필요한 건 <em>셋뿐</em>입니다. WSL 도 Node.js 도 필요 없습니다.</p>
+<p class="lead">Claude Desktop에서 <em>로컬 세션을 시작하기 위한 준비</em></p>
 
 <div class="steps tight">
 <div><b>Claude 데스크톱 앱</b><span>Windows x64 또는 ARM64</span></div>
@@ -615,9 +635,44 @@ class: top-led compact
 <div><b>유료 플랜 로그인</b><span>Pro · Max · Team · Enterprise</span></div>
 </div>
 
-<div class="callout"><b>Git 이 없으면 Code 탭이 안 열립니다</b> 앱이 세션마다 폴더를 따로 떼어 쓰는데 그 일을 <code>git</code> 이 합니다. 첫 시간 사고의 1번 원인입니다.</div>
+<div class="callout"><b>Git 이 없으면 Code 탭이 안 열립니다</b> 앱이 세션마다 폴더를 따로 떼어 쓰는데 그 일을 <code>git</code> 이 합니다. 설치 후 Claude 앱을 다시 시작합니다.</div>
 
 <p class="src">출처 — Claude Code 공식 문서 「Desktop application · Work in parallel with sessions」 · 「Desktop quickstart」</p>
+
+---
+class: top-led brand-cc compact
+---
+
+<p class="eyebrow">시작 전 · Windows</p>
+
+# Windows에서 첫 세션
+
+<div class="steps">
+<div><b>설치</b><span><a href="https://claude.com/download">Claude Desktop</a>과 <a href="https://git-scm.com/downloads/win">Git for Windows</a> 설치</span></div>
+<div><b>로그인</b><span>Claude 앱을 다시 열고, 구독 중인 계정으로 로그인</span></div>
+<div><b>폴더 선택</b><span>Code → Local → Select folder에서 <code>C:\ax-lab</code> 선택</span></div>
+<div><b>첫 확인</b><span>「현재 작업 폴더의 경로와 파일 목록을 알려줘. 아직 수정하지 마.」</span></div>
+</div>
+<p class="thesis">내가 선택한 폴더와 답변의 경로가 같으면 준비 완료. 캡처의 운영체제가 달라도 메뉴 이름으로 찾아갑니다.</p>
+<p class="src">공식 안내 · <a href="https://code.claude.com/docs/en/desktop-quickstart">Desktop quickstart</a> · Windows Local은 Git 필요, WSL은 선택</p>
+
+---
+class: top-led brand-cc
+---
+
+<p class="eyebrow">시작 전 · Windows</p>
+
+# 앱 설치와 실습 도구
+
+<p class="lead">Claude 앱은 바로 시작, 웹 개발과 MCP에는 실행 도구 추가</p>
+<div class="deflist">
+<div><b>Claude Desktop</b><span>Claude Code 포함. CLI를 별도로 설치하지 않아도 시작 가능</span></div>
+<div><b>Node.js LTS</b><span><a href="https://nodejs.org/en/download">공식 설치 파일</a>로 설치. 웹 개발 서버와 Playwright MCP 실행에 사용</span></div>
+<div><b>설치 확인</b><span>새 PowerShell 창에서 <code>node --version</code>, <code>npm.cmd --version</code></span></div>
+<div><b>앱 다시 열기</b><span>설치 후 Claude 앱도 재시작. 기존 세션은 새 PATH를 못 읽을 수 있음</span></div>
+</div>
+<p class="thesis">「node를 찾을 수 없다」는 메시지는 설치·경로 문제. 설치가 제한된 PC는 강사 시연으로 이어갑니다.</p>
+<p class="src">공식 안내 · <a href="https://code.claude.com/docs/en/desktop#session-not-finding-installed-tools">도구를 찾지 못할 때</a> · <a href="https://github.com/microsoft/playwright-mcp">Playwright MCP 요구사항</a></p>
 
 ---
 class: divider brand-cc-solid
@@ -639,7 +694,7 @@ class: top-led brand-cc
 
 # Claude Code란
 
-<p class="lead">코드를 읽고, 파일을 고치고, <em>명령까지 실행</em>합니다.</p>
+<p class="lead">코드 읽기 · 파일 수정 · 명령 실행</p>
 
 <figure class="shot strip" data-origin="web" data-source="https://code.claude.com/docs/en/overview">
 <img src="./images/docs/cc-intro.png" alt="Claude Code 공식 문서 개요. 코드베이스를 읽고 파일을 수정하고 명령을 실행하며 개발 도구와 연동한다고 적혀 있다" />
@@ -658,7 +713,7 @@ class: top-led brand-cc band-page
 
 # 일하는 3단계
 
-<p class="lead">시킬 때마다 <em>맥락 수집 → 실행 → 검증</em>을 돕니다. 한 바퀴로 안 끝나면 다시 돕니다.</p>
+<p class="lead">맥락 수집 → 실행 → 검증. 결과에 따라 반복</p>
 
 <figure class="shot band nochrome" data-origin="web" data-source="https://code.claude.com/docs/en/how-claude-code-works#the-agentic-loop">
 <img src="./images/docs/agentic-loop.png" alt="공식 도해. 내 지시에서 시작해 맥락 수집·실행·검증 세 단계를 돌고, 아래에서 사람이 언제든 끼어들어 방향을 바꿀 수 있다고 그려져 있다" />
@@ -678,7 +733,7 @@ class: top-led brand-cc
 <div class="split evidence">
 <div>
 
-<p class="lead">문서는 아홉 가지를 듭니다. 이 수업에서 실제로 쓰는 건 <em>넷</em>입니다.</p>
+<p class="lead">오늘 실습에서 사용할 네 가지 작업</p>
 
 <div class="deflist">
 <div><b>기능·버그</b><span>기능을 만들고 버그를 고칩니다</span></div>
@@ -704,7 +759,7 @@ class: divider brand-cc-solid
 
 ## Claude Code 사용해보기
 
-<p class="div-sub">설명을 더 듣기 전에, 다섯 가지를 직접 물어봅니다</p>
+<p class="div-sub">첫 질문 · 되묻기 · 검색 · 웹페이지 만들기</p>
 
 <p class="div-file">1-1 능력 · 1-2 꼬리 질문 · 1-3 사이드 채팅 · 1-4 검색 · 1-5 아티팩트</p>
 
@@ -719,7 +774,7 @@ class: top-led brand-cc lab-page
 <div class="split evidence">
 <div>
 
-<p class="lead">「Claude Code는 뭘 할 수 있어?」 <em>이 한 줄</em>로 시작합니다.</p>
+
 
 <div class="deflist">
 <div><b>①</b><span>질문은 이 한 줄이 전부입니다</span></div>
@@ -746,7 +801,7 @@ class: top-led brand-cc lab-page
 <div class="split evidence">
 <div>
 
-<p class="lead">답 안에 모르는 단어가 나오면 <em>거기서 다시 묻습니다</em>. 새 대화를 열지 않습니다.</p>
+<p class="lead">낯선 단어가 나오면 <em>같은 대화에서</em> 다시 질문</p>
 
 <div class="deflist">
 <div><b>물어본 것</b><span>「<code>/schedule</code> 이랑 <code>/loop</code> 이랑 뭐가 달라?」</span></div>
@@ -773,7 +828,7 @@ class: top-led brand-cc lab-page
 <div class="split evidence">
 <div>
 
-<p class="lead">본 대화를 흐트리지 않고 <em>궁금한 것만</em> 따로 묻습니다.</p>
+<p class="lead">본 작업을 이어 가면서 별도 질문</p>
 
 <div class="deflist">
 <div><b>①</b><span>답 위에서 궁금한 부분을 마우스로 끕니다</span></div>
@@ -800,7 +855,7 @@ class: top-led brand-cc lab-page
 <div class="split evidence">
 <div>
 
-<p class="lead">답이 <em>오른쪽 패널에만</em> 쌓입니다.</p>
+
 
 <div class="deflist">
 <div><b>물어본 것</b><span>「배포랑 CI가 뭐야?」 — 본 주제와 상관없는 질문</span></div>
@@ -827,7 +882,7 @@ class: top-led brand-cc lab-page
 <div class="split evidence">
 <div>
 
-<p class="lead">「확실치 않다」는 답이 오면 <em>찾아보라고 시킵니다</em>.</p>
+<p class="lead">불확실한 답은 출처를 찾아 확인</p>
 
 <div class="deflist">
 <div><b>①</b><span>웹을 두 번 검색하고</span></div>
@@ -854,7 +909,7 @@ class: top-led brand-cc lab-page
 <div class="split evidence">
 <div>
 
-<p class="lead">지금까지 오간 대화를 <em>한 장의 웹페이지</em>로 만듭니다.</p>
+<p class="lead">지금까지의 대화를 한 장의 웹페이지로</p>
 
 <div class="deflist">
 <div><b>①</b><span>「지금까지 대화내역을 정리해서 아티팩트로 만들어줘」</span></div>
@@ -880,10 +935,10 @@ class: top-led brand-cc
 
 # 실행 환경 4종
 
-<p class="lead">어디서 켜도 <em>같은 엔진</em>입니다. 지침·설정·연결한 도구가 그대로 따라옵니다.</p>
+<p class="lead">같은 Claude Code, <em>환경에 따라 다른 기능과 연결 설정</em></p>
 
 <figure class="figure mark-none">
-<svg viewBox="0 0 900 290" role="img" aria-label="터미널·IDE·데스크톱 앱·웹 네 표면이 같은 엔진 하나로 모이고, 그 아래에 CLAUDE.md·설정 파일·MCP 서버가 공유된다">
+<svg viewBox="0 0 900 290" role="img" aria-label="터미널·IDE·데스크톱·웹에서 Claude Code를 사용한다. CLAUDE.md, 설정, MCP는 적용 범위와 지원 여부를 환경별로 확인한다">
   <g style="font-family: var(--mono); font-size: 15px;" fill="var(--ink)" text-anchor="middle">
     <g style="fill: var(--card); stroke: var(--rule); stroke-width: 1.5;">
       <rect x="20" y="14" width="190" height="50" rx="9"/>
@@ -914,7 +969,7 @@ class: top-led brand-cc
     <text x="680" y="231" style="font-size: 14px;">MCP 서버</text>
   </g>
 </svg>
-<figcaption>표면이 달라도 아래는 하나입니다</figcaption>
+<figcaption>프로젝트 지침을 재사용할 수 있으며, 도구 연결과 지원 기능은 환경별 확인</figcaption>
 </figure>
 
 <p class="src">출처 — Claude Code 공식 문서 「Overview · Use Claude Code everywhere」</p>
@@ -927,7 +982,7 @@ class: top-led brand-cc compact
 
 # CLI vs Desktop
 
-<p class="lead">기능이 다른 게 아니라 <em>화면이 다릅니다</em>. 설정과 지침은 양쪽이 같은 파일을 읽습니다.</p>
+<p class="lead">프로젝트 지침은 공유, 조작 화면과 지원 기능은 차이</p>
 
 <div class="split">
 <figure class="shot nochrome" data-origin="web" data-source="https://code.claude.com/docs/en/whats-new/2026-w20">
@@ -942,7 +997,7 @@ class: top-led brand-cc compact
 
 <div class="deflist">
 <div><b>데스크톱에만</b><span>창 배치 · 변경 확인 화면 · 앱 미리보기 · Windows 컴퓨터 제어</span></div>
-<div><b>양쪽 공유</b><span>설정 파일 · CLAUDE.md · MCP 서버</span></div>
+<div><b>양쪽 공유</b><span>같은 로컬 프로젝트의 CLAUDE.md · 스킬 · 지원되는 설정과 MCP 구성</span></div>
 </div>
 
 <p class="src">출처 — Claude Code 공식 문서 「Desktop application」 docs/en/desktop</p>
@@ -955,7 +1010,7 @@ class: top-led brand-cc
 
 # 앱의 세 탭
 
-<p class="lead">Claude 앱을 열면 탭이 셋입니다. 이 수업은 <em>Code 탭</em>만 씁니다.</p>
+<p class="lead">오늘 사용할 곳은 <em>Code 탭</em></p>
 
 <div class="trio">
 <div class="pane"><h3>Chat</h3><p>평소 쓰는 대화. 코드 작업과 무관합니다.</p></div>
@@ -978,7 +1033,7 @@ class: top-led brand-cc
 <div class="split evidence">
 <div>
 
-<p class="lead">첫 메시지를 보내기 전에 <em>입력창 주변</em>에서 네 가지를 정합니다.</p>
+<p class="lead">첫 메시지 전에 확인할 네 곳</p>
 
 <div class="deflist">
 <div><b>① 실행 위치</b><span>Local · Cloud · SSH · Windows 라면 WSL 배포판</span></div>
@@ -1009,7 +1064,7 @@ class: top-led brand-cc
 <div class="split evidence">
 <div>
 
-<p class="lead">돌아가는 <em>도중에도</em> 다음 지시를 넣을 수 있습니다.</p>
+<p class="lead">실행 도중에도 추가 지시와 방향 수정</p>
 
 <div class="deflist">
 <div><b>즉시 중단</b><span>정지 버튼. 하던 동작이 그 자리에서 멈춥니다</span></div>
@@ -1036,7 +1091,7 @@ class: top-led brand-cc
 
 # 대화에 파일 첨부
 
-<p class="lead">둘 다 씁니다. <em>파일이 프로젝트 안에 있느냐 밖에 있느냐</em>로 갈립니다.</p>
+<p class="lead">프로젝트 안의 파일, 바깥에서 가져온 자료</p>
 
 <div class="duo">
 <div class="pane"><h3><span class="latin">@</span>프로젝트 안 — 파일 언급</h3><p><code>@</code> 뒤에 파일 이름. 이미 폴더에 있는 파일을 대화 맥락에 올립니다. 소스 코드·설정 파일·문서. <em>Cloud·WSL 세션에서는 안 됩니다.</em></p></div>
@@ -1055,7 +1110,7 @@ class: top-led brand-cc compact
 
 # 권한 모드 5종 비교
 
-<p class="lead">파일을 고치기 전에 물을지, 명령을 돌리기 전에 물을지, <em>아예 안 물을지</em>를 고릅니다.</p>
+<p class="lead">파일 수정과 명령 실행을 <em>어디까지 맡길지</em></p>
 
 | 모드 | 설정 키 | 동작 |
 |---|---|---|
@@ -1080,7 +1135,7 @@ class: top-led brand-cc compact
 <div class="split evidence">
 <div>
 
-<p class="lead">처음 켜면 대개 <em>Auto</em> 로 시작합니다. 물어볼 줄 알았는데 안 묻는 게 정상입니다.</p>
+<p class="lead">새 세션의 권한 모드부터 확인</p>
 
 <div class="deflist">
 <div><b>Pro · Max · Team</b><span>세션이 Auto 로 시작합니다</span></div>
@@ -1111,7 +1166,7 @@ class: top-led brand-cc compact
 <div class="split evidence">
 <div>
 
-<p class="lead">코드를 못 읽어도 됩니다. 줄에 대고 <em>「이 줄은 왜 이렇게 했어?」</em> 라고 적으면 답이 옵니다.</p>
+<p class="lead">변경된 줄을 짚어 <em>이유를 질문</em></p>
 
 <div class="steps">
 <div><b>변경 표시</b><span><code>+12 -1</code> 처럼 더한 줄·지운 줄 수가 뜹니다</span></div>
@@ -1139,7 +1194,7 @@ class: top-led brand-cc
 <div class="split evidence">
 <div>
 
-<p class="lead">걸러낼 것을 미리 정해 두었기 때문에 <em>지적이 짧습니다</em>. 많이 나오면 그건 진짜입니다.</p>
+<p class="lead">변경 내용에서 오류 가능성이 높은 부분 점검</p>
 
 <div class="duo">
 <div class="pane"><h3>본다</h3><p>컴파일 에러 · 논리 오류 · 보안 취약점 · 명백한 버그</p></div>
@@ -1163,7 +1218,7 @@ class: top-led brand-cc
 
 # 앱 미리보기
 
-<p class="lead">만든 화면을 앱 안에서 띄우고, <em>스스로 눌러 보며</em> 고칩니다.</p>
+<p class="lead">실행한 화면을 보며 수정</p>
 
 <figure class="shot hero nochrome mark-ok" data-origin="web" data-source="https://code.claude.com/docs/en/whats-new/2026-w28">
 <img src="./images/official/desktop-browser-crop.png" alt="데스크톱 앱 화면. 왼쪽 대화에 브라우저를 조작한 기록과 고친 코드가 쌓여 있고, 오른쪽 브라우저 패널에 만든 주문 화면이 떠 있다" />
@@ -1180,7 +1235,7 @@ class: top-led brand-cc
 
 # 창 배치
 
-<p class="lead">Code 탭은 <em>창(pane)</em> 을 늘어놓는 화면입니다. 필요한 것만 꺼내 씁니다.</p>
+
 
 <figure class="figure mark-none">
 <svg viewBox="0 0 900 250" role="img" aria-label="Code 탭의 창 배치. 왼쪽 대화 창, 가운데 변경 내용과 브라우저, 오른쪽 터미널과 파일 편집기">
@@ -1220,7 +1275,7 @@ class: top-led brand-cc compact
 <div class="split evidence">
 <div>
 
-<p class="lead"><code>Ctrl+/</code> 를 누르면 전부 나옵니다. 손이 실제로 가는 건 <em>여섯 개</em>입니다.</p>
+<p class="lead">전체 목록은 <code>Ctrl + /</code></p>
 
 | 키 (Windows) | 하는 일 |
 |---|---|
@@ -1248,7 +1303,7 @@ class: top-led brand-cc
 
 # 쓰는 도중에 멈추기
 
-<p class="lead">Code 탭의 새 대화에서 시작합니다. 목표는 <em>메신저에 보낼 안내 3줄</em>입니다.</p>
+<p class="lead">새 대화에서 시작 · 목표는 메신저 공지 3줄</p>
 
 ```text
 내일 오후 2시, 3층 회의실에서 생산실적 회의를 해.
@@ -1276,7 +1331,7 @@ class: top-led brand-cc
 
 # 같은 대화에서 다시 지시
 
-<p class="lead">응답이 멈췄으면 <em>아래 지시만</em> 보냅니다. 회의 정보를 다시 붙이지 않습니다.</p>
+<p class="lead">회의 정보를 다시 붙이지 않고 요청만 수정</p>
 
 ```text
 방향을 바꿀게. 긴 안내문은 그만 쓰고,

@@ -14,12 +14,11 @@ class: cover brand-cc
 
 <!--
   대상: 세아그룹 실무자. 엑셀은 능숙, 코드는 처음. Windows.
-  시작 상태: 노트북 + Claude 데스크톱 앱(Code 탭). 준비물 없음.
+  시작 상태: Windows 노트북 · Claude 유료 계정. Git과 Node.js는 수업 중 설치 안내.
   종료 수행: PRD 를 채우고, 만든 것이 맞는지 확인할 방법을 붙여 배포한다.
   오개념: (1) 한 줄로 되는데 왜 배우나 (2) 에러가 안 나면 잘 된 것
 
-  장표 제목 규칙 — 제목은 라벨(명사구 8~14자), 결론은 본문 첫 줄(.lead).
-  서술형 종결과 두 문장 제목은 쓰지 않는다.
+  기존 제목과 테마를 유지한다. 제목을 반복하는 부제는 생략하고, 필요한 설명은 짧은 명사구 또는 자연스러운 문장으로 쓴다.
 
   그림 출처 — images/official/* 는 Claude Code 릴리스 노트의 공식 자산
   (영상은 대표 프레임 추출). images/docs/* 는 공식 문서 해당 구간 캡처.
@@ -44,7 +43,7 @@ class: top-led
 
 # 목차
 
-<p class="thesis">다섯 덩어리. 첫 덩어리는 왜, 가운데 둘은 도구, 뒤의 둘은 그 도구로 무엇을 하는가.</p>
+<p class="thesis">사례에서 도구로, 요구사항에서 구현과 검증으로</p>
 
 <div class="steps tight">
 <div><b>0 · AX 사례와 트렌드</b><span>남들은 어디까지 와 있는가</span></div>
@@ -57,6 +56,27 @@ class: top-led
 <!-- 시간 배분은 구두로. 0부는 30분, 1부가 가장 길다. -->
 
 ---
+class: top-led  compact
+---
+
+<p class="eyebrow">COURSE · 1일차</p>
+
+# 1일차 진행 순서
+
+<p class="lead">7시간 · 작은 앱 하나를 직접 만들고 검증하기</p>
+
+| 구간 | 할 일 | 시간 |
+|---|---|---:|
+| 사례와 준비 | AX 사례 · Windows 설치 · 첫 질문 | 70분 |
+| Claude Code | 권한 · 모델 · 파일 · 지침 · 스킬 | 90분 |
+| 도구 비교 | Antigravity 설치·계획 시연 | 25분 |
+| 구현 실습 | 역인터뷰 · PRD · 레퍼런스 · 디자인 스킬 | 120분 |
+| 검증과 배포 | Playwright MCP · 수정 · Vercel·Cloud Run 소개 | 75분 |
+
+<p class="thesis">진행 380분 + 휴식 40분. 점심 별도. 팀·자동 실행·상세 비교 실험은 선택 확장.</p>
+<!-- 10명 기준. 짝끼리 설치 상태를 확인하고, 강사는 막힌 사람을 지원한다. 기존 전체 교안의 흐름은 유지하되 1일차에는 핵심 경로만 진행한다. -->
+
+---
 class: divider
 ---
 
@@ -64,7 +84,7 @@ class: divider
 
 ## AX 사례와 트렌드
 
-<p class="div-sub">남들이 무엇을 만들었는지 보고, 지금 도구가 어디까지 왔는지 확인합니다</p>
+<p class="div-sub">기업 적용 사례와 최근 도구의 변화</p>
 
 <p class="div-file">실습 없음 · 30분</p>
 
@@ -90,7 +110,7 @@ class: top-led
 
 <p class="eyebrow">0부 · AX</p>
 
-# 예시: 단순 AI 도입과 AX 비교
+# AI 도입과 업무 변화
 
 <div class="vs">
 <div class="pane">
@@ -104,7 +124,7 @@ class: top-led
 </div>
 </div>
 
-<p class="thesis">판별법은 하나입니다. <em>일하는 순서가 바뀌었는가</em>.</p>
+<p class="thesis">확인할 질문 · <em>AI를 넣은 뒤 일하는 순서가 어떻게 달라졌는가?</em></p>
 
 ---
 class: top-led compact
@@ -117,7 +137,7 @@ class: top-led compact
 <div class="split evidence">
 <div>
 
-<p class="lead">사내에서 막아 두었던 도구를 <em>임직원 전체에 열었습니다</em>.</p>
+<p class="lead">외부 생성형 AI 세 종, <em>DX부문 임직원에게 도입</em></p>
 
 <div class="deflist">
 <div><b>연 도구</b><span>챗GPT · 제미나이 · 클로드 세 가지 모두</span></div>
@@ -144,7 +164,7 @@ class: top-led embed-page
 
 # 현대차그룹 발표회
 
-<p class="lead">한 그룹이 현장 여섯 곳에 <em>무엇을 만들었는지</em> 발표한 영상입니다. 성과 숫자는 보지 않습니다.</p>
+<p class="lead">연구·생산·정비·고객 응대, 여섯 현장의 적용 사례</p>
 
 <figure class="embed">
 <Youtube id="5WFbSPFbTPA?start=1889" />
@@ -164,7 +184,7 @@ class: top-led compact
 <div class="split evidence">
 <div>
 
-<p class="lead">수십 년치 충돌 시험 리포트·해석 데이터·고속 영상이 <em>흩어져 있어</em> 찾는 데 시간이 갔습니다.</p>
+<p class="lead">흩어진 충돌 시험 리포트·해석 데이터·고속 영상 검색</p>
 
 <div class="deflist">
 <div><b>만든 것</b><span>질문하면 관련 보고서와 근거를 찾아 답하는 검색·질의 도구</span></div>
@@ -192,7 +212,7 @@ class: top-led compact
 <div class="split evidence">
 <div>
 
-<p class="lead">조립 라인에 차가 들어올 때 식별번호와 사양이 맞는지 <em>사람이 일일이 대조</em>하느라 라인이 섰습니다.</p>
+<p class="lead">조립 라인의 <em>식별번호·차량 사양 대조</em></p>
 
 <div class="deflist">
 <div><b>만든 것</b><span>카메라 이미지에서 식별번호를 읽어 시스템 정보와 맞춰 보는 검사</span></div>
@@ -220,7 +240,7 @@ class: top-led compact
 <div class="split evidence">
 <div>
 
-<p class="lead">프레스·차체 공정에서 수백 종의 운반 대차가 오가는 동선이 얽혀 <em>병목</em>이 생겼습니다.</p>
+<p class="lead">프레스·차체 공정의 운반 대차 동선과 병목</p>
 
 <div class="deflist">
 <div><b>만든 것</b><span>대차 이동 순서와 적재 위치를 시뮬레이션으로 다시 짜는 계산</span></div>
@@ -248,7 +268,7 @@ class: top-led compact
 <div class="split evidence">
 <div>
 
-<p class="lead">현장 엔지니어가 공정마다 필요한 AI 도구를 <em>개발자 없이</em> 만들기 어려웠습니다.</p>
+<p class="lead">현장 엔지니어가 직접 만드는 공정용 AI 도구</p>
 
 <div class="deflist">
 <div><b>만든 것</b><span>현장 사람이 코딩 없이 업무용 에이전트를 만들고 나누는 공간</span></div>
@@ -276,7 +296,7 @@ class: top-led compact
 <div class="split evidence">
 <div>
 
-<p class="lead">전동화로 고장 코드가 복잡해져 정비사의 진단이 어려워지고 <em>고객 대기</em>가 길어졌습니다.</p>
+<p class="lead">복잡한 고장 코드와 정비 이력, 진단에 필요한 정보 찾기</p>
 
 <div class="deflist">
 <div><b>만든 것</b><span>정비 이력·센서 데이터·정비 매뉴얼을 읽고 원인을 좁혀 주는 도우미</span></div>
@@ -304,7 +324,7 @@ class: top-led compact
 <div class="split evidence">
 <div>
 
-<p class="lead">전 세계 앱 마켓에 달마다 수천 건씩 쌓이는 리뷰를 <em>사람이 읽고 분류</em>하는 데 한계가 왔습니다.</p>
+<p class="lead">여러 국가의 앱 리뷰를 읽고 분류하는 반복 업무</p>
 
 <div class="deflist">
 <div><b>만든 것</b><span>다국어 리뷰를 감성·기능별로 나누고 개선 요청을 담당 부서로 보내는 처리</span></div>
@@ -329,7 +349,7 @@ class: top-led band-page
 
 # GPT-6 Astra
 
-<p class="lead">발표문 첫 줄이 포지셔닝 전부입니다. <em>컴퓨터로 하는 일</em>을 대신하겠다는 것.</p>
+<p class="lead">발표문이 내세운 용도 · 컴퓨터로 수행하는 업무</p>
 
 <figure class="shot band nochrome" data-origin="web" data-source="https://community.openai.com/t/introducing-gpt-6-astra-the-most-intelligent-and-aligned-model-in-the-world/1394703">
 <img src="./images/trend/astra.png" alt="OpenAI 개발자 커뮤니티의 공지 글. 제목은 Introducing GPT-6-Astra: The most intelligent and aligned model in the world 이고, 본문 첫 줄은 Anything you can do on a computer, Astra can do for you. Fast. 이다" />
@@ -346,14 +366,14 @@ class: top-led band-page
 
 # Claude Fable 5.1
 
-<p class="lead">이틀 먼저 나왔습니다. 내세운 용도는 <em>코딩 · 지식 업무 · 오래 걸리는 일</em>입니다.</p>
+<p class="lead">코딩 · 지식 업무 · 오래 걸리는 작업</p>
 
 <figure class="shot band nochrome" data-origin="web" data-source="https://www.anthropic.com/claude-fable-and-mythos-5-1">
 <img src="./images/trend/fable.png" alt="Anthropic 발표 페이지의 첫 화면. SEPTEMBER 2026 아래에 Claude Fable 5.1 and Mythos 5.1 이라는 제목이 있다" />
 <figcaption>Anthropic 발표 · 2026-09-01 · <a href="https://www.anthropic.com/claude-fable-and-mythos-5-1"><code>anthropic.com</code></a></figcaption>
 </figure>
 
-<p class="thesis">같은 모델을 <em>이름 둘로 갈라</em> 냈습니다. Fable 5.1 은 누구나, Mythos 5.1 은 심사를 거친 조직만.</p>
+<p class="thesis">발표의 핵심은 접근 범위의 차이. Fable도 실제 사용 가능 여부와 크레딧 조건은 계정에서 확인합니다.</p>
 
 ---
 class: top-led compact
@@ -363,7 +383,7 @@ class: top-led compact
 
 # 갈리는 지점
 
-<p class="lead">값도 같고 둘 다 「최고」라고 합니다. 갈리는 건 <em>여는 방식</em>입니다.</p>
+<p class="lead">성능 주장과 함께 볼 것 · <em>이용 경로와 과금 조건</em></p>
 
 | | GPT-6 Astra | Claude Fable 5.1 |
 |---|---|---|
@@ -384,7 +404,7 @@ class: top-led
 
 # 써 본 사람의 말
 
-<p class="lead">발표문 말고 <em>같은 일을 시켜 본</em> 기록을 봅니다.</p>
+<p class="lead">같은 일을 시킨 사용 기록과 결과 비교</p>
 
 <div class="embed-row">
 <figure class="embed">
@@ -405,12 +425,12 @@ class: top-led compact
 
 <p class="eyebrow">0부 · 트렌드</p>
 
-# Astra 에 대한 반응
+# Astra 사용 후기
 
 <div class="split evidence">
 <div>
 
-<p class="lead">발표문·리뷰 영상 다음은 <em>Threads 에 올라온 후기</em>입니다.</p>
+
 
 <div class="deflist">
 <div><b>속도와 사용량</b><span>「Ultra 를 1시간 돌렸는데 2% 소모, 버그인가 싶을 만큼 적다」</span></div>
@@ -437,7 +457,7 @@ class: top-led band-page
 
 # Aside 열풍
 
-<p class="lead">한국인 셋이 만든 브라우저가 X 와 Threads 에서 <em>화제 토픽에 올랐습니다</em>.</p>
+<p class="lead">브라우저 안에서 업무를 처리하는 에이전트</p>
 
 <figure class="shot band nochrome" data-origin="web" data-source="https://aside.com/">
 <img src="./images/trend/aside.png" alt="Aside 공식 사이트 첫 화면. Backed by Y Combinator 배지 아래에 The most intelligent AI assistant, but it's a browser. 라는 한 문장과 Download 버튼이 있다" />
@@ -454,7 +474,7 @@ class: top-led
 
 # 코드 에이전트와 다른 점
 
-<p class="lead">둘 다 대신 일해 주는데 <em>손대는 곳</em>이 다릅니다.</p>
+<p class="lead">직접 수정하는 파일, 로그인한 웹 서비스</p>
 
 <div class="vs">
 <div class="pane">
@@ -476,9 +496,9 @@ class: top-led
 
 <p class="eyebrow">0부 · 트렌드</p>
 
-# Aside 에 대한 반응
+# Aside 사용 후기
 
-<p class="lead">써 본 사람의 말과 만든 사람의 말이 <em>같은 검색 결과</em>에 나란히 있습니다.</p>
+
 
 <div class="shot-row">
 <figure class="shot nochrome" data-origin="capture">
@@ -501,7 +521,7 @@ class: top-led band-page
 
 # 순위표에 붙은 의문
 
-<p class="lead">Artificial Analysis 는 여러 벤치마크를 모아 순위를 매기는 사이트입니다. <em>기사와 발표문이 자주 인용</em>합니다.</p>
+<p class="lead">여러 벤치마크를 합산한 Artificial Analysis 지수</p>
 
 <figure class="shot band nochrome" data-origin="web" data-source="https://artificialanalysis.ai/">
 <img src="./images/trend/aa-chart.png" alt="Artificial Analysis 첫 화면의 세 막대그래프. 지능 지수에서 Claude Fable 5.1 이 57, GPT-6 Astra 가 55, Claude Opus 5 가 54 로 나란히 있고 그 옆에 속도와 과제당 비용 그래프가 있다" />
@@ -521,7 +541,7 @@ class: top-led compact
 <div class="split evidence">
 <div>
 
-<p class="lead">의문이 커지자 사이트는 <em>지수 구성을 바꿨습니다</em>. 그래도 남는 한계가 있습니다.</p>
+<p class="lead">평가 항목이 바뀌면 순위의 의미도 달라진다</p>
 
 <div class="deflist">
 <div><b>어긋난 폭</b><span>같은 과제를 ARC Prize 가 채점하면 62.7%, 발표 수치는 99.9%</span></div>
@@ -548,14 +568,14 @@ class: top-led band-page
 
 # 같은 일에 드는 토큰
 
-<p class="lead">세로는 점수, 가로는 <em>과제 하나에 쓴 출력 토큰</em>입니다. 점수는 비슷한데 토큰은 세 배 가까이 차이 납니다.</p>
+<p class="lead">세로축은 점수, 가로축은 <em>과제당 출력 토큰</em></p>
 
 <figure class="shot band nochrome" data-origin="web" data-source="https://artificialanalysis.ai/models">
 <img src="./images/trend/aa-scatter.png" alt="Artificial Analysis 산점도. 세로축은 지능 지수, 가로축은 과제당 출력 토큰의 로그 눈금. GPT-6 Astra 는 약 2만 7천 토큰에 52점 부근, Claude Fable 5.1 은 약 7만 8천 토큰에 53점 부근에 찍혀 있다. 왼쪽 위 초록 영역이 가장 유리한 사분면으로 표시되어 있다" />
 <figcaption>2026-09 · <a href="https://artificialanalysis.ai/models"><code>artificialanalysis.ai/models</code></a> · 가로축은 로그 눈금</figcaption>
 </figure>
 
-<p class="thesis">Astra 는 과제당 약 2.7만, Fable 5.1 은 약 7.8만 토큰입니다. 값이 같으니 <em>같은 일을 Astra 가 훨씬 싸게</em> 끝냅니다 — Threads 에 「Ultra 를 1시간 돌렸는데 2%」 후기가 올라온 이유입니다.</p>
+<p class="thesis">캡처 시점의 출력 토큰은 약 2.7만과 7.8만. <em>이 지표만으로 실제 업무 비용을 단정할 수는 없습니다.</em> 입력·캐시·도구 비용과 구독 한도는 별도입니다.</p>
 
 ---
 class: top-led
@@ -565,14 +585,14 @@ class: top-led
 
 # 이 수업에서 만드는 것
 
-<p class="lead">현대차 여섯 사례는 결국 두 종류입니다. <em>흩어진 자료를 모아 읽는 것</em>과 <em>사람이 매번 대조하던 일을 대신하는 것</em>. 이 수업에서 그 둘을 하나씩 만듭니다.</p>
+<p class="lead">자료를 모아 읽기, 반복해서 대조하기. 두 업무를 작은 앱으로 구현합니다.</p>
 
 <div class="deflist">
 <div><b>모아 읽기</b><span>예제 1 — 엑셀을 올리면 볼 곳을 짚어 주는 화면. 충돌안전 어시스턴트와 같은 종류</span></div>
 <div><b>대신 대조하기</b><span>예제 2 — 공고를 훑어 조건에 맞는 것만 골라내는 화면. 차량 식별번호 인식과 같은 종류</span></div>
 </div>
 
-<p class="thesis">현대차와 다른 건 <em>규모와 데이터의 양</em>뿐입니다. 만드는 순서는 같습니다.</p>
+<p class="thesis">출발점은 비슷합니다. <em>필요한 자료와 판단 기준</em>부터 정하고, 수업에서는 작은 범위로 구현합니다.</p>
 
 <!-- 여기서 "우리 팀에서 이 두 종류에 해당하는 일"을 한 명씩 말하게 하고 1부로 넘어간다. -->
 
@@ -584,7 +604,7 @@ class: top-led
 
 # 오늘의 결과물
 
-<p class="lead">이틀 뒤 <em>주소 두 개</em>와 저장소 하나가 남습니다.</p>
+<p class="lead">1일차는 작은 앱 한 개, 2일차는 업무 예제로 확장</p>
 
 <div class="split">
 <figure class="shot" data-origin="capture">
@@ -607,7 +627,7 @@ class: top-led compact
 
 # 준비물 3가지
 
-<p class="lead">Windows 에서 필요한 건 <em>셋뿐</em>입니다. WSL 도 Node.js 도 필요 없습니다.</p>
+<p class="lead">Claude Desktop에서 <em>로컬 세션을 시작하기 위한 준비</em></p>
 
 <div class="steps tight">
 <div><b>Claude 데스크톱 앱</b><span>Windows x64 또는 ARM64</span></div>
@@ -615,9 +635,44 @@ class: top-led compact
 <div><b>유료 플랜 로그인</b><span>Pro · Max · Team · Enterprise</span></div>
 </div>
 
-<div class="callout"><b>Git 이 없으면 Code 탭이 안 열립니다</b> 앱이 세션마다 폴더를 따로 떼어 쓰는데 그 일을 <code>git</code> 이 합니다. 첫 시간 사고의 1번 원인입니다.</div>
+<div class="callout"><b>Git 이 없으면 Code 탭이 안 열립니다</b> 앱이 세션마다 폴더를 따로 떼어 쓰는데 그 일을 <code>git</code> 이 합니다. 설치 후 Claude 앱을 다시 시작합니다.</div>
 
 <p class="src">출처 — Claude Code 공식 문서 「Desktop application · Work in parallel with sessions」 · 「Desktop quickstart」</p>
+
+---
+class: top-led brand-cc compact
+---
+
+<p class="eyebrow">시작 전 · Windows</p>
+
+# Windows에서 첫 세션
+
+<div class="steps">
+<div><b>설치</b><span><a href="https://claude.com/download">Claude Desktop</a>과 <a href="https://git-scm.com/downloads/win">Git for Windows</a> 설치</span></div>
+<div><b>로그인</b><span>Claude 앱을 다시 열고, 구독 중인 계정으로 로그인</span></div>
+<div><b>폴더 선택</b><span>Code → Local → Select folder에서 <code>C:\ax-lab</code> 선택</span></div>
+<div><b>첫 확인</b><span>「현재 작업 폴더의 경로와 파일 목록을 알려줘. 아직 수정하지 마.」</span></div>
+</div>
+<p class="thesis">내가 선택한 폴더와 답변의 경로가 같으면 준비 완료. 캡처의 운영체제가 달라도 메뉴 이름으로 찾아갑니다.</p>
+<p class="src">공식 안내 · <a href="https://code.claude.com/docs/en/desktop-quickstart">Desktop quickstart</a> · Windows Local은 Git 필요, WSL은 선택</p>
+
+---
+class: top-led brand-cc
+---
+
+<p class="eyebrow">시작 전 · Windows</p>
+
+# 앱 설치와 실습 도구
+
+<p class="lead">Claude 앱은 바로 시작, 웹 개발과 MCP에는 실행 도구 추가</p>
+<div class="deflist">
+<div><b>Claude Desktop</b><span>Claude Code 포함. CLI를 별도로 설치하지 않아도 시작 가능</span></div>
+<div><b>Node.js LTS</b><span><a href="https://nodejs.org/en/download">공식 설치 파일</a>로 설치. 웹 개발 서버와 Playwright MCP 실행에 사용</span></div>
+<div><b>설치 확인</b><span>새 PowerShell 창에서 <code>node --version</code>, <code>npm.cmd --version</code></span></div>
+<div><b>앱 다시 열기</b><span>설치 후 Claude 앱도 재시작. 기존 세션은 새 PATH를 못 읽을 수 있음</span></div>
+</div>
+<p class="thesis">「node를 찾을 수 없다」는 메시지는 설치·경로 문제. 설치가 제한된 PC는 강사 시연으로 이어갑니다.</p>
+<p class="src">공식 안내 · <a href="https://code.claude.com/docs/en/desktop#session-not-finding-installed-tools">도구를 찾지 못할 때</a> · <a href="https://github.com/microsoft/playwright-mcp">Playwright MCP 요구사항</a></p>
 
 ---
 class: divider brand-cc-solid
@@ -639,7 +694,7 @@ class: top-led brand-cc
 
 # Claude Code란
 
-<p class="lead">코드를 읽고, 파일을 고치고, <em>명령까지 실행</em>합니다.</p>
+<p class="lead">코드 읽기 · 파일 수정 · 명령 실행</p>
 
 <figure class="shot strip" data-origin="web" data-source="https://code.claude.com/docs/en/overview">
 <img src="./images/docs/cc-intro.png" alt="Claude Code 공식 문서 개요. 코드베이스를 읽고 파일을 수정하고 명령을 실행하며 개발 도구와 연동한다고 적혀 있다" />
@@ -658,7 +713,7 @@ class: top-led brand-cc band-page
 
 # 일하는 3단계
 
-<p class="lead">시킬 때마다 <em>맥락 수집 → 실행 → 검증</em>을 돕니다. 한 바퀴로 안 끝나면 다시 돕니다.</p>
+<p class="lead">맥락 수집 → 실행 → 검증. 결과에 따라 반복</p>
 
 <figure class="shot band nochrome" data-origin="web" data-source="https://code.claude.com/docs/en/how-claude-code-works#the-agentic-loop">
 <img src="./images/docs/agentic-loop.png" alt="공식 도해. 내 지시에서 시작해 맥락 수집·실행·검증 세 단계를 돌고, 아래에서 사람이 언제든 끼어들어 방향을 바꿀 수 있다고 그려져 있다" />
@@ -678,7 +733,7 @@ class: top-led brand-cc
 <div class="split evidence">
 <div>
 
-<p class="lead">문서는 아홉 가지를 듭니다. 이 수업에서 실제로 쓰는 건 <em>넷</em>입니다.</p>
+<p class="lead">오늘 실습에서 사용할 네 가지 작업</p>
 
 <div class="deflist">
 <div><b>기능·버그</b><span>기능을 만들고 버그를 고칩니다</span></div>
@@ -704,7 +759,7 @@ class: divider brand-cc-solid
 
 ## Claude Code 사용해보기
 
-<p class="div-sub">설명을 더 듣기 전에, 다섯 가지를 직접 물어봅니다</p>
+<p class="div-sub">첫 질문 · 되묻기 · 검색 · 웹페이지 만들기</p>
 
 <p class="div-file">1-1 능력 · 1-2 꼬리 질문 · 1-3 사이드 채팅 · 1-4 검색 · 1-5 아티팩트</p>
 
@@ -719,7 +774,7 @@ class: top-led brand-cc lab-page
 <div class="split evidence">
 <div>
 
-<p class="lead">「Claude Code는 뭘 할 수 있어?」 <em>이 한 줄</em>로 시작합니다.</p>
+
 
 <div class="deflist">
 <div><b>①</b><span>질문은 이 한 줄이 전부입니다</span></div>
@@ -746,7 +801,7 @@ class: top-led brand-cc lab-page
 <div class="split evidence">
 <div>
 
-<p class="lead">답 안에 모르는 단어가 나오면 <em>거기서 다시 묻습니다</em>. 새 대화를 열지 않습니다.</p>
+<p class="lead">낯선 단어가 나오면 <em>같은 대화에서</em> 다시 질문</p>
 
 <div class="deflist">
 <div><b>물어본 것</b><span>「<code>/schedule</code> 이랑 <code>/loop</code> 이랑 뭐가 달라?」</span></div>
@@ -773,7 +828,7 @@ class: top-led brand-cc lab-page
 <div class="split evidence">
 <div>
 
-<p class="lead">본 대화를 흐트리지 않고 <em>궁금한 것만</em> 따로 묻습니다.</p>
+<p class="lead">본 작업을 이어 가면서 별도 질문</p>
 
 <div class="deflist">
 <div><b>①</b><span>답 위에서 궁금한 부분을 마우스로 끕니다</span></div>
@@ -800,7 +855,7 @@ class: top-led brand-cc lab-page
 <div class="split evidence">
 <div>
 
-<p class="lead">답이 <em>오른쪽 패널에만</em> 쌓입니다.</p>
+
 
 <div class="deflist">
 <div><b>물어본 것</b><span>「배포랑 CI가 뭐야?」 — 본 주제와 상관없는 질문</span></div>
@@ -827,7 +882,7 @@ class: top-led brand-cc lab-page
 <div class="split evidence">
 <div>
 
-<p class="lead">「확실치 않다」는 답이 오면 <em>찾아보라고 시킵니다</em>.</p>
+<p class="lead">불확실한 답은 출처를 찾아 확인</p>
 
 <div class="deflist">
 <div><b>①</b><span>웹을 두 번 검색하고</span></div>
@@ -854,7 +909,7 @@ class: top-led brand-cc lab-page
 <div class="split evidence">
 <div>
 
-<p class="lead">지금까지 오간 대화를 <em>한 장의 웹페이지</em>로 만듭니다.</p>
+<p class="lead">지금까지의 대화를 한 장의 웹페이지로</p>
 
 <div class="deflist">
 <div><b>①</b><span>「지금까지 대화내역을 정리해서 아티팩트로 만들어줘」</span></div>
@@ -880,10 +935,10 @@ class: top-led brand-cc
 
 # 실행 환경 4종
 
-<p class="lead">어디서 켜도 <em>같은 엔진</em>입니다. 지침·설정·연결한 도구가 그대로 따라옵니다.</p>
+<p class="lead">같은 Claude Code, <em>환경에 따라 다른 기능과 연결 설정</em></p>
 
 <figure class="figure mark-none">
-<svg viewBox="0 0 900 290" role="img" aria-label="터미널·IDE·데스크톱 앱·웹 네 표면이 같은 엔진 하나로 모이고, 그 아래에 CLAUDE.md·설정 파일·MCP 서버가 공유된다">
+<svg viewBox="0 0 900 290" role="img" aria-label="터미널·IDE·데스크톱·웹에서 Claude Code를 사용한다. CLAUDE.md, 설정, MCP는 적용 범위와 지원 여부를 환경별로 확인한다">
   <g style="font-family: var(--mono); font-size: 15px;" fill="var(--ink)" text-anchor="middle">
     <g style="fill: var(--card); stroke: var(--rule); stroke-width: 1.5;">
       <rect x="20" y="14" width="190" height="50" rx="9"/>
@@ -914,7 +969,7 @@ class: top-led brand-cc
     <text x="680" y="231" style="font-size: 14px;">MCP 서버</text>
   </g>
 </svg>
-<figcaption>표면이 달라도 아래는 하나입니다</figcaption>
+<figcaption>프로젝트 지침을 재사용할 수 있으며, 도구 연결과 지원 기능은 환경별 확인</figcaption>
 </figure>
 
 <p class="src">출처 — Claude Code 공식 문서 「Overview · Use Claude Code everywhere」</p>
@@ -927,7 +982,7 @@ class: top-led brand-cc compact
 
 # CLI vs Desktop
 
-<p class="lead">기능이 다른 게 아니라 <em>화면이 다릅니다</em>. 설정과 지침은 양쪽이 같은 파일을 읽습니다.</p>
+<p class="lead">프로젝트 지침은 공유, 조작 화면과 지원 기능은 차이</p>
 
 <div class="split">
 <figure class="shot nochrome" data-origin="web" data-source="https://code.claude.com/docs/en/whats-new/2026-w20">
@@ -942,7 +997,7 @@ class: top-led brand-cc compact
 
 <div class="deflist">
 <div><b>데스크톱에만</b><span>창 배치 · 변경 확인 화면 · 앱 미리보기 · Windows 컴퓨터 제어</span></div>
-<div><b>양쪽 공유</b><span>설정 파일 · CLAUDE.md · MCP 서버</span></div>
+<div><b>양쪽 공유</b><span>같은 로컬 프로젝트의 CLAUDE.md · 스킬 · 지원되는 설정과 MCP 구성</span></div>
 </div>
 
 <p class="src">출처 — Claude Code 공식 문서 「Desktop application」 docs/en/desktop</p>
@@ -955,7 +1010,7 @@ class: top-led brand-cc
 
 # 앱의 세 탭
 
-<p class="lead">Claude 앱을 열면 탭이 셋입니다. 이 수업은 <em>Code 탭</em>만 씁니다.</p>
+<p class="lead">오늘 사용할 곳은 <em>Code 탭</em></p>
 
 <div class="trio">
 <div class="pane"><h3>Chat</h3><p>평소 쓰는 대화. 코드 작업과 무관합니다.</p></div>
@@ -978,7 +1033,7 @@ class: top-led brand-cc
 <div class="split evidence">
 <div>
 
-<p class="lead">첫 메시지를 보내기 전에 <em>입력창 주변</em>에서 네 가지를 정합니다.</p>
+<p class="lead">첫 메시지 전에 확인할 네 곳</p>
 
 <div class="deflist">
 <div><b>① 실행 위치</b><span>Local · Cloud · SSH · Windows 라면 WSL 배포판</span></div>
@@ -1009,7 +1064,7 @@ class: top-led brand-cc
 <div class="split evidence">
 <div>
 
-<p class="lead">돌아가는 <em>도중에도</em> 다음 지시를 넣을 수 있습니다.</p>
+<p class="lead">실행 도중에도 추가 지시와 방향 수정</p>
 
 <div class="deflist">
 <div><b>즉시 중단</b><span>정지 버튼. 하던 동작이 그 자리에서 멈춥니다</span></div>
@@ -1036,7 +1091,7 @@ class: top-led brand-cc
 
 # 대화에 파일 첨부
 
-<p class="lead">둘 다 씁니다. <em>파일이 프로젝트 안에 있느냐 밖에 있느냐</em>로 갈립니다.</p>
+<p class="lead">프로젝트 안의 파일, 바깥에서 가져온 자료</p>
 
 <div class="duo">
 <div class="pane"><h3><span class="latin">@</span>프로젝트 안 — 파일 언급</h3><p><code>@</code> 뒤에 파일 이름. 이미 폴더에 있는 파일을 대화 맥락에 올립니다. 소스 코드·설정 파일·문서. <em>Cloud·WSL 세션에서는 안 됩니다.</em></p></div>
@@ -1055,7 +1110,7 @@ class: top-led brand-cc compact
 
 # 권한 모드 5종 비교
 
-<p class="lead">파일을 고치기 전에 물을지, 명령을 돌리기 전에 물을지, <em>아예 안 물을지</em>를 고릅니다.</p>
+<p class="lead">파일 수정과 명령 실행을 <em>어디까지 맡길지</em></p>
 
 | 모드 | 설정 키 | 동작 |
 |---|---|---|
@@ -1080,7 +1135,7 @@ class: top-led brand-cc compact
 <div class="split evidence">
 <div>
 
-<p class="lead">처음 켜면 대개 <em>Auto</em> 로 시작합니다. 물어볼 줄 알았는데 안 묻는 게 정상입니다.</p>
+<p class="lead">새 세션의 권한 모드부터 확인</p>
 
 <div class="deflist">
 <div><b>Pro · Max · Team</b><span>세션이 Auto 로 시작합니다</span></div>
@@ -1111,7 +1166,7 @@ class: top-led brand-cc compact
 <div class="split evidence">
 <div>
 
-<p class="lead">코드를 못 읽어도 됩니다. 줄에 대고 <em>「이 줄은 왜 이렇게 했어?」</em> 라고 적으면 답이 옵니다.</p>
+<p class="lead">변경된 줄을 짚어 <em>이유를 질문</em></p>
 
 <div class="steps">
 <div><b>변경 표시</b><span><code>+12 -1</code> 처럼 더한 줄·지운 줄 수가 뜹니다</span></div>
@@ -1139,7 +1194,7 @@ class: top-led brand-cc
 <div class="split evidence">
 <div>
 
-<p class="lead">걸러낼 것을 미리 정해 두었기 때문에 <em>지적이 짧습니다</em>. 많이 나오면 그건 진짜입니다.</p>
+<p class="lead">변경 내용에서 오류 가능성이 높은 부분 점검</p>
 
 <div class="duo">
 <div class="pane"><h3>본다</h3><p>컴파일 에러 · 논리 오류 · 보안 취약점 · 명백한 버그</p></div>
@@ -1163,7 +1218,7 @@ class: top-led brand-cc
 
 # 앱 미리보기
 
-<p class="lead">만든 화면을 앱 안에서 띄우고, <em>스스로 눌러 보며</em> 고칩니다.</p>
+<p class="lead">실행한 화면을 보며 수정</p>
 
 <figure class="shot hero nochrome mark-ok" data-origin="web" data-source="https://code.claude.com/docs/en/whats-new/2026-w28">
 <img src="./images/official/desktop-browser-crop.png" alt="데스크톱 앱 화면. 왼쪽 대화에 브라우저를 조작한 기록과 고친 코드가 쌓여 있고, 오른쪽 브라우저 패널에 만든 주문 화면이 떠 있다" />
@@ -1180,7 +1235,7 @@ class: top-led brand-cc
 
 # 창 배치
 
-<p class="lead">Code 탭은 <em>창(pane)</em> 을 늘어놓는 화면입니다. 필요한 것만 꺼내 씁니다.</p>
+
 
 <figure class="figure mark-none">
 <svg viewBox="0 0 900 250" role="img" aria-label="Code 탭의 창 배치. 왼쪽 대화 창, 가운데 변경 내용과 브라우저, 오른쪽 터미널과 파일 편집기">
@@ -1220,7 +1275,7 @@ class: top-led brand-cc compact
 <div class="split evidence">
 <div>
 
-<p class="lead"><code>Ctrl+/</code> 를 누르면 전부 나옵니다. 손이 실제로 가는 건 <em>여섯 개</em>입니다.</p>
+<p class="lead">전체 목록은 <code>Ctrl + /</code></p>
 
 | 키 (Windows) | 하는 일 |
 |---|---|
@@ -1248,7 +1303,7 @@ class: top-led brand-cc
 
 # 쓰는 도중에 멈추기
 
-<p class="lead">Code 탭의 새 대화에서 시작합니다. 목표는 <em>메신저에 보낼 안내 3줄</em>입니다.</p>
+<p class="lead">새 대화에서 시작 · 목표는 메신저 공지 3줄</p>
 
 ```text
 내일 오후 2시, 3층 회의실에서 생산실적 회의를 해.
@@ -1276,7 +1331,7 @@ class: top-led brand-cc
 
 # 같은 대화에서 다시 지시
 
-<p class="lead">응답이 멈췄으면 <em>아래 지시만</em> 보냅니다. 회의 정보를 다시 붙이지 않습니다.</p>
+<p class="lead">회의 정보를 다시 붙이지 않고 요청만 수정</p>
 
 ```text
 방향을 바꿀게. 긴 안내문은 그만 쓰고,
@@ -1340,7 +1395,7 @@ class: top-led brand-cc compact
 <div class="split evidence">
 <div>
 
-<p class="lead">이름을 직접 고릅니다. 「Default」 는 <em>요금제마다 다른 모델</em>로 풀립니다.</p>
+<p class="lead">계정에서 선택 가능한 모델과 작업 성격</p>
 
 | 이름 | 성격 | 시킬 일 |
 |---|---|---|
@@ -1361,6 +1416,23 @@ class: top-led brand-cc compact
 <p class="src">출처 — Claude Code 공식 문서 「Model configuration · Available models」 docs/en/model-config</p>
 
 ---
+class: top-led brand-cc
+---
+
+<p class="eyebrow">1-D · 실습 설정</p>
+
+# 오늘의 모델 선택
+
+<p class="lead">목록에 Opus가 있으면 먼저 사용, 한도가 부족하면 Sonnet으로</p>
+<div class="deflist">
+<div><b>Opus</b><span>요구사항 정리, 여러 조건이 얽힌 판단, 오류 원인 조사</span></div>
+<div><b>Sonnet</b><span>짧은 수정과 반복 구현. 내 계정에서 사용 가능한지 확인</span></div>
+<div><b>남은 사용량</b><span>Claude 대화와 Code 사용량은 구독 한도를 공유. 모델·대화 길이에 따라 소모량 차이</span></div>
+</div>
+<p class="thesis">모든 참가자의 목록과 한도가 같지는 않습니다. 수업 시작 때 선택한 모델과 재설정 시간을 확인합니다.</p>
+<p class="src">공식 안내 · <a href="https://code.claude.com/docs/en/model-config">Model configuration</a> · <a href="https://support.claude.com/en/articles/11145838-using-claude-code-with-your-pro-or-max-plan">Pro·Max에서 Claude Code 사용</a></p>
+
+---
 class: top-led brand-cc compact
 ---
 
@@ -1371,13 +1443,13 @@ class: top-led brand-cc compact
 <div class="split evidence">
 <div>
 
-<p class="lead">모델을 바꾸는 게 아니라 <em>얼마나 공들일지</em>만 바꿉니다. 기본은 <code>high</code> 입니다.</p>
+<p class="lead">같은 모델에 <em>얼마나 깊게 생각하도록 요청할지</em></p>
 
 | 단계 | 언제 |
 |---|---|
 | `low` | 짧고 범위가 좁은 일 |
 | `medium` | 토큰을 아껴야 할 때 |
-| `high` | <em>기본값</em>. 대부분의 코딩 |
+| `high` | 대부분의 지원 모델에서 기본값 |
 | `xhigh` | 더 깊게. 토큰은 더 많이 |
 | `max` | 어려운 과제. 과하게 생각하기도 |
 
@@ -1388,7 +1460,7 @@ class: top-led brand-cc compact
 </figure>
 </div>
 
-<p class="thesis">메뉴에는 <code>ultracode</code> 가 하나 더 있습니다. 이건 모델 단계가 아니라 Claude Code 설정으로, <code>xhigh</code> 로 돌리면서 <em>일마다 흐름을 따로 짜게</em> 합니다.</p>
+<p class="thesis">지원 단계와 기본값은 모델·조직 설정에 따라 다릅니다. <code>ultracode</code>는 <code>xhigh</code>와 워크플로 구성을 묶은 별도 설정입니다.</p>
 
 <p class="src">출처 — Claude Code 공식 문서 「Model configuration · Choose an effort level」 docs/en/model-config</p>
 
@@ -1400,7 +1472,7 @@ class: top-led brand-cc
 
 # Effort 바꾸는 자리
 
-<p class="lead">돌아가는 <em>도중에도</em> 바꿉니다. 바꾼 값은 그 턴의 다음 요청부터 먹습니다.</p>
+
 
 <div class="steps">
 <div><b><code>/effort</code></b><span>슬라이더가 뜹니다. 단계 이름을 붙여 바로 줘도 됩니다</span></div>
@@ -1420,7 +1492,7 @@ class: top-led brand-cc
 
 # 컨텍스트 창
 
-<p class="lead">내가 말을 걸기 전에 <em>이미 상당히 차 있습니다</em>. 가득 차기 전에 스스로 요약해 접습니다.</p>
+<p class="lead">지침·대화·파일·도구 결과가 함께 차지하는 공간</p>
 
 <figure class="figure mark-none">
 <svg viewBox="0 0 900 210" role="img" aria-label="컨텍스트 창을 가로 막대로 그린 그림. 왼쪽부터 시작 전에 이미 채워지는 지침과 메모리와 도구 목록, 그다음 대화와 읽은 파일, 오른쪽 끝 가까이에서 자동 압축이 일어난다">
@@ -1452,7 +1524,7 @@ class: top-led brand-cc
 
 # 맥락 아끼는 법
 
-<p class="lead">자동 압축에 맡기기보다 <em>내가 먼저 정리</em>하는 편이 낫습니다. 무엇을 남길지 내가 고르니까요.</p>
+<p class="lead">작업을 바꾸기 전에 필요한 맥락 정리</p>
 
 <div class="steps">
 <div><b>남길 것을 짚어 압축</b><span><code>/compact 수집기 고친 부분만 남겨줘</code></span></div>
@@ -1472,7 +1544,7 @@ class: top-led brand-cc compact
 
 # 작업별 설정 기준
 
-<p class="lead">고민되면 <em>기본값 그대로</em> 둡니다. 바꿀 때는 한 번에 하나만.</p>
+<p class="lead">기본값으로 시작하고, 필요할 때 하나씩 조정</p>
 
 | 시킬 일 | 모델 | Effort |
 |---|---|---|
@@ -1494,7 +1566,7 @@ class: top-led brand-cc compact
 
 # 같은 질문 두 번
 
-<p class="lead">같은 모델, 같은 질문. <code>low</code> 와 <code>xhigh</code> 만 바꿔 봤습니다.</p>
+<p class="lead">같은 모델·같은 질문에서 <em>low와 xhigh 비교</em></p>
 
 | | `low` | `xhigh` |
 |---|---|---|
@@ -1514,7 +1586,7 @@ class: top-led brand-cc band-page
 
 # 다섯 배가 한 일
 
-<p class="lead"><code>xhigh</code> 는 원인을 찾은 뒤 <em>안 물어본 경우까지</em> 만들어 확인했습니다.</p>
+<p class="lead">이 실험에서 xhigh가 추가로 확인한 경우</p>
 
 <figure class="shot band nochrome term" data-origin="capture">
 <img src="./images/term/eff-high.png" alt="검증 결과 표. UTF-8 BOM 없음은 에러 재현, UTF-8 더하기 BOM 은 정상, UTF-8 더하기 BOM 더하기 CRLF 도 정상, xlsx 변환도 정상, CP949 는 실패. 앱과 동일한 로직으로 재현한 뒤 실제 사이트에도 업로드해 확인했다는 문장이 위에 있다" />
@@ -1533,7 +1605,7 @@ class: top-led brand-cc
 
 # 사용량이 새는 자리
 
-<p class="lead">「왜 벌써 다 썼지」의 답은 대개 <em>대화가 길어서</em>입니다.</p>
+<p class="lead">긴 대화 · 큰 파일 · 반복 실행 · 여러 에이전트</p>
 
 <div class="deflist">
 <div><b>긴 맥락</b><span>한 줄만 물어도 그날 대화 전부를 같이 보냅니다</span></div>
@@ -1557,7 +1629,7 @@ class: top-led brand-cc compact
 <div class="split evidence">
 <div>
 
-<p class="lead">코드를 건드리기 전에 <em>무엇을 할지 먼저 적어 오게</em> 합니다.</p>
+<p class="lead">코드를 수정하기 전에 <em>접근 방법부터 검토</em></p>
 
 <div class="steps">
 <div><b>모드를 고릅니다</b><span>보내기 버튼 옆 <em>모드 선택기</em>에서 Plan · <code>Ctrl Shift M</code></span></div>
@@ -1584,7 +1656,7 @@ class: top-led brand-cc
 
 # 계획 승인 3갈래
 
-<p class="lead">계획이 나오면 셋 중 하나를 묻습니다. <em>고른 대로 실행 권한이 바뀝니다</em>.</p>
+<p class="lead">계획 승인 뒤 적용할 실행 권한</p>
 
 <div class="deflist">
 <div><b>네, 자동으로</b><span>승인하고 auto 모드로 바로 실행합니다</span></div>
@@ -1607,7 +1679,7 @@ class: top-led brand-cc compact
 <div class="split evidence">
 <div>
 
-<p class="lead">조사는 <em>딴 창에서</em> 시키고 요약만 받습니다. 내 대화가 로그로 덮이지 않습니다.</p>
+<p class="lead">조사는 별도 맥락에서, 결과는 요약으로</p>
 
 | 이름 | 맡는 일 | 쓸 수 있는 도구 |
 |---|---|---|
@@ -1634,7 +1706,7 @@ class: top-led brand-cc
 
 # 자동 위임과 지목 호출
 
-<p class="lead">평소엔 <em>알아서 넘깁니다</em>. 꼭 저 사람이어야 할 때만 지목합니다.</p>
+<p class="lead">자동으로 맡기거나, 역할을 지정하거나</p>
 
 <div class="duo">
 <div class="pane"><h3>알아서 넘기기</h3><p>내 요청과 각 에이전트에 적힌 설명을 견줘 Claude 가 판단합니다. 이름을 그냥 말해도 대개 넘깁니다.</p></div>
@@ -1653,7 +1725,7 @@ class: top-led brand-cc
 
 # 앞에서와 뒤에서
 
-<p class="lead">결과를 <em>기다릴 일</em>과 <em>던져둘 일</em>은 다릅니다.</p>
+<p class="lead">기다려야 할 작업과 병행할 작업</p>
 
 <div class="deflist">
 <div><b>기본</b><span>뒤에서 돕니다. 내가 고르는 게 아닙니다</span></div>
@@ -1678,7 +1750,7 @@ class: top-led brand-cc compact
 <div class="split evidence">
 <div>
 
-<p class="lead">돌아가는 중에 Enter 를 쳐도 <em>끊기지 않습니다</em>. 줄을 서서 기다립니다.</p>
+<p class="lead">실행 중 입력한 다음 요청의 처리 순서</p>
 
 <div class="steps">
 <div><b>그냥 쓰고 Enter</b><span>입력창 위에 줄 선 항목이 쌓입니다</span></div>
@@ -1708,7 +1780,7 @@ class: top-led brand-cc compact
 <div class="split evidence">
 <div>
 
-<p class="lead">하나는 <em>결과만 받는</em> 구조, 하나는 <em>서로 이야기하는</em> 구조입니다.</p>
+<p class="lead">개별 결과 보고와 팀원 간 협업</p>
 
 | | 서브에이전트 | 에이전트 팀 |
 |---|---|---|
@@ -1735,7 +1807,7 @@ class: top-led brand-cc band-page
 
 # 이름이 붙는 자리
 
-<p class="lead">같은 지시를 두 번 줬습니다. 갈린 건 <em>이름이 붙느냐</em>입니다.</p>
+
 
 <figure class="shot band thin nochrome term" data-origin="capture">
 <img src="./images/term/sub-launch.png" alt="터미널 화면. 백그라운드 에이전트 3개를 띄웠다는 줄 아래에 08-24 일지 검토, 08-25 일지 검토, 08-26 일지 검토라는 작업 이름 세 개가 나열되어 있다" />
@@ -1759,7 +1831,7 @@ class: top-led brand-cc band-page
 
 # 도는 동안의 목록
 
-<p class="lead">일하는 중에 <code>←</code> 를 누르면 뜨는 화면도 <em>다르게 적힙니다</em>.</p>
+
 
 <figure class="shot band nochrome term" data-origin="capture">
 <img src="./images/term/sub-panel.png" alt="에이전트 목록. main 아래에 general-purpose 라는 종류와 08-24 일지 검토 같은 작업 이름, 그리고 20초에 27.3k 토큰 같은 소요와 사용량이 세 줄 적혀 있다" />
@@ -1781,7 +1853,7 @@ class: top-led brand-cc band-page
 
 # 끝났다는 말
 
-<p class="lead">팀원은 나에게 말하지 않습니다. <em>팀장에게</em> 보고합니다.</p>
+<p class="lead">팀원의 결과 보고와 팀장의 취합</p>
 
 <figure class="shot band nochrome term" data-origin="capture">
 <img src="./images/term/team-msg.png" alt="터미널 화면. 골뱅이 reviewer-0824 에게서 메시지가 왔다는 줄, 08-24 검토 결과가 도착했다는 본대화의 말, 그리고 팀원 reviewer-0824 가 끝났다는 알림과 함께 2026-08-24 일지 검토를 마치고 team-lead 에게 결과를 전달했으며 원본은 읽기만 했다는 보고가 이어진다" />
@@ -1803,7 +1875,7 @@ class: top-led brand-cc compact
 <div class="split evidence">
 <div>
 
-<p class="lead">매번 다시 설명하지 않으려면 <em>둘 중 어디에 적을지</em>부터 정합니다.</p>
+<p class="lead">직접 정한 지침과 Claude가 남긴 메모</p>
 
 | | CLAUDE.md | 자동 메모리 |
 |---|---|---|
@@ -1831,7 +1903,7 @@ class: top-led brand-cc
 
 # CLAUDE.md에 적을 때
 
-<p class="lead">「또 설명하고 있네」 싶으면 <em>그때가 적을 때</em>입니다.</p>
+<p class="lead">여러 작업에서 반복해서 설명하는 규칙</p>
 
 <div class="deflist">
 <div><b>같은 실수 두 번째</b><span>한 번은 그럴 수 있습니다. 두 번이면 적습니다</span></div>
@@ -1852,7 +1924,7 @@ class: top-led brand-cc
 
 # 위치별 적용 범위
 
-<p class="lead">파일을 <em>어디에 두느냐</em>가 곧 적용 범위입니다.</p>
+<p class="lead">파일 위치에 따라 달라지는 적용 범위</p>
 
 <figure class="figure mark-none">
 <svg viewBox="0 0 900 250" role="img" aria-label="CLAUDE.md 를 둘 수 있는 네 자리. 위에서부터 조직 정책, 내 계정, 프로젝트, 로컬 순으로 범위가 좁아진다">
@@ -1884,7 +1956,7 @@ class: top-led brand-cc
 
 # 통하는 문장
 
-<p class="lead">지켰는지 <em>확인할 수 있게</em> 써야 지켜집니다.</p>
+<p class="lead">지켰는지 확인할 수 있는 구체적인 지침</p>
 
 <div class="duo">
 <div class="pane key"><h3>통합니다</h3><p>「들여쓰기는 2칸」<br>「커밋 전에 <code>npm test</code>」<br>「API 처리기는 <code>src/api/handlers/</code> 에」</p></div>
@@ -1903,7 +1975,7 @@ class: top-led brand-cc
 
 # 자동 메모리 4종
 
-<p class="lead">내가 적지 않아도 <em>스스로 메모를 남깁니다</em>. 네 갈래로 나눠 적습니다.</p>
+<p class="lead">대화에서 발견한 내용을 네 종류로 기록</p>
 
 <div class="deflist">
 <div><b>user</b><span>내 역할 · 숙련도 · 일하는 방식</span></div>
@@ -1924,7 +1996,7 @@ class: top-led brand-cc
 
 # /memory
 
-<p class="lead">무엇이 쌓였는지 <em>열어서 봅니다</em>. 전부 그냥 텍스트 파일입니다.</p>
+
 
 <div class="deflist">
 <div><b>여는 법</b><span><code>/memory</code> — 지침 파일들과 메모리 폴더가 목록으로</span></div>
@@ -1945,7 +2017,7 @@ class: top-led brand-cc band-page
 
 # 첫 마디 전의 창
 
-<p class="lead">지침은 <em>내가 말을 걸기 전에</em> 이미 들어가 있습니다. <code>/context</code> 로 확인합니다.</p>
+<p class="lead">첫 질문 전에 들어온 지침, <code>/context</code>로 확인</p>
 
 <figure class="shot band nochrome term" data-origin="capture">
 <img src="./images/term/ctx-on.png" alt="터미널의 /context 출력. 시작 직후인데 30.7k 토큰이 차 있고, 항목별로 시스템 프롬프트 5.2k, 시스템 도구 17.9k, 커스텀 에이전트 2.7k, 메모리 파일 1.5k, 스킬 3.4k 로 나뉘어 있다. 주고받은 말은 8토큰뿐이다" />
@@ -1964,7 +2036,7 @@ class: top-led brand-cc band-page
 
 # 시키지 않은 것
 
-<p class="lead">지시는 <code>이번 주 일지 정리해서 주간 보고 만들어줘</code> 한 줄. <em>형식도 규칙도</em> 말하지 않았습니다.</p>
+<p class="lead">요청은 한 줄 · 이번 주 일지를 주간 보고로</p>
 
 <figure class="shot band nochrome term mark-ok" data-origin="capture">
 <img src="./images/term/claudemd-answer.png" alt="결과 요약. 기준 초과 3건을 모두 실었고, 반복을 따로 묶었고, 합계는 계산값임을 표시했고, 정비 소요 시간을 적었다고 보고한다" />
@@ -1981,7 +2053,7 @@ class: top-led brand-cc band-page
 
 # 판단이 갈린 자리
 
-<p class="lead">「추정하지 않는다」 한 줄을 적어 두면 <em>모르는 것을 모른다고</em> 말합니다.</p>
+<p class="lead">지침 유무에 따른 결과 비교 · 「추정하지 않는다」</p>
 
 <figure class="shot band nochrome term" data-origin="capture">
 <img src="./images/term/claudemd-judge.png" alt="같은 답변의 뒷부분. 목요일 금요일 일지가 없다는 것, 8월 26일 76도를 원문은 기준 근접이라 적었지만 기준 75도로 보면 넘는다는 것, 장력은 기준값이 일지에 없어 기준 초과가 아니라 반복으로 넣었다는 것 세 가지를 짚어 두었다" />
@@ -2000,7 +2072,7 @@ class: top-led brand-cc
 
 # 슬래시 명령
 
-<p class="lead">입력창에 <em><code>/</code> 한 글자</em>를 치면 지금 쓸 수 있는 명령이 전부 뜹니다.</p>
+<p class="lead">입력창의 <code>/</code>로 명령 찾기</p>
 
 <div class="deflist">
 <div><b>여는 법</b><span><code>/</code> 를 치고 글자를 이어 넣어 좁힙니다</span></div>
@@ -2020,7 +2092,7 @@ class: top-led brand-cc compact
 
 # 자주 쓰는 명령 8개
 
-<p class="lead">백 개가 넘게 있지만, 처음 두 주 동안 실제로 손이 가는 건 <em>여덟 개</em>입니다.</p>
+
 
 | 명령 | 언제 씁니까 |
 |---|---|
@@ -2044,7 +2116,7 @@ class: top-led brand-cc
 
 # 스킬
 
-<p class="lead">같은 지시를 <em>세 번째</em> 붙여넣고 있다면, 거기가 스킬로 만들 자리입니다.</p>
+<p class="lead">반복해서 쓰는 지시와 절차를 파일로</p>
 
 <div class="deflist">
 <div><b>무엇인가</b><span><code>SKILL.md</code> 파일 하나에 적어 둔 절차</span></div>
@@ -2064,7 +2136,7 @@ class: top-led brand-cc
 
 # SKILL.md 두 덩어리
 
-<p class="lead"><code>---</code> 사이가 <em>머리말</em>, 그 아래가 시키는 말입니다.</p>
+<p class="lead">머리말은 스킬 설명, 본문은 실행 지침</p>
 
 ```markdown
 ---
@@ -2087,7 +2159,7 @@ class: top-led brand-cc
 
 # 스킬 두는 자리
 
-<p class="lead">파일을 <em>어디에 두느냐</em>가 곧 누가 쓰느냐입니다.</p>
+<p class="lead">개인용 스킬과 프로젝트 공용 스킬</p>
 
 | 자리 | 경로 | 적용 범위 |
 |---|---|---|
@@ -2107,7 +2179,7 @@ class: top-led brand-cc band-page
 
 # 스킬이 열리는 자리
 
-<p class="lead">스킬 이름을 부르지 않았습니다. <em>머리말 한 줄</em>을 보고 알아서 엽니다.</p>
+<p class="lead">요청과 description이 맞으면 자동으로 선택</p>
 
 <figure class="shot band nochrome term" data-origin="capture">
 <img src="./images/term/skill-open.png" alt="터미널 화면. 「3호 압연기가 얼마나 자주 서는지 궁금해. 고장 간격 좀 뽑아줘」 라고 입력하자 Skill(설비-신뢰도) 이 호출되고 스킬을 불러왔다는 줄이 뜬 뒤 파일을 읽기 시작한다" />
@@ -2126,7 +2198,7 @@ class: top-led brand-cc band-page
 
 # 절차대로 나온 표
 
-<p class="lead">스킬에 적어 둔 <em>계산 순서와 표 모양</em>이 그대로 나옵니다.</p>
+
 
 <figure class="shot band nochrome term" data-origin="capture">
 <img src="./images/term/skill-table.png" alt="지표 표. 조업 시간 28시간 40분, 정지 시간 1시간 20분, 가동시간 27시간 20분, MTBF 27시간 20분, MTTR 1시간 20분, 가동률 95.3 퍼센트. 각 행마다 계산에 쓴 값이 적혀 있고 계산값이라는 표시가 붙어 있다" />
@@ -2143,7 +2215,7 @@ class: top-led brand-cc band-page
 
 # 스킬이 막은 것
 
-<p class="lead">숫자보다 중요한 건 <em>그 숫자를 믿으면 안 되는 이유</em>입니다.</p>
+<p class="lead">계산 결과와 함께 남긴 <em>데이터의 한계</em></p>
 
 <figure class="shot band nochrome term mark-ok" data-origin="capture">
 <img src="./images/term/skill-caveat.png" alt="표 아래 붙은 단서. 사건 수가 1건이라 평균값의 의미가 제한적이고 MTBF 는 관측된 간격이 아니라는 설명, 조업 시간을 어느 일지 몇 줄에서 가져왔는지, 3호 압연기 단독 가동시간은 일지에 없다는 내용" />
@@ -2162,7 +2234,7 @@ class: top-led brand-cc
 
 # MCP
 
-<p class="lead">다른 프로그램에서 <em>복사해 붙여넣고</em> 있다면, 그 자리가 MCP 자리입니다.</p>
+<p class="lead">외부 프로그램의 도구를 Claude에 연결</p>
 
 <div class="deflist">
 <div><b>무엇인가</b><span>바깥 도구를 붙이는 공용 규격</span></div>
@@ -2183,7 +2255,7 @@ class: top-led brand-cc band-page
 
 # 어디서 온 도구인가
 
-<p class="lead">붙은 서버는 <code>/mcp</code> 에서 <em>출처별로 묶여</em> 보입니다.</p>
+
 
 <figure class="shot band nochrome term" data-origin="capture">
 <img src="./images/term/mcp-scope.png" alt="슬래시 mcp 화면의 일부. 프로젝트 MCP 항목 아래에 데모 폴더의 점 mcp 점 json 경로와 playwright 서버가 연결됨 24개 도구로 표시되고, 그 아래 사용자 MCP 항목에 홈 폴더 설정 파일 경로와 stitch 서버가 연결됨 15개 도구로 표시된다" />
@@ -2202,7 +2274,7 @@ class: top-led brand-cc
 
 # 플러그인
 
-<p class="lead">스킬·에이전트·훅·MCP 서버를 <em>한 묶음</em>으로 받아 켭니다.</p>
+<p class="lead">스킬·에이전트·훅·MCP 서버를 한 묶음으로 설치</p>
 
 <div class="steps">
 <div><b>마켓플레이스 추가</b><span>공식 목록은 처음 실행할 때 자동으로 붙습니다</span></div>
@@ -2222,7 +2294,7 @@ class: top-led brand-cc
 
 # 커뮤니티 확장 두 가지
 
-<p class="lead">공식 목록 밖에도 <em>작은 문제 하나</em>를 겨냥한 플러그인과 스킬이 있습니다.</p>
+<p class="lead">특정 작업을 돕는 플러그인과 스킬</p>
 
 <div class="duo">
 <div class="pane">
@@ -2247,7 +2319,7 @@ class: top-led brand-cc compact
 
 # README 예시로 감 잡기
 
-<p class="lead">두 저장소가 말하는 변화는 <em>결과의 방향</em>을 보여 주는 예시입니다.</p>
+<p class="lead">제작자가 제시한 예시로 결과의 방향 확인</p>
 
 | | 길게·많이 만들기 | 짧게·필요한 만큼 만들기 |
 |---|---|---|
@@ -2268,7 +2340,7 @@ class: top-led brand-cc compact
 
 # 설치하고 시험하기
 
-<p class="lead">처음부터 둘 다 켜지 말고, <em>새 폴더·새 세션에서 하나씩</em> 비교합니다.</p>
+<p class="lead">새 폴더·새 세션에서 하나씩 적용해 비교</p>
 
 <div class="duo">
 <div class="pane">
@@ -2296,9 +2368,9 @@ class: top-led brand-cc band-page
 
 <p class="eyebrow">1-G · 확장</p>
 
-# 2571개 중에서
+# 확장 기능 고르는 기준
 
-<p class="lead">기준은 하나입니다. <em>내가 반복해서 시키던 일</em>인가.</p>
+<p class="lead">내가 반복해서 시키는 일을 기준으로 선택</p>
 
 <figure class="shot band nochrome term" data-origin="capture">
 <img src="./images/term/plugin-discover.png" alt="플러그인 목록 화면. 전체 2571개 중 첫 화면이고 검색창 아래에 frontend-design 120만 설치, superpowers 110만 설치, code-review 46.4만 설치, context7 43.7만 설치가 설명 한 줄씩과 함께 나열되어 있다" />
@@ -2317,7 +2389,7 @@ class: top-led brand-cc band-page
 
 # 켜져 있는 것 세기
 
-<p class="lead">스킬·MCP·플러그인이 <em>한 화면</em>에 모입니다. 얼마나 먹는지도 같이.</p>
+<p class="lead">활성화된 확장과 맥락 사용량 확인</p>
 
 <figure class="shot band nochrome term" data-origin="capture">
 <img src="./images/term/plugin-installed.png" alt="설치됨 탭. 플러그인 세 개와 MCP 서버들이 출처별로 묶여 있고, 스킬 목록에는 slidev-deck-builder 가 85토큰 사흘간 9회, slidev-deck-builder-lab 이 100토큰 한 번도 안 씀, 설비-신뢰도가 프로젝트 스코프 26토큰 오늘 1회로 표시된다" />
@@ -2339,7 +2411,7 @@ class: top-led brand-cc compact
 <div class="split evidence">
 <div>
 
-<p class="lead">넷을 다 배웠으니 남는 건 하나입니다 — <em>그래서 언제 뭘 쓰나</em>.</p>
+
 
 | 이런 일이 생기면 | 이걸 붙입니다 |
 |---|---|
@@ -2367,7 +2439,7 @@ class: top-led brand-cc
 
 # 화면 제어 4단계
 
-<p class="lead">화면을 직접 움직이는 건 <em>마지막 수단</em>입니다. 위에서부터 되는 게 있으면 그걸 씁니다.</p>
+<p class="lead">명령·API·브라우저 도구로 가능한지 먼저 확인</p>
 
 <figure class="figure mark-none">
 <svg viewBox="0 0 900 300" role="img" aria-label="위에서부터 커넥터·MCP, 터미널 명령, 브라우저, 컴퓨터 제어 네 단계. 위로 갈수록 정확하고 빠르며, 아래로 갈수록 무엇이든 되지만 느리고 위험하다">
@@ -2410,7 +2482,7 @@ class: top-led brand-cc
 <div class="split evidence">
 <div>
 
-<p class="lead">앱 안에 브라우저가 하나 들어 있습니다. <em>Ctrl+Shift+B</em>.</p>
+<p class="lead">앱 안의 브라우저 · <code>Ctrl + Shift + B</code></p>
 
 <div class="deflist">
 <div><b>만든 화면</b><span>개발 서버를 띄우고 그 안에서 엽니다</span></div>
@@ -2437,7 +2509,7 @@ class: top-led brand-cc
 
 # 사이트 승인
 
-<p class="lead">바깥 사이트에서 처음 뭔가를 하려 하면 <em>카드가 뜨고 멈춥니다</em>.</p>
+<p class="lead">외부 사이트에서 행동하기 전 권한 확인</p>
 
 <div class="trio">
 <div class="pane"><h3>한 번만 허용</h3><p>이번 동작만 지나갑니다. 아무것도 저장하지 않습니다.</p></div>
@@ -2457,7 +2529,7 @@ class: top-led brand-cc
 
 # 브라우저 패널 vs Chrome
 
-<p class="lead">갈리는 건 하나입니다. <em>내 로그인 상태가 필요한가</em>.</p>
+<p class="lead">로그인 상태를 공유해야 하는가?</p>
 
 <div class="duo">
 <div class="pane"><h3><span class="latin">IN-APP</span>브라우저 패널</h3><p>앱이 따로 쓰는 깨끗한 프로필입니다. 저장된 로그인도 방문 기록도 없습니다. 내가 만든 화면을 확인하고, 로그인이 필요 없는 사이트를 볼 때.</p></div>
@@ -2476,7 +2548,7 @@ class: top-led brand-cc
 
 # Playwright MCP
 
-<p class="lead">세 번째 브라우저입니다. <em>내 PC의 Chromium</em>을 MCP 로 붙입니다.</p>
+<p class="lead">브라우저 조작과 검증 도구를 MCP로 연결</p>
 
 <div class="deflist">
 <div><b>누가</b><span>Microsoft. 웹 테스트 도구 Playwright 의 MCP 서버판</span></div>
@@ -2497,10 +2569,10 @@ class: top-led brand-cc compact
 
 # Playwright MCP 붙이기
 
-<p class="lead">한 줄이면 붙습니다. <em>Node.js 18 이상</em>이 있어야 합니다.</p>
+<p class="lead">CLI가 설치된 경우의 명령. Desktop 실습은 다음 장에서 설정</p>
 
 ```bash
-claude mcp add playwright -- npx @playwright/mcp@latest
+claude mcp add playwright -- cmd /c npx -y @playwright/mcp@latest
 ```
 
 <div class="steps">
@@ -2514,6 +2586,30 @@ claude mcp add playwright -- npx @playwright/mcp@latest
 <p class="src">출처 — Claude Code 공식 문서 「MCP · Add an MCP server」 docs/en/mcp · microsoft/playwright-mcp README 「Configuration」</p>
 
 ---
+class: top-led brand-cc compact
+---
+
+<p class="eyebrow">1-H · Windows 실습</p>
+
+# Desktop에 MCP 연결
+
+<p class="lead">프로젝트 루트의 <code>.mcp.json</code> · Windows 로컬 세션</p>
+
+```json
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "@playwright/mcp@latest"]
+    }
+  }
+}
+```
+<p class="thesis">Claude에게 파일을 만들게 한 뒤 새 세션을 열고 서버 사용을 승인합니다. <code>/mcp</code>에서 연결 확인 → 「Playwright MCP로 example.com을 열어줘.」</p>
+<p class="src">Node.js LTS 설치 필요 · <a href="https://code.claude.com/docs/en/desktop#connect-external-tools">Desktop MCP 설정</a> · <a href="https://code.claude.com/docs/en/mcp">Windows의 cmd /c 설정</a></p>
+<!-- 기존 .mcp.json이 있으면 mcpServers 안에 playwright만 추가한다. 파일 전체를 덮어쓰지 않는다. 최초 실행에 패키지 다운로드와 브라우저 설치가 필요할 수 있다. -->
+
+---
 class: top-led brand-cc band-page
 ---
 
@@ -2521,7 +2617,7 @@ class: top-led brand-cc band-page
 
 # 없다고 말하기
 
-<p class="lead">화면을 볼 수 있으면 <em>내 질문이 틀렸을 때</em> 그렇다고 답합니다.</p>
+<p class="lead">화면을 확인한 뒤 질문의 전제부터 수정</p>
 
 <figure class="shot band nochrome term" data-origin="capture">
 <img src="./images/term/mcp-run.png" alt="터미널 화면. 「플레이라이트로 주소를 열어서 첫 화면 맨 위에 있는 KPI 카드들의 제목과 숫자를 그대로 읽어와줘」 라는 입력에 대해, 파일 2건을 읽고 playwright 를 4번 호출한 뒤 「페이지는 열렸지만 첫 화면에 KPI 카드가 없습니다. 읽어올 제목과 숫자가 존재하지 않아 그대로 보고합니다」 라고 답한다" />
@@ -2540,7 +2636,7 @@ class: top-led brand-cc band-page
 
 # 두 번 올려 가른 것
 
-<p class="lead">CSV 를 올렸더니 컬럼을 못 읽었습니다. <em>같은 파일에 BOM 만 붙여</em> 다시 올렸습니다.</p>
+<p class="lead">같은 CSV에 BOM만 추가해 다시 업로드</p>
 
 <figure class="shot band nochrome term mark-ok" data-origin="capture">
 <img src="./images/term/mcp-bom.png" alt="A/B 결과 표. BOM 없는 파일은 실패로 일자·라인·생산량(톤)·불량량(톤) 네 컬럼을 미인식, BOM 있는 파일은 성공으로 대시보드가 렌더링됨. 그 아래 원인이 앱 번들의 XLSX.read 호출이며 SheetJS 가 BOM 없는 CSV 를 latin1 로 디코딩해 한글 헤더가 깨진다는 설명이 붙어 있다" />
@@ -2559,7 +2655,7 @@ class: top-led brand-cc band-page
 
 # 화면에서 읽어 온 값
 
-<p class="lead">고친 파일을 올린 뒤, <em>실제로 뜬 카드</em>를 그대로 옮겨 왔습니다.</p>
+
 
 <figure class="shot band nochrome term" data-origin="capture">
 <img src="./images/term/mcp-cards.png" alt="KPI 카드 표. 총 생산량 442.2톤 전월 대비 25.6퍼센트 증가, 불량률 2.46퍼센트 0.46퍼센트포인트 감소, 가동률 90.1퍼센트, 목표 달성률 101.8퍼센트, 종합효율 OEE 89.4퍼센트. 각 행에 산식이 함께 적혀 있다" />
@@ -2576,7 +2672,7 @@ class: top-led brand-cc band-page
 
 # 도구가 흘린 파일
 
-<p class="lead">브라우저 도구가 캡처 파일을 폴더에 떨어뜨렸고, <em>지침에 걸렸습니다</em>.</p>
+<p class="lead">캡처 파일을 저장한 위치와 프로젝트 지침</p>
 
 <figure class="shot band nochrome term" data-origin="capture">
 <img src="./images/term/mcp-cleanup.png" alt="터미널 화면. 스크린샷과 스냅샷이 프로젝트 폴더 루트에 저장돼서 CLAUDE.md 의 「새 파일은 보고 폴더 아래에만」 규칙에 어긋나 삭제했다고 보고하고, 원본 일지는 건드리지 않았다고 덧붙인다" />
@@ -2595,7 +2691,7 @@ class: top-led brand-cc
 
 # 같은 부탁, 다른 도구
 
-<p class="lead">같은 요청을 두 번 보냅니다. 도구를 안 정하고 한 번, <em>Playwright 를 지정해서</em> 한 번.</p>
+<p class="lead">도구를 지정하기 전과 후 비교</p>
 
 <p>대상은 네이버 뉴스 경제 탭입니다. 시키기 전에 그 사이트의 규칙부터 봅니다.</p>
 
@@ -2625,7 +2721,7 @@ class: top-led brand-cc band-page compact
 
 # 그냥 시킨다
 
-<p class="lead">MCP 없이 시작합니다. 화면 첫 줄이 보낸 문장입니다. <em>도구 이름은 없습니다</em>.</p>
+<p class="lead">도구 이름 없이 보낸 요청</p>
 
 <figure class="shot band nochrome term" data-origin="capture">
 <img src="./images/term/robots-fetch.png" alt="터미널 화면. 네이버 뉴스 경제 탭 주소로 최신 뉴스 10개를 가져오라는 입력에 대해 Fetch 를 시도하고 Claude Code is unable to fetch from news.naver.com 오류가 난다. 이어 WebFetch 가 차단되어 브라우저 자동화 도구로 진행하겠다며 claude-in-chrome 을 두 번 호출하고, 모바일 주소 m.news.naver.com 으로 다시 Fetch 를 시도해 같은 오류를 받는다" />
@@ -2644,14 +2740,14 @@ class: top-led brand-cc band-page compact
 
 # 멈춘 뒤에 내미는 것
 
-<p class="lead">막히자 <em>대안을 제안합니다</em>. 1번이 「Chrome 확장에서 이 사이트를 직접 허용해 달라」입니다.</p>
+<p class="lead">접속 실패 후 제안한 대안</p>
 
 <figure class="shot band nochrome term" data-origin="capture">
 <img src="./images/term/robots-ask.png" alt="터미널 화면. 네이버 뉴스에 두 가지 방법 모두 막혔다고 정리하고, 추측이나 오래된 정보로 채워서 드리고 싶지는 않다고 말한 뒤 진행 방법을 묻는 선택 카드가 뜬다. 1번 Chrome 확장에서 직접 권한 허용, 2번 다른 경제 뉴스 출처로 대체, 3번 직접 URL 복사해서 전달, 4번 직접 입력" />
 <figcaption>여기서 멈춥니다. <em>거부</em>하고 이 화면을 그대로 둡니다</figcaption>
 </figure>
 
-<p class="thesis">도구는 울타리 안에서 멈췄고, 넘어가는 승인은 <em>내 손</em>에 있습니다. 승인하는 순간 책임도 같이 옵니다.</p>
+<p class="thesis">어디서 접속이 막혔고 어떤 대안을 제안했는지 확인합니다. 제안이 나왔다고 바로 실행하지는 않습니다.</p>
 
 <p class="src">근거 — 같은 세션 · 헤드리스로 돌리면 <code>curl -A "Mozilla/5.0 … Chrome/120.0"</code> 을 제안합니다. 크롬인 척하는 헤더까지 스스로 붙입니다</p>
 
@@ -2668,10 +2764,10 @@ class: top-led brand-cc compact
 
 # 도구를 지정한다
 
-<p class="lead">세션을 나가서 붙이고, 다시 들어와 <em>도구 이름을 넣어</em> 같은 부탁을 합니다.</p>
+<p class="lead">같은 요청에 <em>Playwright MCP</em> 명시</p>
 
 ```bash
-claude mcp add playwright -- npx @playwright/mcp@latest
+claude mcp add playwright -- cmd /c npx -y @playwright/mcp@latest
 ```
 
 ```text
@@ -2683,9 +2779,9 @@ Playwright MCP로 https://news.naver.com/section/101 에 접속해서 최신 뉴
 <div><b>한 줄 더</b><span>끝나면 묻습니다. 「방금 접속할 때 robots.txt 를 확인했어?」</span></div>
 </div>
 
-<p class="thesis">「확인하지 않았다 · Playwright 에는 그런 검사가 없다」는 답이 <em>결론 장표를 대신합니다</em>.</p>
+<p class="thesis">답변뿐 아니라 실제 호출 기록도 확인합니다. 도구가 성공했다는 사실만으로 수집이 허용된다고 판단하지 않습니다.</p>
 
-<p class="src">강사 시연 · microsoft/playwright-mcp 문서에는 robots.txt 라는 단어가 없습니다</p>
+<p class="src">강사 시연 기록 · 실행 환경과 사이트 응답에 따라 결과가 달라질 수 있음</p>
 
 ---
 class: top-led brand-cc
@@ -2695,16 +2791,16 @@ class: top-led brand-cc
 
 # 갈린 자리
 
-<p class="lead">프롬프트는 도구 이름 하나 차이였습니다. 갈린 건 <em>요청을 누가 보냈느냐</em>입니다.</p>
+<p class="lead">이 시연에서 관찰한 접속 경로와 결과</p>
 
 |  | A · 도구 미지정 | B · Playwright 지정 |
 |---|---|---|
 | 요청 주체 | Anthropic 쪽 fetcher · Chrome 확장 | 내 PC 의 Chromium |
-| robots.txt | 확인 → 중단 | 확인 안 함 |
+| 시연에서의 응답 | robots.txt 관련 중단 | 같은 중단 메시지 없음 |
 | 결과 | 실패 + 대안·우회 제안 | 성공 |
-| 책임 | Anthropic 이 회피 | 사용자 |
+| 추가 확인 | 오류 내용과 대체 자료 | 사이트의 수집·이용 조건 |
 
-<p class="thesis">「그럼 B 로 매일 수집해도 되나요?」 답은 되냐가 아니라 <em>누구 책임이냐</em>입니다. 규모 · 약관 · 저장과 재이용이 기준입니다.</p>
+<p class="thesis"><em>접속 성공과 반복 수집 허용은 별개</em>입니다. 정기 수집 전에는 공식 API와 사이트 이용 조건부터 확인합니다.</p>
 
 <p class="src">2일차 「코드 한 줄 쓰기 전에」 표로 이어집니다 — robots.txt · 이용약관 · 공개 API · 로그인</p>
 
@@ -2722,7 +2818,7 @@ class: top-led brand-cc
 
 # 컴퓨터 제어 켜기
 
-<p class="lead">Windows에서는 <em>앱 설정의 토글 하나</em>로 시작합니다.</p>
+<p class="lead">Windows · Settings → General → Computer use</p>
 
 <div class="steps">
 <div><b>앱을 업데이트합니다</b><span>최신 Claude Desktop으로 올린 뒤 앱을 다시 시작합니다</span></div>
@@ -2745,7 +2841,7 @@ class: top-led brand-cc
 <div class="split evidence">
 <div>
 
-<p class="lead">CLI 도 API 도 없는 프로그램은 <em>마우스로 직접</em> 다룹니다.</p>
+<p class="lead">명령·API가 없는 프로그램을 클릭과 입력으로 조작</p>
 
 <div class="deflist">
 <div><b>되는 일</b><span>앱 열기 · 클릭 · 타이핑 · 캡처</span></div>
@@ -2773,7 +2869,7 @@ class: top-led brand-cc
 
 # 일하는 동안
 
-<p class="lead">시작하면 <em>다른 창이 숨습니다</em>. 승인한 앱만 화면에 남습니다.</p>
+<p class="lead">승인한 앱을 제어하는 동안의 화면</p>
 
 <div class="steps">
 <div><b>시작</b><span>필요한 앱을 먼저 묻고, 승인한 앱만 만집니다</span></div>
@@ -2796,7 +2892,7 @@ class: top-led brand-cc
 <div class="split evidence">
 <div>
 
-<p class="lead">확인할 방법을 쥐어 주면 <em>스스로 고칩니다</em>. 안 주면 그 일을 사람이 합니다.</p>
+<p class="lead">기대값과 확인 도구를 함께 전달</p>
 
 <div class="deflist">
 <div><b>검사거리</b><span>테스트 · 빌드 · 화면 대조. 통과/실패가 나오는 것</span></div>
@@ -2823,7 +2919,7 @@ class: top-led brand-cc band-page
 
 # 확인할 수 없을 때
 
-<p class="lead">파일만 열어 볼 수 있는 세션에 물었습니다. 답은 <em>가능성 네 개의 순위</em>였습니다.</p>
+<p class="lead">파일만 읽을 수 있을 때의 답변</p>
 
 <figure class="shot band nochrome term" data-origin="capture">
 <img src="./images/term/verify-off.png" alt="원인 추정 목록. 1번 인코딩을 EUC-KR로 강제 디코딩이 가장 유력하다고 적혀 있고, 2번 구분자 오판, 3번 헤더 행 인덱스 가정, 4번 BOM 은 가능성은 있지만 이번 증상과 맞지 않는다고 배제되어 있다. 괄호 안에 도구 제약상 BOM 유무만은 확정하지 못했다고 덧붙였다" />
@@ -2840,7 +2936,7 @@ class: top-led brand-cc band-page
 
 # 확인할 수 있을 때
 
-<p class="lead">같은 질문을 <em>돌려 볼 수 있는</em> 세션에 했습니다. 순위가 아니라 결론이 나왔습니다.</p>
+<p class="lead">직접 실행할 수 있을 때의 답변</p>
 
 <figure class="shot band nochrome term mark-ok" data-origin="capture">
 <img src="./images/term/verify-on.png" alt="같은 라이브러리 버전으로 재현한 결과. A 현재 앱 방식은 헤더가 깨짐, B BOM 추가 후는 정상, C TextDecoder 사용도 정상. 컬럼 매칭 로직은 멀쩡하고 비교 대상 문자열이 깨져 들어와 무엇과도 맞지 않는다는 결론이 이어진다" />
@@ -2859,7 +2955,7 @@ class: top-led brand-cc
 
 # 탐색 → 계획 → 코드
 
-<p class="lead">코드부터 시키면 <em>엉뚱한 문제</em>를 잘 풀어 옵니다.</p>
+<p class="lead">문제와 범위를 확인한 뒤 구현</p>
 
 <div class="steps">
 <div><b>탐색</b><span>Plan 모드로 읽게만 합니다. 「어떻게 돌아가는지 봐」</span></div>
@@ -2879,7 +2975,7 @@ class: top-led brand-cc
 
 # 조기 방향 수정
 
-<p class="lead">어긋난 걸 봤으면 <em>그 자리에서</em> 세웁니다. 끝나기를 기다리지 않습니다.</p>
+<p class="lead">어긋난 부분을 발견하면 즉시 중단·수정</p>
 
 <div class="deflist">
 <div><b><code>Esc</code></b><span>하던 동작만 멈춥니다. 맥락은 남습니다</span></div>
@@ -2900,7 +2996,7 @@ class: top-led brand-cc band-page
 
 # 30초 만에 보이는 것
 
-<p class="lead">「엑셀 파일로 만들어줘」 한 줄에 <em>파이썬부터 찾기</em> 시작했습니다.</p>
+<p class="lead">엑셀 파일 요청 뒤 시작한 작업</p>
 
 <figure class="shot band nochrome term" data-origin="capture">
 <img src="./images/term/redir-wrong.png" alt="터미널 화면. 「주간 보고를 엑셀 파일로도 만들어줘」 라는 입력에 대해 파이썬 및 openpyxl 확인이라는 작업 이름과 함께, python3 와 uv 위치를 찾고 openpyxl 버전을 확인하는 셸 명령이 돌고 있다" />
@@ -2919,7 +3015,7 @@ class: top-led brand-cc band-page
 
 # 세우고 돌리기
 
-<p class="lead"><code>Esc</code> 를 누르면 <em>「대신 뭘 할까요」</em>가 뜹니다. 대화는 그대로 남습니다.</p>
+<p class="lead">실행을 멈춘 뒤 같은 대화에서 방향 수정</p>
 
 <figure class="shot band nochrome term mark-ok" data-origin="capture">
 <img src="./images/term/redir-fix.png" alt="터미널 화면. 읽은 파일과 실행한 명령 요약 아래에 Interrupted, What should Claude do instead 라는 줄이 있고, 이어서 「파이썬 설치까지 가지 말고, 엑셀에서 그냥 열리는 CSV로 만들어줘. 보고 아래에」 라는 입력이 들어간 뒤 CSV로 만들겠다는 답이 이어진다" />
@@ -2938,7 +3034,7 @@ class: top-led brand-cc compact
 
 # 흔한 실수 5가지
 
-<p class="lead">대부분 <em>맥락이 지저분해져서</em> 생깁니다.</p>
+
 
 | 증상 | 처방 |
 |---|---|
@@ -2960,7 +3056,7 @@ class: top-led brand-cc
 
 # 1부 되짚기
 
-<p class="lead">답이 바로 안 나오는 줄이 있으면 <em>거기가 다시 볼 자리</em>입니다.</p>
+<p class="lead">답이 막히는 항목은 해당 장표로 돌아가 확인</p>
 
 <div class="deflist">
 <div><b>되돌리려면</b><span>무엇을 누르고, 무엇은 안 돌아옵니까</span></div>
@@ -2981,7 +3077,7 @@ class: top-led brand-cc
 
 # 되짚기 답
 
-<p class="lead">네 줄 다 나왔다면 1부는 끝입니다.</p>
+
 
 <div class="deflist">
 <div><b>되돌리려면</b><span>Esc 두 번. Bash 로 바꾼 것과 외부 변경은 안 돌아옵니다</span></div>
@@ -3015,12 +3111,12 @@ class: top-led brand-ag
 <div class="split evidence">
 <div>
 
-<p class="lead">구글이 만든, 에이전트를 <em>여러 개 굴리는</em> 데스크톱 앱입니다.</p>
+<p class="lead">Google의 에이전트 작업용 데스크톱 앱</p>
 
 <div class="deflist">
 <div><b>어디서 도나</b><span>편집기 없이 <em>혼자 도는 앱</em>입니다</span></div>
 <div><b>시킬 수 있는 것</b><span>명령 실행 · 파일 수정 · 웹 검색 · 크롬 조작</span></div>
-<div><b>일하는 단위</b><span>프로젝트. 묶어 둔 폴더 안에서만</span></div>
+<div><b>일하는 단위</b><span>프로젝트에 추가한 폴더. 접근 범위는 권한 설정으로 확인</span></div>
 </div>
 
 <p class="thesis">터미널용 CLI 와 편집기 버전도 따로 있습니다. 이 수업은 <em>데스크톱 앱</em>만 봅니다.</p>
@@ -3035,6 +3131,23 @@ class: top-led brand-ag
 <p class="src">출처 — Antigravity 공식 문서 「Overview」 antigravity.google/docs/overview</p>
 
 ---
+class: top-led brand-ag compact
+---
+
+<p class="eyebrow">2부 · 설치와 시연</p>
+
+# Antigravity 시작하기
+
+<div class="steps">
+<div><b>설치·로그인</b><span><a href="https://antigravity.google/download">공식 다운로드</a>에서 Windows용 설치 후 Google 계정으로 로그인</span></div>
+<div><b>프로젝트</b><span>New Project → Add Folder에서 실습 폴더 추가 → Create</span></div>
+<div><b>작업 시작</b><span>Local을 선택하고, 이번 시연은 계획을 먼저 요청</span></div>
+<div><b>비교</b><span>Claude Code에서 했던 질문을 보내 계획·승인·결과 확인 위치 찾기</span></div>
+</div>
+<p class="thesis">Claude 구독과 Antigravity 사용량은 별개. 오늘은 강사 시연 25분 후 Claude Code로 돌아갑니다.</p>
+<p class="src">2026-09-10 확인 · <a href="https://antigravity.google/docs/getting-started">Getting Started</a> · <a href="https://antigravity.google/docs/plans">Plans</a></p>
+
+---
 class: top-led brand-ag
 ---
 
@@ -3042,14 +3155,14 @@ class: top-led brand-ag
 
 # 실행 모드 2종
 
-<p class="lead">대화를 시작할 때 <em>계획을 낼지 말지</em>를 먼저 고릅니다.</p>
+<p class="lead">계획을 먼저 검토할 작업, 바로 실행할 작업</p>
 
 <div class="duo">
 <div class="pane"><h3><span class="latin">PLANNING</span>계획 모드</h3><p>일을 묶음으로 정리하고, 코드를 읽어 조사한 뒤 <em>계획 문서</em>를 냅니다. 처음 보는 코드나 여러 파일을 건드릴 때.</p></div>
 <div class="pane"><h3><span class="latin">FAST</span>바로 실행</h3><p>계획 단계 없이 바로 합니다. 이름 바꾸기, 명령 한 줄, 작은 정리처럼 <em>범위가 뻔한</em> 일.</p></div>
 </div>
 
-<p class="thesis">이름만 다를 뿐, Claude Code 의 <em>Plan 모드와 같은 자리</em>입니다.</p>
+<p class="thesis">계획부터 검토한다는 목적은 Claude Code의 Plan과 같습니다. <em>승인 정책은 별도 설정</em>입니다.</p>
 
 <p class="src">출처 — Antigravity 공식 문서 「Artifact Review」 antigravity.google/docs/artifact-review</p>
 
@@ -3064,7 +3177,7 @@ class: top-led brand-ag
 <div class="split evidence">
 <div>
 
-<p class="lead">매 단계를 지켜보는 대신 <em>산출물</em>로 확인합니다.</p>
+<p class="lead">계획·변경 내용·검증 결과를 문서와 화면으로 확인</p>
 
 <div class="deflist">
 <div><b>무엇이 나오나</b><span>계획 문서 · 코드 diff · 구조도 · 브라우저 녹화</span></div>
@@ -3094,12 +3207,12 @@ class: top-led brand-ag
 <div class="split evidence">
 <div>
 
-<p class="lead">코드를 건드리기 전에 <em>사람에게 확인받는</em> 문서입니다.</p>
+<p class="lead">구현 방법과 확인이 필요한 결정 사항</p>
 
 <div class="deflist">
 <div><b>담기는 것</b><span>무엇을 왜 고칠지, 새로 만들 파일 목록</span></div>
 <div><b>따로 표시</b><span>「User Review Required」 로 묶인 갈림길</span></div>
-<div><b>멈추는 자리</b><span>이 문서를 내고 멈춰서 기다립니다</span></div>
+<div><b>승인 정책</b><span>Request Review는 승인 대기, Always Proceed는 계속 실행</span></div>
 </div>
 
 <p class="thesis">3부에서 쓸 PRD 와 다릅니다. PRD 는 <em>무엇을 만들지</em>, 이 문서는 <em>어떻게 고칠지</em>입니다.</p>
@@ -3121,7 +3234,7 @@ class: top-led brand-ag
 
 # 계획 승인과 반려
 
-<p class="lead">갈림길로 표시된 곳부터 읽고, 그대로 가려면 <em>Proceed</em>.</p>
+<p class="lead">Request Review 설정에서 계획을 검토한 뒤 승인</p>
 
 <div class="steps">
 <div><b>코멘트</b><span>고칠 문장을 골라 「이건 이번엔 빼」 처럼 적습니다</span></div>
@@ -3141,12 +3254,12 @@ class: top-led brand-ag
 
 # 모델 선택
 
-<p class="lead">안에서 도는 모델을 <em>직접 고릅니다</em>. 구글 것만 있는 게 아닙니다.</p>
+<p class="lead">사용할 수 있는 모델은 요금제와 계정에 따라 차이</p>
 
 <div class="chips">
 <i>Gemini 3.7 Flash</i>
 <i>Gemini 3.6 Flash</i>
-<i>Gemini 3.5 Flash</i>
+<i>Gemini 3.8 Flash</i>
 <i>Gemini 3.1 Pro</i>
 <i>Claude Sonnet 4.6</i>
 <i>Claude Opus 4.6</i>
@@ -3165,7 +3278,7 @@ class: top-led brand-ag compact
 
 # Claude Code vs Antigravity
 
-<p class="lead">어느 쪽이 나은가가 아니라 <em>어떤 화면이 필요한가</em>입니다.</p>
+<p class="lead">앞에서 배운 개념을 다른 화면에 연결</p>
 
 | | Claude Code | Antigravity |
 |---|---|---|
@@ -3175,7 +3288,7 @@ class: top-led brand-ag compact
 | 모델 | Claude 계열 | Gemini · Claude · GPT-OSS 중 선택 |
 | 확장 | 스킬 · MCP · 플러그인 · 훅 | 스킬 · MCP · 플러그인 · 훅 |
 
-<p class="thesis">맨 아랫줄이 같습니다. 둘 다 <code>SKILL.md</code> 와 MCP 를 씁니다. <em>갈리는 건 화면</em>입니다.</p>
+<p class="thesis">둘 다 <code>SKILL.md</code>와 MCP를 지원합니다. 설치 경로·권한 정책·사용량은 각각 확인합니다.</p>
 
 <p class="src">출처 — Antigravity 공식 문서 「Feature overview」·「Skills」·「MCP」 / Claude Code 공식 문서 「Overview」</p>
 
@@ -3187,7 +3300,7 @@ class: top-led brand-ag
 
 # 같은 한 줄
 
-<p class="lead">같은 지시 한 줄을 두 도구에 <em>그대로</em> 넣습니다.</p>
+<p class="lead">같은 업무 요청으로 계획 비교</p>
 
 <div class="deflist">
 <div><b>지시</b><span>「이 폴더의 엑셀을 읽어 월별 합계 화면을 만들어 줘」</span></div>
@@ -3211,7 +3324,7 @@ class: top-led brand-ag
 <div class="split evidence">
 <div>
 
-<p class="lead">나온 계획 문서를 <em>같이 읽습니다</em>.</p>
+
 
 <div class="deflist">
 <div><b>맨 위</b><span>무엇을 만드는지 한 문단</span></div>
@@ -3219,7 +3332,7 @@ class: top-led brand-ag
 <div><b>아래</b><span>새로 만들 파일과 각 파일이 하는 일</span></div>
 </div>
 
-<p class="thesis">코드를 못 읽어도 <em>이 문서는 읽힙니다</em>. 확인해야 할 것이 여기 다 있습니다.</p>
+<p class="thesis">목적·범위·미정 항목을 먼저 읽습니다. 구현 뒤에는 실제 동작도 별도로 검증합니다.</p>
 
 </div>
 <figure class="shot nochrome" data-origin="web" data-source="https://antigravity.google/docs/implementation-plan/">
@@ -3241,7 +3354,7 @@ class: top-led brand-ag
 <div class="split evidence">
 <div>
 
-<p class="lead">Proceed 를 누르기 전까지는 <em>파일이 하나도 안 바뀝니다</em>.</p>
+<p class="lead">Request Review에서 계획에 코멘트를 달고 재검토</p>
 
 <div class="steps">
 <div><b>코멘트</b><span>「이 기능은 이번엔 빼」 처럼 범위를 줄입니다</span></div>
@@ -3266,11 +3379,11 @@ class: top-led brand-ag
 
 # 선택 기준
 
-<p class="lead">셋 중 어디에 해당하는지로 고릅니다.</p>
+<p class="lead">오늘의 실습 도구와 이후의 비교 후보</p>
 
 <div class="trio">
 <div class="pane key"><h3>Claude Code</h3><p>터미널까지 함께 쓰고, 되돌리기와 권한 모드를 손에 익힌 일. 이 수업의 실습은 전부 여기입니다.</p></div>
-<div class="pane"><h3>Antigravity</h3><p>코드는 안 보고 계획 문서만 읽고 승인하고 싶을 때. 모델을 바꿔 가며 견줘 보고 싶을 때.</p></div>
+<div class="pane"><h3>Antigravity</h3><p>계획·검증 결과를 아티팩트로 검토하고, 다른 모델의 결과와 비교할 때.</p></div>
 <div class="pane"><h3>둘 다 아님</h3><p>엑셀 한 장으로 끝나는 일. 도구를 켜는 시간이 더 듭니다.</p></div>
 </div>
 
@@ -3284,7 +3397,7 @@ class: divider brand-cc-solid
 
 ## 질문으로 PRD 작성
 
-<p class="div-sub">모호한 아이디어를 확인 가능한 요구사항으로 바꿉니다</p>
+<p class="div-sub">아이디어에서 확인 가능한 요구사항으로</p>
 
 ---
 class: top-led brand-cc
@@ -3294,7 +3407,7 @@ class: top-led brand-cc
 
 # 개발 워크플로우
 
-<p class="lead">세 단계를 한 바퀴 돕니다. <em>완료 기준은 첫 단계에서</em> 정합니다.</p>
+<p class="lead">역인터뷰 → 디자인·개발 → 검증</p>
 <figure class="figure">
 <svg viewBox="0 0 900 230" role="img" aria-label="역인터뷰로 PRD 확정, 스킬과 reference 이미지로 개발, Playwright MCP로 검증. 실패하면 해당 단계로 돌아간다">
 <g fill="var(--ink)" style="font-family:var(--sans);font-size:24px;font-weight:600">
@@ -3318,7 +3431,7 @@ class: top-led brand-cc
 
 # 첫 요청은 역인터뷰
 
-<p class="lead">무엇을 만들지 짧게 말하고, <em>Claude가 질문하게</em> 합니다.</p>
+<p class="lead">업무를 짧게 설명하고 <em>Claude가 질문하도록 요청</em></p>
 
 ```text
 생산실적 엑셀을 올리면 라인별 불량률을 확인하는 화면을 만들고 싶어.
@@ -3327,7 +3440,7 @@ class: top-led brand-cc
 한 번에 1~2개씩 질문하고, 애매한 답은 예를 들어 다시 물어봐.
 내가 모르는 부분은 선택지와 차이를 설명해줘.
 ```
-<p class="thesis">시작 상태 · Code 탭에서 수업용 프로젝트를 열고 샘플 엑셀을 첨부합니다.</p>
+<p class="thesis">시작 상태 · Code 탭에서 수업용 프로젝트를 열고 <a href="./downloads/day1-samples.zip" download>샘플 엑셀</a>을 첨부합니다.</p>
 
 
 <!--
@@ -3343,7 +3456,7 @@ class: top-led brand-cc
 
 # 모르는 것도 되묻기
 
-<p class="lead">내가 답하기 어렵다면 <em>예를 들어 설명해 달라</em>고 묻습니다.</p>
+<p class="lead">낯선 기준은 예시와 선택지를 요청</p>
 <div class="deflist">
 <div><b>Claude의 질문</b><span>전체 불량률은 라인별 비율의 평균인가요, 수량 합계로 계산하나요?</span></div>
 <div><b>내가 되묻기</b><span>둘이 어떻게 달라? 생산량이 다른 두 라인으로 설명해줘.</span></div>
@@ -3360,7 +3473,7 @@ class: top-led brand-cc
 
 # 대화가 기준이 되는 순간
 
-<p class="lead">「불량률을 보여줘」를 <em>값까지 확인할 수 있는 문장</em>으로 바꿉니다.</p>
+<p class="lead">「불량률을 보여줘」에서 <em>검증 가능한 기준</em>으로</p>
 
 | 샘플 | 생산량 | 불량수 | 불량률 |
 |---|---:|---:|---:|
@@ -3383,7 +3496,7 @@ class: top-led brand-cc
 
 # 합의한 내용을 PRD로
 
-<p class="lead"><em>PRD는 무엇을 만들고 어떻게 확인할지</em> 합의한 문서입니다.</p>
+<p class="lead">무엇을 만들고, 어떻게 확인할지 합의한 문서</p>
 
 ```text
 지금까지 합의한 내용을 PRD.md로 정리해줘.
@@ -3402,7 +3515,7 @@ class: top-led brand-cc
 
 # PRD에 남길 내용
 
-<p class="lead">개발을 시작하기 전에 <em>완료 조건까지</em> 읽고 확정합니다.</p>
+<p class="lead">목적 · 데이터 · 기능 · 제외 범위 · 완료 조건</p>
 <div class="deflist">
 <div><b>목적·사용자</b><span>생산 담당자가 회의 전에 라인별 불량률을 확인한다.</span></div>
 <div><b>데이터·기능</b><span>라인·생산량·불량수 열을 읽고, 업로드와 라인 필터를 제공한다.</span></div>
@@ -3420,7 +3533,7 @@ class: top-led brand-cc
 
 # 내 업무로 역인터뷰
 
-<p class="lead"><em>10분 실습</em> · 만들고 싶은 업무 화면 하나로 질문과 답변을 이어갑니다.</p>
+<p class="lead"><em>10분 실습</em> · 업무 화면 하나의 요구사항 정리</p>
 <div class="steps">
 <div><b>시작</b><span>업무 설명 한 문장과 사용할 샘플 자료를 보냅니다.</span></div>
 <div><b>대화</b><span>불명확한 말이 나오면 구체적인 상황과 예시로 답합니다.</span></div>
@@ -3441,7 +3554,7 @@ class: divider brand-cc-solid
 
 ## 스킬과 레퍼런스
 
-<p class="div-sub">원하는 화면을 보여주고, PRD의 기능을 담아 구현합니다</p>
+<p class="div-sub">PRD의 기능, 레퍼런스의 화면 구성</p>
 
 ---
 class: top-led brand-cc
@@ -3451,13 +3564,13 @@ class: top-led brand-cc
 
 # 디자인에 쓰는 세 가지
 
-<p class="lead"><em>스킬은 구현을 돕고, 이미지는 원하는 방향을 보여줍니다.</em></p>
+<p class="lead">구현 지침을 담은 스킬, 원하는 방향을 보여 주는 이미지</p>
 <div class="deflist">
 <div><b>frontend-design</b><span>화면 구성·타이포그래피·시각적 완성도를 고려하며 구현합니다.</span></div>
 <div><b>taste-skill</b><span>배치·여백·정보 밀도를 다듬을 때 함께 사용합니다.</span></div>
 <div><b>reference/</b><span>내가 고른 화면 캡처를 넣고, 닮았으면 하는 부분을 짚습니다.</span></div>
 </div>
-<p class="thesis">준비 · 두 스킬이 현재 Claude Code 세션에서 사용 가능한지 확인합니다.</p>
+<p class="thesis">준비 · frontend-design부터 확인. taste-skill은 설치한 경우 함께 사용합니다.</p>
 <p class="src">출처 · <a href="https://github.com/anthropics/skills/tree/main/skills/frontend-design">frontend-design</a> · <a href="https://github.com/Leonxlnx/taste-skill">taste-skill</a></p>
 
 <!--
@@ -3468,11 +3581,31 @@ taste-skill 저장소의 기본 프런트엔드 스킬 설치 이름은 design-t
 class: top-led brand-cc
 ---
 
+<p class="eyebrow">3-B · 실습 준비</p>
+
+# 디자인 스킬 준비
+
+<p class="lead">처음에는 frontend-design 하나로 시작</p>
+
+```text
+공식 저장소의 frontend-design 스킬을 이 프로젝트에 설치해줘.
+https://github.com/anthropics/skills/tree/main/skills/frontend-design
+.claude/skills/frontend-design/SKILL.md에 저장하고,
+원문의 라이선스와 함께 필요한 파일을 가져와줘.
+설치한 경로와 이 스킬이 하는 일을 알려줘. 아직 앱은 만들지 마.
+```
+<p class="thesis">새 세션에서 스킬을 찾을 수 있는지 확인. 적용할 때는 이름을 명시하고, 작업 기록에서 읽었는지 확인합니다. taste-skill은 선택 확장.</p>
+<p class="src">출처 · <a href="https://github.com/anthropics/skills/tree/main/skills/frontend-design">Anthropic frontend-design</a> · <a href="https://code.claude.com/docs/en/skills">스킬 설치 경로</a></p>
+
+---
+class: top-led brand-cc
+---
+
 <p class="eyebrow">3-B · 스킬과 레퍼런스로 디자인</p>
 
 # 원하는 화면 캡처
 
-<p class="lead"><em>Dribbble 등에서 마음에 드는 화면</em>을 찾아 캡처합니다.</p>
+<p class="lead">만들 화면과 비슷한 레퍼런스 1~3장</p>
 <div class="steps">
 <div><b>찾기</b><span>만드는 것과 비슷한 화면을 검색합니다. 예: dashboard, data table.</span></div>
 <div><b>고르기</b><span>전체 배치가 마음에 드는 화면 1장, 필요한 세부 화면 1~2장을 고릅니다.</span></div>
@@ -3494,7 +3627,7 @@ class: top-led brand-cc
 
 # reference 폴더 구성
 
-<p class="lead">프로젝트 폴더 안에 <em>이미지 파일을 직접</em> 넣습니다.</p>
+
 
 ```text
 내 프로젝트/
@@ -3518,7 +3651,7 @@ class: top-led brand-cc
 
 # 참고할 부분을 짚기
 
-<p class="lead">「이것처럼」에 <em>어디를 닮게 할지</em> 한 문장을 더합니다.</p>
+<p class="lead">레이아웃·숫자 정렬·여백 중 참고할 부분 지정</p>
 
 ```text
 reference/dashboard.png의 왼쪽 메뉴와 상단 지표 배치를 참고해줘.
@@ -3537,11 +3670,12 @@ class: top-led brand-cc
 
 # 스킬을 써서 개발 시작
 
-<p class="lead">PRD와 이미지를 읽은 뒤, <em>핵심 흐름부터 실제로 동작하게</em> 만듭니다.</p>
+<p class="lead">PRD와 레퍼런스를 읽고 <em>핵심 흐름부터 구현</em></p>
 
 ```text
 PRD.md와 reference/의 이미지를 읽어줘.
-frontend-design과 taste-skill(design-taste-frontend)을 사용해 구현해줘.
+frontend-design을 사용해 구현해줘.
+설치했다면 design-taste-frontend도 함께 참고해줘.
 별도의 디자인 문서는 만들지 말고 레퍼런스를 참고해 바로 개발해줘.
 먼저 엑셀 업로드 → 전체 불량률 → 라인 필터 흐름을 완성해줘.
 실행한 뒤 접속 주소와 확인할 동작을 알려줘.
@@ -3557,7 +3691,7 @@ class: top-led brand-cc
 
 # 이미지로 확인 못 하는 것
 
-<p class="lead">레퍼런스에 없는 <em>빈 화면과 오류 상태</em>도 PRD대로 만듭니다.</p>
+<p class="lead">빈 화면 · 오류 안내 · 키보드 조작</p>
 <div class="deflist">
 <div><b>파일 없음</b><span>무엇을 올려야 하는지 보이는가?</span></div>
 <div><b>잘못된 열</b><span>어떤 열을 고쳐야 하는지 알려 주는가?</span></div>
@@ -3573,7 +3707,7 @@ class: divider brand-cc-solid
 
 ## 개발 결과 검증
 
-<p class="div-sub">Playwright MCP로 실제 동작을 확인하고, 고친 뒤 다시 확인합니다</p>
+<p class="div-sub">기대값과 실제 동작 대조 · 수정 후 재검증</p>
 
 ---
 class: top-led brand-cc
@@ -3583,7 +3717,7 @@ class: top-led brand-cc
 
 # 브라우저를 직접 조작
 
-<p class="lead"><em>Playwright MCP</em>는 Claude가 브라우저를 열고 조작하도록 연결합니다.</p>
+<p class="lead">Playwright MCP로 열기 → 조작 → 대조 → 기록</p>
 <div class="steps">
 <div><b>열기</b><span>개발 서버를 실행하고 실제 접속 주소를 확인합니다.</span></div>
 <div><b>조작</b><span>파일을 올리고, 필터와 버튼을 누릅니다.</span></div>
@@ -3604,7 +3738,7 @@ class: top-led brand-cc
 
 # 검증 시작 전 확인
 
-<p class="lead">지시를 보내기 전에 <em>주소·연결·샘플</em>이 준비돼 있어야 합니다.</p>
+<p class="lead">실행 주소 · MCP 연결 · 샘플 파일</p>
 <div class="deflist">
 <div><b>앱 주소</b><span>Claude가 알려 준 개발 서버 주소를 실제로 열 수 있습니다.</span></div>
 <div><b>MCP 연결</b><span>현재 세션에서 Playwright MCP의 브라우저 도구를 호출할 수 있습니다.</span></div>
@@ -3621,7 +3755,7 @@ class: top-led brand-cc
 
 # 검증용 파일 준비
 
-<p class="lead">값을 아는 작은 파일로 확인합니다. <em>아래 두 파일을 만들게</em> 하세요.</p>
+<p class="lead">값을 아는 정상 파일과 필수 열이 빠진 파일</p>
 
 ```text
 검증용 엑셀 두 개를 만들어줘. 열 이름은 PRD.md의 정의를 따라줘.
@@ -3631,6 +3765,8 @@ sample-missing.xlsx: 같은 데이터에서 불량수 열을 뺀 파일.
 ```
 
 <p class="thesis">열어서 확인 · 정상 파일의 두 행이 위 값과 같은지, 오류 파일에 불량수 열이 없는지 봅니다.</p>
+
+<p class="src">바로 사용 · <a href="./downloads/day1-samples.zip" download>수업용 엑셀 2개 + Windows MCP 설정 다운로드</a></p>
 
 <!-- 앱을 통한 계산 전에 검증 자료 자체를 열어서 확인합니다. 강사가 두 파일을 사전 준비해도 됩니다. 이후 Playwright MCP가 읽을 수 있는 경로를 전달합니다. -->
 
@@ -3642,7 +3778,7 @@ class: top-led brand-cc
 
 # 검증 요청 프롬프트
 
-<p class="lead">「확인해줘」 대신 <em>동작과 기대 결과를 함께</em> 보냅니다.</p>
+<p class="lead">사용자 동작과 기대 결과를 함께 전달</p>
 
 ```text
 실행 중인 앱을 Playwright MCP로 열어 PRD.md의 완료 조건을 검증해줘.
@@ -3662,7 +3798,7 @@ class: top-led brand-cc
 
 # 통과 판단의 기준
 
-<p class="lead">아래는 <em>수업용 검증표 예시</em>입니다. 실제 실행 결과로 채웁니다.</p>
+<p class="lead">아래 표는 예시. 판정은 실제 실행 결과로</p>
 
 | 동작 | 기대 결과 | 남길 증거 |
 |---|---|---|
@@ -3682,7 +3818,7 @@ class: top-led brand-cc
 
 # 실패한 동작 다시 확인
 
-<p class="lead">「고쳤다」는 답 뒤에 <em>같은 조건으로 한 번 더</em> 실행합니다.</p>
+<p class="lead">수정 뒤에도 <em>같은 샘플·같은 동작</em>으로 재검증</p>
 
 ```text
 A라인을 선택해도 전체 값 2%가 그대로 보여.
@@ -3701,7 +3837,7 @@ class: top-led brand-cc
 
 # 완료라고 말할 때
 
-<p class="lead"><em>무엇을 실행했고 무엇이 남았는지</em> 확인하고 마칩니다.</p>
+<p class="lead">실행한 항목과 남은 항목 확인</p>
 <div class="deflist">
 <div><b>기능</b><span>PRD의 완료 조건을 실행 결과로 확인했다.</span></div>
 <div><b>화면</b><span>캡처를 reference와 대조하고 의도한 차이는 설명했다.</span></div>
@@ -3718,7 +3854,7 @@ class: top-led brand-cc
 
 # 검증 지시 직접 쓰기
 
-<p class="lead"><em>5분 실습</em> · 내 PRD에서 완료 조건 하나를 골라 검증을 시킵니다.</p>
+<p class="lead"><em>5분 실습</em> · 내 PRD의 완료 조건 하나 검증</p>
 
 ```text
 Playwright MCP로 [앱 주소]를 열어줘.
@@ -3734,9 +3870,140 @@ class: divider brand-cc-solid
 
 <p class="div-no">4-B</p>
 
+## 검증한 앱 배포
+
+<p class="div-sub">Vercel과 Cloud Run · 내 PC 밖에서 실행하기</p>
+<p class="div-file">강사 시연 · 공개 가능한 샘플 데이터</p>
+
+---
+class: top-led brand-cc
+---
+
+<p class="eyebrow">4-B · 배포 선택</p>
+
+# 어디에 배포할까
+
+<p class="lead">화면만 필요한가, 서버에서 처리할 일이 있는가?</p>
+
+| 만들 앱 | 시작할 후보 | 먼저 확인할 것 |
+|---|---|---|
+| 브라우저 안에서 엑셀 분석 | Vercel | 파일이 서버로 전송되는지 |
+| 웹 화면과 짧은 API 처리 | Vercel | 지원 런타임·실행 시간·환경 변수 |
+| Python·Node 서버, 컨테이너 | Cloud Run | 실행 명령·PORT·인증·저장소 |
+
+<p class="thesis">같은 앱도 구조에 따라 배포 방식이 달라집니다. 오늘은 강사가 공개 가능한 샘플 앱으로 두 경로를 보여줍니다.</p>
+<p class="src">공식 안내 · <a href="https://vercel.com/docs/deployments">Vercel deployments</a> · <a href="https://docs.cloud.google.com/run/docs/deploying-source-code">Cloud Run source deployment</a></p>
+
+---
+class: top-led brand-cc compact
+---
+
+<p class="eyebrow">4-B · Vercel</p>
+
+# Vercel에 올리기
+
+<div class="steps">
+<div><b>저장소 준비</b><span>동작을 확인한 앱을 GitHub 저장소에 커밋·푸시</span></div>
+<div><b>가져오기</b><span>Vercel 로그인 → Add New → Project → 저장소 Import</span></div>
+<div><b>설정 확인</b><span>앱 폴더·프레임워크·빌드 명령·출력 폴더·환경 변수 확인</span></div>
+<div><b>배포·검증</b><span>Deploy 후 발급 주소에서 샘플 업로드와 필터 동작 재확인</span></div>
+</div>
+<p class="thesis">첫 프로젝트 배포도 Production이 될 수 있습니다. 실행 전 대상과 공개 범위를 확인합니다. 업무용은 회사가 승인한 플랜 사용.</p>
+<p class="src">공식 안내 · <a href="https://vercel.com/docs/deployments">Git 저장소에서 배포</a> · <a href="https://vercel.com/docs/plans/hobby">Hobby는 개인·비상업 용도</a></p>
+
+---
+class: top-led brand-cc
+---
+
+<p class="eyebrow">4-B · Vercel</p>
+
+# Vercel 배포 요청
+
+<p class="lead">Claude에게 앱 구조를 확인시킨 뒤 배포 설정 작성</p>
+
+```text
+이 앱을 Vercel에 배포할 수 있는지 확인해줘.
+앱 루트, 프레임워크, 빌드 명령, 출력 폴더를 정리해줘.
+필요한 환경 변수는 이름과 용도만 알려줘. 비밀 값은 코드에 넣지 마.
+로컬 빌드가 통과하면 배포할 프로젝트와 공개 범위를 보여줘.
+배포 후에는 발급된 주소에서 정상 파일 업로드,
+전체 2%와 A라인 4%, 필수 열 누락 안내를 다시 확인해줘.
+```
+<p class="thesis">CLI를 쓸 때 · <code>npx.cmd vercel</code>. 연결할 계정·프로젝트와 배포 환경을 확인하고 진행합니다.</p>
+<p class="src">공식 안내 · <a href="https://vercel.com/docs/cli/deploy">vercel deploy</a> · 첫 배포 이후 <code>--prod</code>는 Production 배포</p>
+
+---
+class: top-led brand-cc compact
+---
+
+<p class="eyebrow">4-B · Cloud Run</p>
+
+# Cloud Run 준비
+
+<p class="lead">소스 코드를 빌드해 서버로 실행</p>
+<figure class="figure"><svg viewBox="0 0 900 140" role="img" aria-label="소스 코드가 Cloud Build를 거쳐 Artifact Registry의 컨테이너 이미지로 저장되고 Cloud Run의 HTTPS 서비스로 배포된다">
+<g style="font-family:var(--sans);font-size:21px" fill="var(--ink)" text-anchor="middle"><text x="90" y="55">소스 코드</text><text x="320" y="55">Cloud Build</text><text x="550" y="55">이미지 저장</text><text x="795" y="55">Cloud Run</text></g>
+<g fill="var(--dim)" style="font-family:var(--sans);font-size:15px" text-anchor="middle"><text x="90" y="95">내 프로젝트</text><text x="320" y="95">빌드</text><text x="550" y="95">Artifact Registry</text><text x="795" y="95">HTTPS 주소</text></g>
+<g fill="var(--accent)" style="font-size:25px"><text x="190" y="57">→</text><text x="430" y="57">→</text><text x="665" y="57">→</text></g></svg></figure>
+<div class="deflist">
+<div><b>프로젝트</b><span>결제 계정 연결 · Cloud Run, Cloud Build, Artifact Registry API 활성화</span></div>
+<div><b>권한</b><span>배포 계정과 빌드 서비스 계정의 IAM 권한 확인</span></div>
+<div><b>앱</b><span>실행 명령과 의존성 명시. <code>0.0.0.0</code>에서 <code>PORT</code> 환경 변수 사용</span></div>
+</div>
+<p class="src">공식 안내 · <a href="https://docs.cloud.google.com/run/docs/deploying-source-code">Source deployment와 필요한 역할</a> · <a href="https://docs.cloud.google.com/run/docs/container-contract">Container contract</a></p>
+
+---
+class: top-led brand-cc compact
+---
+
+<p class="eyebrow">4-B · Cloud Run</p>
+
+# Cloud Run에 올리기
+
+<p class="lead">Windows PowerShell · Google Cloud CLI 설치 후 앱 폴더에서 실행</p>
+
+```powershell
+gcloud auth login
+gcloud config set project YOUR_PROJECT_ID
+gcloud run deploy seah-lab --source . --region asia-northeast3
+```
+<div class="deflist">
+<div><b>YOUR_PROJECT_ID</b><span>수업용 GCP 프로젝트 ID로 교체. 프로젝트 이름과 구분</span></div>
+<div><b>인증 선택</b><span>기본 인증 정책 확인. 공개 샘플 시연일 때만 비인증 접근 허용</span></div>
+<div><b>완료 확인</b><span>출력된 서비스 URL에서 샘플 실행. 실패하면 빌드 로그와 서비스 로그 확인</span></div>
+</div>
+<p class="src">공식 안내 · <a href="https://docs.cloud.google.com/sdk/docs/install">Google Cloud CLI 설치</a> · <a href="https://docs.cloud.google.com/run/docs/deploying-source-code">gcloud run deploy --source</a></p>
+<!-- 준비된 프로젝트와 권한이 없으면 강사 시연만 진행. 공개 시연은 비민감 샘플만 사용하며 필요 시 --allow-unauthenticated를 설명한다. 조직 정책에 따라 허용되지 않을 수 있다. -->
+
+---
+class: top-led brand-cc
+---
+
+<p class="eyebrow">4-B · 배포 확인</p>
+
+# 배포 주소에서도 재검증
+
+<p class="lead">로컬에서 통과한 같은 샘플, 같은 사용자 동작</p>
+
+| 확인 | 볼 것 |
+|---|---|
+| 새 브라우저에서 접속 | 로그인 필요 여부, 링크를 받는 사람의 접근 권한 |
+| 정상 샘플 업로드 | 전체 2%, A라인 4% |
+| 누락 열·새로고침 | 오류 안내, 데이터 보존 여부 |
+| 운영 설정 | 비밀 값 분리, 비용 확인, 사용 후 테스트 서비스 정리 |
+
+<p class="thesis">Cloud Run의 로컬 파일은 영구 저장소가 아닙니다. 저장이 필요하면 Cloud Storage나 DB를 별도로 연결합니다.</p>
+<p class="src">공식 안내 · <a href="https://docs.cloud.google.com/run/docs/container-contract#file-system">Cloud Run 파일 시스템</a> · <a href="https://vercel.com/docs/environment-variables">Vercel 환경 변수</a></p>
+
+---
+class: divider brand-cc-solid
+---
+
+<p class="div-no">4-C</p>
+
 ## 두 예제에 적용
 
-<p class="div-sub">같은 세 단계로 데이터와 화면, 실제 동작을 확인합니다</p>
+<p class="div-sub">생산실적 분석과 수주 레이더</p>
 
 ---
 class: top-led brand-cc
@@ -3746,7 +4013,7 @@ class: top-led brand-cc
 
 # 생산실적 분석 흐름
 
-<p class="lead">엑셀의 숫자 뜻부터 <em>역인터뷰로 확정</em>합니다.</p>
+<p class="lead">엑셀의 숫자 뜻부터 역인터뷰로 확정</p>
 <div class="steps">
 <div><b>① 역인터뷰 → PRD</b><span>생산량·불량수의 뜻, 계산식, 라인 필터, 빈 값 처리를 결정합니다.</span></div>
 <div><b>② 디자인·개발</b><span>대시보드 캡처를 reference에 넣고 두 스킬로 구현합니다.</span></div>
@@ -3763,7 +4030,7 @@ class: top-led brand-cc
 
 # 예제 1 결과 화면
 
-<p class="lead">첫 화면에서 <em>조치가 필요한 구간</em>을 먼저 보여줍니다.</p>
+
 
 <figure class="shot hero nochrome" data-origin="capture">
 <img src="./images/ex1-crop.png" alt="기존 생산실적 분석 화면" />
@@ -3778,7 +4045,7 @@ class: top-led brand-cc
 
 # 수주 레이더 흐름
 
-<p class="lead">수집한 값의 뜻과 <em>판정할 수 없는 경우</em>부터 합의합니다.</p>
+<p class="lead">수집 값의 의미와 판정할 수 없는 경우 합의</p>
 <div class="steps">
 <div><b>① 역인터뷰 → PRD</b><span>대상 공고·판정 기준·수집 실패와 판단불가 처리를 정합니다.</span></div>
 <div><b>② 디자인·개발</b><span>목록 화면 캡처를 reference에 넣고 두 스킬로 구현합니다.</span></div>
@@ -3795,7 +4062,7 @@ class: top-led brand-cc
 
 # 새 공고 없음과 수집 실패
 
-<p class="lead">빈 목록 두 개라도 <em>사용자가 해야 할 행동은 다릅니다.</em></p>
+<p class="lead">비어 있는 목록, 서로 다른 후속 조치</p>
 
 | 검증 상황 | 기대 결과 |
 |---|---|
@@ -3818,7 +4085,7 @@ class: top-led brand-cc
 
 # 예제 2 결과 화면
 
-<p class="lead"><em>오늘 볼 공고와 원문 확인이 필요한 건</em>을 구분합니다.</p>
+
 
 <figure class="shot hero nochrome" data-origin="capture">
 <img src="./images/ex2-briefing-crop.png" alt="기존 수주 레이더 브리핑 화면" />
@@ -3833,7 +4100,7 @@ class: divider brand-cc-solid
 
 ## 검증한 뒤 자동 실행
 
-<p class="div-sub">핵심 흐름이 통과한 다음, 반복할 작업을 예약합니다</p>
+<p class="div-sub">동작 확인 후 반복 작업 예약</p>
 
 ---
 class: top-led brand-cc compact
@@ -3846,7 +4113,7 @@ class: top-led brand-cc compact
 <div class="split evidence">
 <div>
 
-<p class="lead">「매일 아침 어제 데이터를 표로 만들어 둬」를 <em>걸어 둡니다</em>.</p>
+<p class="lead">매일 아침 반복할 작업을 Local 예약으로</p>
 
 <div class="steps">
 <div><b>말로 시킨다</b><span>「매일 아침 9시에 도는 작업 하나 만들어 줘」</span></div>
@@ -3876,7 +4143,7 @@ class: top-led brand-cc compact
 <div class="split evidence">
 <div>
 
-<p class="lead">앱이 켜져 있고 컴퓨터가 <em>깨어 있을 때만</em> 돕니다.</p>
+<p class="lead">로컬 예약의 조건 · 앱 실행 중, 컴퓨터 깨어 있음</p>
 
 <div class="deflist narrow">
 <div><b>자고 있으면</b><span>그 회차는 건너뜁니다</span></div>
@@ -3907,7 +4174,7 @@ class: top-led brand-cc compact
 <div class="split evidence">
 <div>
 
-<p class="lead">「이렇게 고쳐」 대신 <em>「이 조건이 될 때까지」</em>를 겁니다.</p>
+<p class="lead">반복 실행을 멈출 조건 지정</p>
 
 <div class="deflist narrow">
 <div><b>거는 법</b><span><code>/goal</code> 뒤에 조건을 씁니다</span></div>
@@ -3935,7 +4202,7 @@ class: top-led brand-cc
 
 # 조건 쓰는 법
 
-<p class="lead">판정하는 모델은 <em>대화에 남은 것만</em> 봅니다. 스스로 명령을 돌리거나 파일을 열지 않습니다.</p>
+<p class="lead">판정에 필요한 실행 결과를 대화에 남기기</p>
 
 <div class="deflist">
 <div><b>되는 조건</b><span>「테스트가 다 통과한다」 — 돌린 결과가 대화에 남습니다</span></div>
@@ -3956,7 +4223,7 @@ class: top-led brand-cc
 
 # 혼자 다시 시작할 때
 
-<p class="lead">다음 프로젝트에서도 <em>같은 세 단계</em>로 시작합니다.</p>
+
 <div class="steps">
 <div><b>① 역인터뷰</b><span>Claude와 묻고 답해 모호한 내용을 PRD.md로 확정합니다.</span></div>
 <div><b>② 디자인·개발</b><span>frontend-design + taste-skill, reference/ 이미지로 구현합니다.</span></div>

@@ -6,7 +6,7 @@ class: top-led brand-cc
 
 # 혼자 다시 시작할 때
 
-<p class="lead">다음 프로젝트에서도 <em>같은 세 단계</em>로 시작합니다.</p>
+
 <div class="steps">
 <div><b>① 역인터뷰</b><span>Claude와 묻고 답해 모호한 내용을 PRD.md로 확정합니다.</span></div>
 <div><b>② 디자인·개발</b><span>frontend-design + taste-skill, reference/ 이미지로 구현합니다.</span></div>

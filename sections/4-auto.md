@@ -6,7 +6,7 @@ class: divider brand-cc-solid
 
 ## 검증한 뒤 자동 실행
 
-<p class="div-sub">핵심 흐름이 통과한 다음, 반복할 작업을 예약합니다</p>
+<p class="div-sub">동작 확인 후 반복 작업 예약</p>
 
 ---
 class: top-led brand-cc compact
@@ -19,7 +19,7 @@ class: top-led brand-cc compact
 <div class="split evidence">
 <div>
 
-<p class="lead">「매일 아침 어제 데이터를 표로 만들어 둬」를 <em>걸어 둡니다</em>.</p>
+<p class="lead">매일 아침 반복할 작업을 Local 예약으로</p>
 
 <div class="steps">
 <div><b>말로 시킨다</b><span>「매일 아침 9시에 도는 작업 하나 만들어 줘」</span></div>
@@ -49,7 +49,7 @@ class: top-led brand-cc compact
 <div class="split evidence">
 <div>
 
-<p class="lead">앱이 켜져 있고 컴퓨터가 <em>깨어 있을 때만</em> 돕니다.</p>
+<p class="lead">로컬 예약의 조건 · 앱 실행 중, 컴퓨터 깨어 있음</p>
 
 <div class="deflist narrow">
 <div><b>자고 있으면</b><span>그 회차는 건너뜁니다</span></div>
@@ -80,7 +80,7 @@ class: top-led brand-cc compact
 <div class="split evidence">
 <div>
 
-<p class="lead">「이렇게 고쳐」 대신 <em>「이 조건이 될 때까지」</em>를 겁니다.</p>
+<p class="lead">반복 실행을 멈출 조건 지정</p>
 
 <div class="deflist narrow">
 <div><b>거는 법</b><span><code>/goal</code> 뒤에 조건을 씁니다</span></div>
@@ -108,7 +108,7 @@ class: top-led brand-cc
 
 # 조건 쓰는 법
 
-<p class="lead">판정하는 모델은 <em>대화에 남은 것만</em> 봅니다. 스스로 명령을 돌리거나 파일을 열지 않습니다.</p>
+<p class="lead">판정에 필요한 실행 결과를 대화에 남기기</p>
 
 <div class="deflist">
 <div><b>되는 조건</b><span>「테스트가 다 통과한다」 — 돌린 결과가 대화에 남습니다</span></div>

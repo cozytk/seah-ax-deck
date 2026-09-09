@@ -6,7 +6,7 @@ class: divider brand-cc-solid
 
 ## 스킬과 레퍼런스
 
-<p class="div-sub">원하는 화면을 보여주고, PRD의 기능을 담아 구현합니다</p>
+<p class="div-sub">PRD의 기능, 레퍼런스의 화면 구성</p>
 
 ---
 class: top-led brand-cc
@@ -16,13 +16,13 @@ class: top-led brand-cc
 
 # 디자인에 쓰는 세 가지
 
-<p class="lead"><em>스킬은 구현을 돕고, 이미지는 원하는 방향을 보여줍니다.</em></p>
+<p class="lead">구현 지침을 담은 스킬, 원하는 방향을 보여 주는 이미지</p>
 <div class="deflist">
 <div><b>frontend-design</b><span>화면 구성·타이포그래피·시각적 완성도를 고려하며 구현합니다.</span></div>
 <div><b>taste-skill</b><span>배치·여백·정보 밀도를 다듬을 때 함께 사용합니다.</span></div>
 <div><b>reference/</b><span>내가 고른 화면 캡처를 넣고, 닮았으면 하는 부분을 짚습니다.</span></div>
 </div>
-<p class="thesis">준비 · 두 스킬이 현재 Claude Code 세션에서 사용 가능한지 확인합니다.</p>
+<p class="thesis">준비 · frontend-design부터 확인. taste-skill은 설치한 경우 함께 사용합니다.</p>
 <p class="src">출처 · <a href="https://github.com/anthropics/skills/tree/main/skills/frontend-design">frontend-design</a> · <a href="https://github.com/Leonxlnx/taste-skill">taste-skill</a></p>
 
 <!--
@@ -33,11 +33,31 @@ taste-skill 저장소의 기본 프런트엔드 스킬 설치 이름은 design-t
 class: top-led brand-cc
 ---
 
+<p class="eyebrow">3-B · 실습 준비</p>
+
+# 디자인 스킬 준비
+
+<p class="lead">처음에는 frontend-design 하나로 시작</p>
+
+```text
+공식 저장소의 frontend-design 스킬을 이 프로젝트에 설치해줘.
+https://github.com/anthropics/skills/tree/main/skills/frontend-design
+.claude/skills/frontend-design/SKILL.md에 저장하고,
+원문의 라이선스와 함께 필요한 파일을 가져와줘.
+설치한 경로와 이 스킬이 하는 일을 알려줘. 아직 앱은 만들지 마.
+```
+<p class="thesis">새 세션에서 스킬을 찾을 수 있는지 확인. 적용할 때는 이름을 명시하고, 작업 기록에서 읽었는지 확인합니다. taste-skill은 선택 확장.</p>
+<p class="src">출처 · <a href="https://github.com/anthropics/skills/tree/main/skills/frontend-design">Anthropic frontend-design</a> · <a href="https://code.claude.com/docs/en/skills">스킬 설치 경로</a></p>
+
+---
+class: top-led brand-cc
+---
+
 <p class="eyebrow">3-B · 스킬과 레퍼런스로 디자인</p>
 
 # 원하는 화면 캡처
 
-<p class="lead"><em>Dribbble 등에서 마음에 드는 화면</em>을 찾아 캡처합니다.</p>
+<p class="lead">만들 화면과 비슷한 레퍼런스 1~3장</p>
 <div class="steps">
 <div><b>찾기</b><span>만드는 것과 비슷한 화면을 검색합니다. 예: dashboard, data table.</span></div>
 <div><b>고르기</b><span>전체 배치가 마음에 드는 화면 1장, 필요한 세부 화면 1~2장을 고릅니다.</span></div>
@@ -59,7 +79,7 @@ class: top-led brand-cc
 
 # reference 폴더 구성
 
-<p class="lead">프로젝트 폴더 안에 <em>이미지 파일을 직접</em> 넣습니다.</p>
+
 
 ```text
 내 프로젝트/
@@ -83,7 +103,7 @@ class: top-led brand-cc
 
 # 참고할 부분을 짚기
 
-<p class="lead">「이것처럼」에 <em>어디를 닮게 할지</em> 한 문장을 더합니다.</p>
+<p class="lead">레이아웃·숫자 정렬·여백 중 참고할 부분 지정</p>
 
 ```text
 reference/dashboard.png의 왼쪽 메뉴와 상단 지표 배치를 참고해줘.
@@ -102,11 +122,12 @@ class: top-led brand-cc
 
 # 스킬을 써서 개발 시작
 
-<p class="lead">PRD와 이미지를 읽은 뒤, <em>핵심 흐름부터 실제로 동작하게</em> 만듭니다.</p>
+<p class="lead">PRD와 레퍼런스를 읽고 <em>핵심 흐름부터 구현</em></p>
 
 ```text
 PRD.md와 reference/의 이미지를 읽어줘.
-frontend-design과 taste-skill(design-taste-frontend)을 사용해 구현해줘.
+frontend-design을 사용해 구현해줘.
+설치했다면 design-taste-frontend도 함께 참고해줘.
 별도의 디자인 문서는 만들지 말고 레퍼런스를 참고해 바로 개발해줘.
 먼저 엑셀 업로드 → 전체 불량률 → 라인 필터 흐름을 완성해줘.
 실행한 뒤 접속 주소와 확인할 동작을 알려줘.
@@ -122,7 +143,7 @@ class: top-led brand-cc
 
 # 이미지로 확인 못 하는 것
 
-<p class="lead">레퍼런스에 없는 <em>빈 화면과 오류 상태</em>도 PRD대로 만듭니다.</p>
+<p class="lead">빈 화면 · 오류 안내 · 키보드 조작</p>
 <div class="deflist">
 <div><b>파일 없음</b><span>무엇을 올려야 하는지 보이는가?</span></div>
 <div><b>잘못된 열</b><span>어떤 열을 고쳐야 하는지 알려 주는가?</span></div>

@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const INTRO = ['0-head.md', '1-D.md', '1-E.md', '1-F.md', '1-G.md', '1-H.md', '1-I.md', '2-antigravity.md'];
-const WORKFLOW = ['3-workflow.md', '3-design.md', '4-verify.md', '4-projects.md', '4-auto.md', '4-wrap.md'];
+const WORKFLOW = ['3-workflow.md', '3-design.md', '4-verify.md', '4-deploy.md', '4-projects.md', '4-auto.md', '4-wrap.md'];
 const sections = await Promise.all([...INTRO, ...WORKFLOW].map(async name => [name, (await fs.readFile(join(ROOT, 'sections', name), 'utf8')).trim()]));
 const sources = new Map(sections);
 const compose = names => names.map((name, i) => i ? sources.get(name).replace(/^---\n/, '') : sources.get(name)).join('\n\n---\n') + '\n';
