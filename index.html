@@ -3,37 +3,101 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>세아 AX 실무 과정 - Slidev</title>
+<title>Claude Code 활용 PRD 작성 및 개발 - Slidev</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pretendard:wght@200;400;600&family=IBM+Plex+Mono:wght@200;400;600&display=swap" type="text/css">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/trend/samsung.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/trend/hyundai/crash.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/trend/hyundai/vin.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/trend/hyundai/carrier.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/trend/hyundai/polaris.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/trend/hyundai/technician.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/trend/hyundai/review.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/trend/astra.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/trend/fable.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/trend/threads/astra-2.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/trend/aside.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/trend/threads/aside-review.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/trend/threads/aside-windows.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/trend/aa-chart.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/trend/aa-index.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/trend/aa-scatter.png">
 <link rel="preload" as="image" href="/seah-ax-deck/./images/ex1-crop.png">
 <link rel="preload" as="image" href="/seah-ax-deck/./images/ex2-briefing-crop.png">
-<link rel="preload" as="image" href="/seah-ax-deck/./images/docs/cc-overview.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/docs/cc-intro.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/docs/agentic-loop.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/docs/what-you-can-do.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/lab/q1-annot.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/lab/q2-annot.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/lab/q3-menu-annot.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/lab/q3-chat-annot.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/lab/q4-annot.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/lab/q5-annot.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/official/agent-view.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/official/auto-continue.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/docs/start-session.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/official/design-skill.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/docs/auto-mode.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/docs/diff-view.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/official/ultrareview.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/official/desktop-browser-crop.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/docs/shortcuts.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/official/fast-mode.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/docs/effort.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/term/eff-high.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/docs/plan-mode.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/docs/subagents-builtin.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/docs/queue.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/official/subagents-vs-teams.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/term/sub-launch.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/term/team-launch.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/term/sub-panel.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/term/team-panel.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/term/team-msg.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/docs/memory.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/term/ctx-on.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/term/claudemd-answer.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/term/claudemd-judge.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/term/skill-open.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/term/skill-table.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/term/skill-caveat.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/term/mcp-scope.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/term/plugin-discover.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/term/plugin-installed.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/docs/setup-over-time.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/term/mcp-run.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/term/mcp-bom.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/term/mcp-cards.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/term/mcp-cleanup.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/term/robots-fetch.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/term/robots-ask.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/docs/computer-use.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/docs/verify-first.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/term/verify-off.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/term/verify-on.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/term/redir-wrong.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/term/redir-fix.png">
 <link rel="preload" as="image" href="/seah-ax-deck/./images/docs/ag-overview.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/docs/ag-artifacts.png">
 <link rel="preload" as="image" href="/seah-ax-deck/./images/docs/ag-plan-crop.png">
-<link rel="preload" as="image" href="/seah-ax-deck/./images/stitch-plain.png">
-<link rel="preload" as="image" href="/seah-ax-deck/./images/stitch-good-crop.png">
-<link rel="preload" as="image" href="/seah-ax-deck/./images/stitch-plain-crop.png">
-<link rel="preload" as="image" href="/seah-ax-deck/./images/four-up.png">
-<link rel="preload" as="image" href="/seah-ax-deck/./images/site-v1.png">
-<link rel="preload" as="image" href="/seah-ax-deck/./images/ex2-runs-crop.png">
-<link rel="preload" as="image" href="/seah-ax-deck/./images/site-v1-cols.png">
-<link rel="preload" as="image" href="/seah-ax-deck/./images/site-v2-cols.png">
-<link rel="preload" as="image" href="/seah-ax-deck/./images/ex2-notices-crop.png">
-<link rel="preload" as="image" href="/seah-ax-deck/./images/ex2-detail-crop.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/docs/ag-plan-comments.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/docs/sched-compare.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/docs/sched-run.png">
+<link rel="preload" as="image" href="/seah-ax-deck/./images/official/goal.png">
 <link rel="icon" href="https://cdn.jsdelivr.net/gh/slidevjs/slidev/assets/favicon.png">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta property="slidev:version" content="52.15.2">
-<meta property="og:title" content="세아 AX 실무 과정 - Slidev">  <script type="module" crossorigin src="/seah-ax-deck/assets/index-p_0lJH84.js"></script>
+<meta property="og:title" content="Claude Code 활용 PRD 작성 및 개발 - Slidev">  <script type="module" crossorigin src="/seah-ax-deck/assets/index-DjHr6WnU.js"></script>
   <link rel="modulepreload" crossorigin href="/seah-ax-deck/assets/rolldown-runtime-QTnfLwEv.js">
-  <link rel="modulepreload" crossorigin href="/seah-ax-deck/assets/modules/shiki-DR6AsgJP.js">
-  <link rel="modulepreload" crossorigin href="/seah-ax-deck/assets/slidev/utils-CmVawvVO-ByEOwlSr.js">
-  <link rel="modulepreload" crossorigin href="/seah-ax-deck/assets/modules/vue-C9hd8Evp.js">
+  <link rel="modulepreload" crossorigin href="/seah-ax-deck/assets/modules/shiki-CIR8J2mL.js">
+  <link rel="modulepreload" crossorigin href="/seah-ax-deck/assets/slidev/utils-CmVawvVO-E870mW-q.js">
+  <link rel="modulepreload" crossorigin href="/seah-ax-deck/assets/modules/vue-C_Ru3pRY.js">
+  <link rel="modulepreload" crossorigin href="/seah-ax-deck/assets/slidev/useClicks-TziqjMXn.js">
   <link rel="modulepreload" crossorigin href="/seah-ax-deck/assets/_plugin-vue_export-helper-BDNMzG2s.js">
-  <link rel="modulepreload" crossorigin href="/seah-ax-deck/assets/slidev/context-BWPTqVCV.js">
-  <link rel="modulepreload" crossorigin href="/seah-ax-deck/assets/useNav-BKiDUvoU.js">
-  <link rel="modulepreload" crossorigin href="/seah-ax-deck/assets/syncState-mr7lvKQQ.js">
+  <link rel="modulepreload" crossorigin href="/seah-ax-deck/assets/slidev/context-Cq7ax2QY.js">
+  <link rel="modulepreload" crossorigin href="/seah-ax-deck/assets/useNav-DbAqnJ7y.js">
+  <link rel="modulepreload" crossorigin href="/seah-ax-deck/assets/syncState-DxjHN8EB.js">
   <link rel="stylesheet" crossorigin href="/seah-ax-deck/assets/modules/shiki-Dh6h6bRK.css">
-  <link rel="stylesheet" crossorigin href="/seah-ax-deck/assets/index-D1sQL0MJ.css">
+  <link rel="stylesheet" crossorigin href="/seah-ax-deck/assets/index-BAbRmgTv.css">
 </head>
 <body>
   <div id="app"></div>
