@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude Code 활용 PRD 작성 및 개발 - Slidev</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pretendard:wght@200;400;600&family=IBM+Plex+Mono:wght@200;400;600&display=swap" type="text/css">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/trend/samsung.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/trend/hyundai/crash.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/trend/hyundai/vin.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/trend/hyundai/carrier.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/trend/hyundai/polaris.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/trend/hyundai/technician.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/trend/hyundai/review.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/trend/astra.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/trend/fable.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/trend/threads/astra-2.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/trend/aside.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/trend/threads/aside-review.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/trend/threads/aside-windows.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/trend/aa-chart.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/trend/aa-index.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/trend/aa-scatter.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/ex1-crop.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/ex2-briefing-crop.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/docs/cc-intro.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/docs/agentic-loop.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/docs/what-you-can-do.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/lab/q1-annot.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/lab/q2-annot.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/lab/q3-menu-annot.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/lab/q3-chat-annot.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/lab/q4-annot.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/lab/q5-annot.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/official/agent-view.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/official/auto-continue.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/docs/start-session.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/official/design-skill.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/docs/auto-mode.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/docs/diff-view.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/official/ultrareview.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/official/desktop-browser-crop.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/docs/shortcuts.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/official/fast-mode.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/docs/effort.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/term/eff-high.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/docs/plan-mode.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/docs/subagents-builtin.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/docs/queue.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/official/subagents-vs-teams.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/term/sub-launch.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/term/team-launch.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/term/sub-panel.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/term/team-panel.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/term/team-msg.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/docs/memory.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/term/ctx-on.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/term/claudemd-answer.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/term/claudemd-judge.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/term/skill-open.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/term/skill-table.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/term/skill-caveat.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/term/mcp-scope.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/term/plugin-discover.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/term/plugin-installed.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/docs/setup-over-time.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/term/mcp-run.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/term/mcp-bom.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/term/mcp-cards.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/term/mcp-cleanup.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/term/robots-fetch.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/term/robots-ask.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/docs/computer-use.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/docs/verify-first.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/term/verify-off.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/term/verify-on.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/term/redir-wrong.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/term/redir-fix.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/docs/ag-overview.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/docs/ag-artifacts.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/docs/ag-plan-crop.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/docs/ag-plan-comments.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/docs/sched-compare.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/docs/sched-run.png">
+<link rel="preload" as="image" href="/seah-ax-deck/original-20260910/./images/official/goal.png">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/slidevjs/slidev/assets/favicon.png">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta property="slidev:version" content="52.15.2">
+<meta property="og:title" content="Claude Code 활용 PRD 작성 및 개발 - Slidev">  <script type="module" crossorigin src="/seah-ax-deck/original-20260910/assets/index-CoHHW_TA.js"></script>
+  <link rel="modulepreload" crossorigin href="/seah-ax-deck/original-20260910/assets/rolldown-runtime-QTnfLwEv.js">
+  <link rel="modulepreload" crossorigin href="/seah-ax-deck/original-20260910/assets/modules/shiki-CIR8J2mL.js">
+  <link rel="modulepreload" crossorigin href="/seah-ax-deck/original-20260910/assets/slidev/utils-CmVawvVO-Dg-3pDD6.js">
+  <link rel="modulepreload" crossorigin href="/seah-ax-deck/original-20260910/assets/modules/vue-C_Ru3pRY.js">
+  <link rel="modulepreload" crossorigin href="/seah-ax-deck/original-20260910/assets/slidev/useClicks-CAJZQh1x.js">
+  <link rel="modulepreload" crossorigin href="/seah-ax-deck/original-20260910/assets/_plugin-vue_export-helper-BDNMzG2s.js">
+  <link rel="modulepreload" crossorigin href="/seah-ax-deck/original-20260910/assets/slidev/context-Cq7ax2QY.js">
+  <link rel="modulepreload" crossorigin href="/seah-ax-deck/original-20260910/assets/useNav-2jgI0RHt.js">
+  <link rel="modulepreload" crossorigin href="/seah-ax-deck/original-20260910/assets/syncState-DxjHN8EB.js">
+  <link rel="stylesheet" crossorigin href="/seah-ax-deck/original-20260910/assets/modules/shiki-Dh6h6bRK.css">
+  <link rel="stylesheet" crossorigin href="/seah-ax-deck/original-20260910/assets/index-BG1vIMeh.css">
+</head>
+<body>
+  <div id="app"></div>
+  <div id="mermaid-rendering-container"></div>
+  
+</body>
+</html>

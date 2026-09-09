@@ -1,0 +1,1 @@
+var e=`/seah-ax-deck/original-20260910/assets/desktop-browser-crop-By7g7nmu.png`;export{e as t};
