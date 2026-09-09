@@ -581,6 +581,116 @@ class: top-led band-page
 class: top-led
 ---
 
+<p class="eyebrow">0부 · 지속형 에이전트</p>
+
+# Hermes Agent
+
+<p class="lead">내가 운영하는 환경에 두고, 메신저에서 작업 요청</p>
+<div class="split evidence"><div>
+<div class="deflist">
+<div><b>실행</b><span>내 PC·서버에 설치한 에이전트</span></div>
+<div><b>접속</b><span>Telegram·Slack·Discord 등 Messaging Gateway</span></div>
+<div><b>누적</b><span>작업 경험을 메모리와 스킬로 남겨 재사용</span></div>
+<div><b>운영</b><span>실행 호스트·모델 연결·접근 권한을 직접 관리</span></div>
+</div>
+<p class="thesis">업무 예 · 매일 아침 공개 공고를 모아 요약하고 메신저로 받기.</p>
+</div><figure class="shot nochrome" data-origin="capture" data-source="https://hermes-agent.nousresearch.com/docs/">
+<img src="./images/trend/remote/hermes.png" alt="Nous Research의 Hermes Agent 공식 문서 시작 화면"/>
+<figcaption><a href="https://hermes-agent.nousresearch.com/docs/">공식 문서 화면</a> · 2026-09-10 캡처</figcaption></figure></div>
+<p class="src">출처 · <a href="https://hermes-agent.nousresearch.com/docs/">Hermes Agent</a> · <a href="https://hermes-agent.nousresearch.com/docs/user-guide/messaging/">Messaging Gateway</a></p>
+
+---
+class: top-led
+---
+
+<p class="eyebrow">0부 · 지속형 에이전트</p>
+
+# Grok Bot
+
+<p class="lead">기억·컴퓨터·반복 업무를 가진 역할별 Bot</p>
+<div class="split evidence"><div>
+<div class="deflist">
+<div><b>역할</b><span>담당 Bot을 정해 대화를 이어감</span></div>
+<div><b>작업 공간</b><span>Bot의 컴퓨터에서 웹·파일·프로그램 사용</span></div>
+<div><b>반복</b><span>Routine으로 일정·이벤트에 맞춰 실행</span></div>
+<div><b>개입</b><span>상태 확인 → 화면 미리보기 → 필요할 때 직접 조작</span></div>
+</div>
+<p class="thesis">업무 예 · 자료 조사 Bot과 보고서 Bot에 역할을 나누고 결과 검토.</p>
+</div><figure class="shot nochrome" data-origin="capture" data-source="https://x.ai/news/designing-grok-bot">
+<img src="./images/trend/remote/grok-bot.png" alt="Grok Bot 공식 제품 예시. 왼쪽 Bot 목록, 중앙 대화, 오른쪽 컴퓨터 작업 화면"/>
+<figcaption><a href="https://x.ai/news/designing-grok-bot">공식 발표의 제품 화면 예시</a> · 2026-09-03</figcaption></figure></div>
+<p class="src">출처 · <a href="https://x.ai/news/designing-grok-bot">Designing Grok Bot for a world of persistent agents</a> · 사용 가능 환경·요금은 가입 화면에서 확인</p>
+
+---
+class: top-led compact
+---
+
+<p class="eyebrow">0부 · 원격 작업</p>
+
+# Claude Code 원격 사용
+
+<p class="lead">휴대폰에서 지시하고, 파일 작업은 연결한 PC에서</p>
+<figure class="figure"><svg viewBox="0 0 900 115" role="img" aria-label="Claude 앱·웹에서 Remote Control를 거쳐 PC의 Claude Code에 연결">
+<g fill="var(--card)" stroke="var(--rule)"><rect x="10" y="20" width="230" height="65" rx="6"/><rect x="335" y="20" width="230" height="65" rx="6"/><rect x="660" y="20" width="230" height="65" rx="6"/></g>
+<g style="font-family:var(--sans);font-size:21px" text-anchor="middle" fill="var(--ink)"><text x="125" y="60">Claude 앱·웹</text><text x="450" y="60">Remote Control</text><text x="775" y="60">PC의 Claude Code</text></g>
+<g style="font-size:28px" fill="var(--accent)"><text x="275" y="62">↔</text><text x="600" y="62">↔</text></g></svg></figure>
+
+```powershell
+claude --remote-control
+```
+
+<div class="deflist">
+<div><b>시작</b><span>PC의 프로젝트 폴더에서 실행 → 연결 안내 승인 → 세션 URL·QR 확인</span></div>
+<div><b>이어가기</b><span>같은 Claude 계정으로 접속. 진행 중 대화에서는 <code>/remote-control</code></span></div>
+<div><b>유지</b><span>PC·터미널을 켜 둠. 원격 접속이 작업을 클라우드로 옮기지는 않음</span></div>
+</div>
+<p class="src">공식 안내 · <a href="https://code.claude.com/docs/en/remote-control">Remote Control</a> · Claude 구독 로그인 필요, 조직은 관리자 설정 확인. <code>claude remote-control</code>은 연결 대기용 서버 모드</p>
+
+---
+class: top-led compact
+---
+
+<p class="eyebrow">0부 · 원격 작업</p>
+
+# Codex 원격 사용
+
+<p class="lead">연결한 컴퓨터의 프로젝트와 작업을 휴대폰에서 관리</p>
+<figure class="figure"><svg viewBox="0 0 900 115" role="img" aria-label="ChatGPT 모바일에서 Remote를 거쳐 연결한 Mac·Windows에 연결">
+<g fill="var(--card)" stroke="var(--rule)"><rect x="10" y="20" width="230" height="65" rx="6"/><rect x="335" y="20" width="230" height="65" rx="6"/><rect x="660" y="20" width="230" height="65" rx="6"/></g>
+<g style="font-family:var(--sans);font-size:21px" text-anchor="middle" fill="var(--ink)"><text x="125" y="60">ChatGPT 모바일</text><text x="450" y="60">Remote</text><text x="775" y="60">연결한 Mac·Windows</text></g>
+<g style="font-size:28px" fill="var(--accent)"><text x="275" y="62">↔</text><text x="600" y="62">↔</text></g></svg></figure>
+<div class="steps tight">
+<div><b>PC에서 설정</b><span>데스크톱 앱 Settings → Connections → Control this Mac or PC → Set up</span></div>
+<div><b>휴대폰 연결</b><span>QR 스캔 → 같은 계정·워크스페이스 확인 → 모바일 Remote에서 호스트 선택</span></div>
+<div><b>작업 이어가기</b><span>새 작업 시작, 기존 작업에 추가 지시, 결과·승인 요청 확인</span></div>
+</div>
+<p class="thesis">파일·도구·권한은 연결한 PC 기준. PC가 깨어 있고 온라인이어야 합니다.</p>
+<p class="src">공식 안내 · <a href="https://learn.chatgpt.com/docs/remote-connections">Remote connections</a> · 최신 문서는 ChatGPT 데스크톱 앱의 Remote로 안내. 구버전 명칭·제공 시점은 다를 수 있음</p>
+
+---
+class: top-led compact
+---
+
+<p class="eyebrow">0부 · 방식 비교</p>
+
+# 무엇을 어디에 맡길까
+
+<p class="lead">접속하는 화면과 실제로 작업하는 컴퓨터를 구분</p>
+
+| 방식 | 작업하는 곳 | 주로 맡길 일 | 내가 준비할 것 |
+|---|---|---|---|
+| Hermes | 내가 운영하는 PC·서버 | 메신저 요청·반복 업무 | 호스트·모델·게이트웨이 |
+| Grok Bot | Bot의 작업 환경 | 역할별 업무·Routine | Bot·연결 도구·권한 |
+| Claude Code 원격 | Claude Code를 켠 PC | 프로젝트 작업 이어가기 | CLI 세션·구독 로그인 |
+| Codex 원격 | 연결한 데스크톱 호스트 | 여러 프로젝트·작업 관리 | 앱 페어링·계정·호스트 |
+
+<p class="thesis">수업 연결 · 먼저 PC에서 요청과 검증을 익힌 뒤, 같은 작업을 원격에서 이어갑니다.</p>
+<p class="src">비교 기준 · <a href="https://hermes-agent.nousresearch.com/docs/">Hermes</a> · <a href="https://x.ai/news/designing-grok-bot">Grok Bot</a> · <a href="https://code.claude.com/docs/en/remote-control">Claude Code</a> · <a href="https://learn.chatgpt.com/docs/remote-connections">Codex</a></p>
+
+---
+class: top-led
+---
+
 <p class="eyebrow">0부 · 정리</p>
 
 # 이 수업에서 만드는 것
@@ -1182,33 +1292,6 @@ class: top-led brand-cc compact
 </div>
 
 <p class="src">출처 — Claude Code 공식 문서 「Desktop application · Review changes with diff view」</p>
-
----
-class: top-led brand-cc
----
-
-<p class="eyebrow">1-B · 데스크톱 앱</p>
-
-# 코드 리뷰 요청
-
-<div class="split evidence">
-<div>
-
-<p class="lead">변경 내용에서 오류 가능성이 높은 부분 점검</p>
-
-<div class="duo">
-<div class="pane"><h3>본다</h3><p>컴파일 에러 · 논리 오류 · 보안 취약점 · 명백한 버그</p></div>
-<div class="pane"><h3>안 본다</h3><p>스타일 · 서식 · 원래 있던 문제 · 린터가 잡을 것</p></div>
-</div>
-
-</div>
-<figure class="shot nochrome mark-ok" data-origin="web" data-source="https://code.claude.com/docs/en/whats-new/2026-w17">
-<img src="./images/official/ultrareview.png" alt="리뷰 결과 화면. 확인된 문제 4건을 짚고, 8건은 오탐으로 기각했다고 적혀 있다" />
-<figcaption>확인 4건 · <em>오탐 8건은 스스로 기각</em> · <a href="https://code.claude.com/docs/en/whats-new/2026-w17"><code>whats-new/2026-w17</code></a></figcaption>
-</figure>
-</div>
-
-<p class="src">출처 — Claude Code 공식 문서 「Desktop application · Review your code」</p>
 
 ---
 class: top-led brand-cc

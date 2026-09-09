@@ -581,6 +581,116 @@ class: top-led band-page
 class: top-led
 ---
 
+<p class="eyebrow">0부 · 지속형 에이전트</p>
+
+# Hermes Agent
+
+<p class="lead">내가 운영하는 환경에 두고, 메신저에서 작업 요청</p>
+<div class="split evidence"><div>
+<div class="deflist">
+<div><b>실행</b><span>내 PC·서버에 설치한 에이전트</span></div>
+<div><b>접속</b><span>Telegram·Slack·Discord 등 Messaging Gateway</span></div>
+<div><b>누적</b><span>작업 경험을 메모리와 스킬로 남겨 재사용</span></div>
+<div><b>운영</b><span>실행 호스트·모델 연결·접근 권한을 직접 관리</span></div>
+</div>
+<p class="thesis">업무 예 · 매일 아침 공개 공고를 모아 요약하고 메신저로 받기.</p>
+</div><figure class="shot nochrome" data-origin="capture" data-source="https://hermes-agent.nousresearch.com/docs/">
+<img src="./images/trend/remote/hermes.png" alt="Nous Research의 Hermes Agent 공식 문서 시작 화면"/>
+<figcaption><a href="https://hermes-agent.nousresearch.com/docs/">공식 문서 화면</a> · 2026-09-10 캡처</figcaption></figure></div>
+<p class="src">출처 · <a href="https://hermes-agent.nousresearch.com/docs/">Hermes Agent</a> · <a href="https://hermes-agent.nousresearch.com/docs/user-guide/messaging/">Messaging Gateway</a></p>
+
+---
+class: top-led
+---
+
+<p class="eyebrow">0부 · 지속형 에이전트</p>
+
+# Grok Bot
+
+<p class="lead">기억·컴퓨터·반복 업무를 가진 역할별 Bot</p>
+<div class="split evidence"><div>
+<div class="deflist">
+<div><b>역할</b><span>담당 Bot을 정해 대화를 이어감</span></div>
+<div><b>작업 공간</b><span>Bot의 컴퓨터에서 웹·파일·프로그램 사용</span></div>
+<div><b>반복</b><span>Routine으로 일정·이벤트에 맞춰 실행</span></div>
+<div><b>개입</b><span>상태 확인 → 화면 미리보기 → 필요할 때 직접 조작</span></div>
+</div>
+<p class="thesis">업무 예 · 자료 조사 Bot과 보고서 Bot에 역할을 나누고 결과 검토.</p>
+</div><figure class="shot nochrome" data-origin="capture" data-source="https://x.ai/news/designing-grok-bot">
+<img src="./images/trend/remote/grok-bot.png" alt="Grok Bot 공식 제품 예시. 왼쪽 Bot 목록, 중앙 대화, 오른쪽 컴퓨터 작업 화면"/>
+<figcaption><a href="https://x.ai/news/designing-grok-bot">공식 발표의 제품 화면 예시</a> · 2026-09-03</figcaption></figure></div>
+<p class="src">출처 · <a href="https://x.ai/news/designing-grok-bot">Designing Grok Bot for a world of persistent agents</a> · 사용 가능 환경·요금은 가입 화면에서 확인</p>
+
+---
+class: top-led compact
+---
+
+<p class="eyebrow">0부 · 원격 작업</p>
+
+# Claude Code 원격 사용
+
+<p class="lead">휴대폰에서 지시하고, 파일 작업은 연결한 PC에서</p>
+<figure class="figure"><svg viewBox="0 0 900 115" role="img" aria-label="Claude 앱·웹에서 Remote Control를 거쳐 PC의 Claude Code에 연결">
+<g fill="var(--card)" stroke="var(--rule)"><rect x="10" y="20" width="230" height="65" rx="6"/><rect x="335" y="20" width="230" height="65" rx="6"/><rect x="660" y="20" width="230" height="65" rx="6"/></g>
+<g style="font-family:var(--sans);font-size:21px" text-anchor="middle" fill="var(--ink)"><text x="125" y="60">Claude 앱·웹</text><text x="450" y="60">Remote Control</text><text x="775" y="60">PC의 Claude Code</text></g>
+<g style="font-size:28px" fill="var(--accent)"><text x="275" y="62">↔</text><text x="600" y="62">↔</text></g></svg></figure>
+
+```powershell
+claude --remote-control
+```
+
+<div class="deflist">
+<div><b>시작</b><span>PC의 프로젝트 폴더에서 실행 → 연결 안내 승인 → 세션 URL·QR 확인</span></div>
+<div><b>이어가기</b><span>같은 Claude 계정으로 접속. 진행 중 대화에서는 <code>/remote-control</code></span></div>
+<div><b>유지</b><span>PC·터미널을 켜 둠. 원격 접속이 작업을 클라우드로 옮기지는 않음</span></div>
+</div>
+<p class="src">공식 안내 · <a href="https://code.claude.com/docs/en/remote-control">Remote Control</a> · Claude 구독 로그인 필요, 조직은 관리자 설정 확인. <code>claude remote-control</code>은 연결 대기용 서버 모드</p>
+
+---
+class: top-led compact
+---
+
+<p class="eyebrow">0부 · 원격 작업</p>
+
+# Codex 원격 사용
+
+<p class="lead">연결한 컴퓨터의 프로젝트와 작업을 휴대폰에서 관리</p>
+<figure class="figure"><svg viewBox="0 0 900 115" role="img" aria-label="ChatGPT 모바일에서 Remote를 거쳐 연결한 Mac·Windows에 연결">
+<g fill="var(--card)" stroke="var(--rule)"><rect x="10" y="20" width="230" height="65" rx="6"/><rect x="335" y="20" width="230" height="65" rx="6"/><rect x="660" y="20" width="230" height="65" rx="6"/></g>
+<g style="font-family:var(--sans);font-size:21px" text-anchor="middle" fill="var(--ink)"><text x="125" y="60">ChatGPT 모바일</text><text x="450" y="60">Remote</text><text x="775" y="60">연결한 Mac·Windows</text></g>
+<g style="font-size:28px" fill="var(--accent)"><text x="275" y="62">↔</text><text x="600" y="62">↔</text></g></svg></figure>
+<div class="steps tight">
+<div><b>PC에서 설정</b><span>데스크톱 앱 Settings → Connections → Control this Mac or PC → Set up</span></div>
+<div><b>휴대폰 연결</b><span>QR 스캔 → 같은 계정·워크스페이스 확인 → 모바일 Remote에서 호스트 선택</span></div>
+<div><b>작업 이어가기</b><span>새 작업 시작, 기존 작업에 추가 지시, 결과·승인 요청 확인</span></div>
+</div>
+<p class="thesis">파일·도구·권한은 연결한 PC 기준. PC가 깨어 있고 온라인이어야 합니다.</p>
+<p class="src">공식 안내 · <a href="https://learn.chatgpt.com/docs/remote-connections">Remote connections</a> · 최신 문서는 ChatGPT 데스크톱 앱의 Remote로 안내. 구버전 명칭·제공 시점은 다를 수 있음</p>
+
+---
+class: top-led compact
+---
+
+<p class="eyebrow">0부 · 방식 비교</p>
+
+# 무엇을 어디에 맡길까
+
+<p class="lead">접속하는 화면과 실제로 작업하는 컴퓨터를 구분</p>
+
+| 방식 | 작업하는 곳 | 주로 맡길 일 | 내가 준비할 것 |
+|---|---|---|---|
+| Hermes | 내가 운영하는 PC·서버 | 메신저 요청·반복 업무 | 호스트·모델·게이트웨이 |
+| Grok Bot | Bot의 작업 환경 | 역할별 업무·Routine | Bot·연결 도구·권한 |
+| Claude Code 원격 | Claude Code를 켠 PC | 프로젝트 작업 이어가기 | CLI 세션·구독 로그인 |
+| Codex 원격 | 연결한 데스크톱 호스트 | 여러 프로젝트·작업 관리 | 앱 페어링·계정·호스트 |
+
+<p class="thesis">수업 연결 · 먼저 PC에서 요청과 검증을 익힌 뒤, 같은 작업을 원격에서 이어갑니다.</p>
+<p class="src">비교 기준 · <a href="https://hermes-agent.nousresearch.com/docs/">Hermes</a> · <a href="https://x.ai/news/designing-grok-bot">Grok Bot</a> · <a href="https://code.claude.com/docs/en/remote-control">Claude Code</a> · <a href="https://learn.chatgpt.com/docs/remote-connections">Codex</a></p>
+
+---
+class: top-led
+---
+
 <p class="eyebrow">0부 · 정리</p>
 
 # 이 수업에서 만드는 것
@@ -1189,33 +1299,6 @@ class: top-led brand-cc
 
 <p class="eyebrow">1-B · 데스크톱 앱</p>
 
-# 코드 리뷰 요청
-
-<div class="split evidence">
-<div>
-
-<p class="lead">변경 내용에서 오류 가능성이 높은 부분 점검</p>
-
-<div class="duo">
-<div class="pane"><h3>본다</h3><p>컴파일 에러 · 논리 오류 · 보안 취약점 · 명백한 버그</p></div>
-<div class="pane"><h3>안 본다</h3><p>스타일 · 서식 · 원래 있던 문제 · 린터가 잡을 것</p></div>
-</div>
-
-</div>
-<figure class="shot nochrome mark-ok" data-origin="web" data-source="https://code.claude.com/docs/en/whats-new/2026-w17">
-<img src="./images/official/ultrareview.png" alt="리뷰 결과 화면. 확인된 문제 4건을 짚고, 8건은 오탐으로 기각했다고 적혀 있다" />
-<figcaption>확인 4건 · <em>오탐 8건은 스스로 기각</em> · <a href="https://code.claude.com/docs/en/whats-new/2026-w17"><code>whats-new/2026-w17</code></a></figcaption>
-</figure>
-</div>
-
-<p class="src">출처 — Claude Code 공식 문서 「Desktop application · Review your code」</p>
-
----
-class: top-led brand-cc
----
-
-<p class="eyebrow">1-B · 데스크톱 앱</p>
-
 # 앱 미리보기
 
 <p class="lead">실행한 화면을 보며 수정</p>
@@ -1786,7 +1869,7 @@ class: top-led brand-cc compact
 |---|---|---|
 | 소통 | 부른 쪽에 결과 보고 | 팀원끼리 직접 |
 | 지휘 | 본 대화가 다 관리 | 공유 작업 목록으로 스스로 |
-| 토큰 | 요약만 돌아옵니다 | 계획 모드로 돌면 7배쯤 |
+| 토큰 | 요약만 돌아옵니다 | 팀원별 맥락·사용량 추가 |
 
 <div class="callout"><b>팀은 데스크톱 앱에 없습니다</b> 터미널 전용이고, 거기서도 환경 변수를 넣어야 켜지는 <em>실험 기능</em>입니다. 앱에서 여러 에이전트를 굴리는 자리는 다이내믹 워크플로입니다.</div>
 
@@ -1797,7 +1880,54 @@ class: top-led brand-cc compact
 </figure>
 </div>
 
-<p class="src">출처 — Claude Code 공식 문서 「Orchestrate agent teams · Compare with subagents」 · 토큰 배수는 「Manage costs · Agent team token costs」 docs/en/costs</p>
+<p class="src">출처 — Claude Code 공식 문서 「Orchestrate agent teams · Compare with subagents」</p>
+
+---
+class: top-led brand-cc compact
+---
+
+<p class="eyebrow">1-E · 터미널 시연</p>
+
+# Windows 터미널에서 팀 켜기
+
+<p class="lead">PowerShell · CLI 설치 후 프로젝트 폴더에서 실행</p>
+
+```powershell
+# CLI가 없을 때 설치. 완료 후 PowerShell을 다시 열기
+winget install Anthropic.ClaudeCode
+# 프로젝트 폴더에서
+claude --version
+$env:CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS="1"
+claude --teammate-mode in-process
+```
+
+<p class="thesis">처음에는 구독 계정으로 로그인하고 폴더 신뢰 여부를 확인합니다. 앱 설치와 CLI 설치는 별개입니다.</p>
+<p class="src">공식 안내 · <a href="https://code.claude.com/docs/en/quickstart">CLI 설치</a> · <a href="https://code.claude.com/docs/en/agent-teams">Agent Teams</a> · 실험 기능. 위 환경 변수는 현재 PowerShell 창에서만 적용</p>
+
+---
+class: top-led brand-cc compact
+---
+
+<p class="eyebrow">1-E · 터미널 시연</p>
+
+# 두 팀원에게 나눠 맡기기
+
+<p class="lead">한 명은 숫자, 한 명은 누락 자료 확인</p>
+
+```text
+팀원 두 명에게 현장메모.txt를 나눠 검토시켜줘.
+수치 담당은 정지 시간 합계와 계산 근거를,
+누락 담당은 원인이나 기준이 없는 항목을 확인해줘.
+서로 발견한 내용을 공유하고, 너는 결과를 한 표로 합쳐줘.
+원본 파일은 수정하지 마.
+```
+
+<div class="deflist">
+<div><b>보기</b><span>에이전트 패널에서 ↑↓로 팀원 선택 → Enter. <code>Ctrl T</code>로 작업 목록 확인</span></div>
+<div><b>끝내기</b><span>「팀원들을 종료해줘」 → 종료 확인 후 세션 종료. 현재 버전은 팀 정리를 자동 처리</span></div>
+</div>
+<p class="thesis">같은 파일을 동시에 고치게 하지 않습니다. 오늘은 강사 시연으로, 한 세션보다 늘어난 사용량도 확인합니다.</p>
+<p class="src">공식 안내 · <a href="https://code.claude.com/docs/en/agent-teams">Start·Control your agent team</a> · 현재 기본값 in-process. 분할 창에는 tmux·iTerm2 등 별도 환경 필요</p>
 
 ---
 class: top-led brand-cc band-page
@@ -1865,35 +1995,25 @@ class: top-led brand-cc band-page
 <p class="src">근거 — 같은 프롬프트 두 세션 · 세 검토자가 일지 3건을 나눠 읽고 본 대화가 대조</p>
 
 ---
-class: top-led brand-cc compact
+class: top-led brand-cc
 ---
 
-<p class="eyebrow">1-F · 기억과 지침</p>
+<p class="eyebrow">1-F · CLAUDE.md</p>
 
-# CLAUDE.md와 자동 메모리
+# CLAUDE.md
 
-<div class="split evidence">
-<div>
-
-<p class="lead">직접 정한 지침과 Claude가 남긴 메모</p>
-
-| | CLAUDE.md | 자동 메모리 |
-|---|---|---|
-| 누가 씁니다 | 내가 | Claude 가 |
-| 무엇이 | 지시와 규칙 | 배운 것과 버릇 |
-| 범위 | 프로젝트 · 계정 · 조직 | 저장소 하나 |
-| 담을 것 | 규약 · 작업 순서 · 구조 | 내 취향, 내가 준 교정 |
-
+<p class="lead">이 프로젝트에서 매번 지켜야 할 작업 지침</p>
+<figure class="figure"><svg viewBox="0 0 900 115" role="img" aria-label="프로젝트의 CLAUDE.md에서 새 세션에서 읽기를 거쳐 요청과 함께 참고에 연결">
+<g fill="var(--card)" stroke="var(--rule)"><rect x="10" y="20" width="230" height="65" rx="6"/><rect x="335" y="20" width="230" height="65" rx="6"/><rect x="660" y="20" width="230" height="65" rx="6"/></g>
+<g style="font-family:var(--sans);font-size:21px" text-anchor="middle" fill="var(--ink)"><text x="125" y="60">프로젝트의 CLAUDE.md</text><text x="450" y="60">새 세션에서 읽기</text><text x="775" y="60">요청과 함께 참고</text></g>
+<g style="font-size:28px" fill="var(--accent)"><text x="275" y="62">→</text><text x="600" y="62">→</text></g></svg></figure>
+<div class="deflist">
+<div><b>쓰는 이유</b><span>보고 형식·업무 기준·확인 절차를 매번 다시 설명하지 않기 위해</span></div>
+<div><b>먼저 정할 것</b><span>Claude가 파일만 보고는 알 수 없는 우리 팀의 기준</span></div>
+<div><b>확인</b><span>새 세션에서 <code>/context</code> → Memory files에 파일이 보이는지 확인</span></div>
 </div>
-<figure class="shot nochrome" data-origin="web" data-source="https://code.claude.com/docs/en/memory#claude-md-vs-auto-memory">
-<img src="./images/docs/memory.png" alt="공식 문서의 비교표. 누가 쓰는지·무엇이 담기는지·적용 범위가 CLAUDE.md 와 자동 메모리로 나뉘어 있다" />
-<figcaption>원문 · <a href="https://code.claude.com/docs/en/memory#claude-md-vs-auto-memory"><code>memory#claude-md-vs-auto-memory</code></a></figcaption>
-</figure>
-</div>
-
-<p class="thesis">둘 다 <em>매 세션 시작에</em> 함께 올라옵니다. 다만 강제 설정이 아니라 참고 맥락입니다. 무조건 막아야 할 건 훅으로 막습니다.</p>
-
-<p class="src">출처 — Claude Code 공식 문서 「How Claude remembers your project · CLAUDE.md vs auto memory」 docs/en/memory</p>
+<p class="thesis">파일이 있다고 성능이 자동으로 오르지는 않습니다. 지침을 읽었는지, 결과가 달라졌는지 함께 확인합니다.</p>
+<p class="src">공식 안내 · <a href="https://code.claude.com/docs/en/memory">CLAUDE.md files</a> · 2026-09-10 확인</p>
 
 ---
 class: top-led brand-cc
@@ -1906,10 +2026,10 @@ class: top-led brand-cc
 <p class="lead">여러 작업에서 반복해서 설명하는 규칙</p>
 
 <div class="deflist">
-<div><b>같은 실수 두 번째</b><span>한 번은 그럴 수 있습니다. 두 번이면 적습니다</span></div>
-<div><b>리뷰에서 걸린 것</b><span>이 코드베이스라면 알았어야 할 내용</span></div>
-<div><b>지난주에도 친 말</b><span>같은 교정을 또 타이핑하고 있을 때</span></div>
-<div><b>새 사람이 물을 것</b><span>들어오면 똑같이 물어볼 내용</span></div>
+<div><b>업무 기준</b><span>조치 대상의 임계값, 비율의 계산식, 사용하는 단위</span></div>
+<div><b>산출물 규칙</b><span>보고서의 필수 항목, 파일 이름, 저장 위치</span></div>
+<div><b>실행·확인</b><span>앱 실행 명령, 실제 쓰는 테스트 명령, 완료 기준</span></div>
+<div><b>제약</b><span>수정하지 않을 원본, 외부로 보내지 않을 데이터</span></div>
 </div>
 
 <p class="thesis">여러 단계짜리 절차나 <em>일부 폴더에서만</em> 맞는 규칙은 여기가 아닙니다. 스킬이나 경로별 규칙으로 보냅니다.</p>
@@ -1943,7 +2063,7 @@ class: top-led brand-cc
     <text x="442" y="220" text-anchor="end" fill="var(--dim)">나만 · gitignore</text>
   </g>
 </svg>
-<figcaption>위에서 아래 순서로 읽습니다. 아래로 갈수록 좁고, 나중에 읽힙니다</figcaption>
+<figcaption>Windows의 ~는 C:&#92;Users&#92;사용자명. 여러 위치의 지침은 함께 적용되므로 서로 모순되지 않게 작성</figcaption>
 </figure>
 
 <p class="src">출처 — Claude Code 공식 문서 「How Claude remembers your project · Choose where to put CLAUDE.md files」</p>
@@ -1963,51 +2083,100 @@ class: top-led brand-cc
 <div class="pane"><h3>안 통합니다</h3><p>「코드를 깔끔하게」<br>「테스트 잘 하기」<br>「파일 정리 잘」</p></div>
 </div>
 
-<div class="callout"><b>200줄</b> 그보다 길어지면 맥락도 먹고 잘 지켜지지도 않습니다. 길어지면 규칙 파일로 쪼갭니다.</div>
+<div class="callout"><b>200줄</b> 공식 문서가 제안하는 상한 목표이며 채워야 할 분량은 아닙니다. 이번 실습은 네 줄. 일부 작업에만 필요한 내용은 스킬·경로별 규칙으로 분리합니다.</div>
 
 <p class="src">출처 — Claude Code 공식 문서 「How Claude remembers your project · Write effective instructions」</p>
 
 ---
-class: top-led brand-cc
+class: top-led brand-cc compact
 ---
 
-<p class="eyebrow">1-F · 기억과 지침</p>
+<p class="eyebrow">1-F · CLAUDE.md</p>
 
-# 자동 메모리 4종
+# 오히려 방해되는 지침
 
-<p class="lead">대화에서 발견한 내용을 네 종류로 기록</p>
+<p class="lead">빼도 실수가 늘지 않는 문장은 덜어내기</p>
 
-<div class="deflist">
-<div><b>user</b><span>내 역할 · 숙련도 · 일하는 방식</span></div>
-<div><b>feedback</b><span>내가 준 교정, 내가 좋다고 한 방식</span></div>
-<div><b>project</b><span>진행 중인 일 · 기한 · 결정</span></div>
-<div><b>reference</b><span>바깥 자료가 어디 있는지</span></div>
+| 덜어낼 내용 | 문제가 되는 이유 | 바꿔 쓰기 |
+|---|---|---|
+| 「항상 완벽하게, 최고 수준으로」 | 지켰는지 판정하기 어려움 | 결과에서 확인할 조건 |
+| 모든 작업에 모든 도구·스킬 사용 | 불필요한 절차와 맥락 증가 | 필요한 작업에만 적용 |
+| 오래된 경로·모순되는 명령 | 잘못된 실행이나 임의 선택 | 현재 폴더에서 확인한 명령 |
+| 긴 매뉴얼·파일 목록 전체 복사 | 핵심 규칙이 묻힘 | 필요한 문서의 위치와 용도 |
+
+<p class="thesis">중요한 한 줄만 강조합니다. 모든 줄에 「반드시」를 붙이거나 예외 없이 검증을 생략하게 하지 않습니다.</p>
+<p class="src">공식 안내 · <a href="https://code.claude.com/docs/en/best-practices#write-an-effective-claude-md">Write an effective CLAUDE.md</a> · 2026-09-10 확인</p>
+
+---
+class: top-led brand-cc compact
+---
+
+<p class="eyebrow">실습 · CLAUDE.md</p>
+
+# 실습 ① 지침 없이 요청
+
+<p class="lead">같은 자료·모델·요청으로 두 결과 비교</p>
+<div class="steps tight">
+<div><b>준비</b><span>샘플 ZIP을 풀면 <code>before</code>와 <code>after</code>에 같은 현장메모.txt. before 폴더를 프로젝트로 선택</span></div>
+<div><b>조건 맞추기</b><span>모델을 기록하고 자동 메모리를 잠시 끔. 새 세션에서 아래 요청 입력</span></div>
+<div><b>남기기</b><span>응답을 A로 보관. 제목·조치 대상·시간 합계·원인 표현 확인</span></div>
 </div>
 
-<p class="thesis">코드를 보면 알 수 있는 것은 <em>일부러 적지 않습니다</em>. CLAUDE.md 에 이미 있는 말도 적지 않습니다. 매 세션 남기는 것도 아닙니다.</p>
+```text
+현장메모.txt를 읽고 주간 보고 초안을 만들어줘.
+```
 
-<p class="src">출처 — Claude Code 공식 문서 「How Claude remembers your project · Auto memory」 docs/en/memory</p>
+<p class="thesis">메모에는 12분·4분·8분 정지 기록과 미확인 원인이 있습니다. 먼저 어떤 보고가 나오는지 봅니다.</p>
+<p class="src">수업용 가상 자료 · <a href="./downloads/claudemd-lab.zip" download>CLAUDE.md 비교 실습 ZIP</a> · before·after 모두 새 세션. /memory가 없는 화면에서는 강사와 설정 확인</p>
 
 ---
-class: top-led brand-cc
+class: top-led brand-cc compact
 ---
 
-<p class="eyebrow">1-F · 기억과 지침</p>
+<p class="eyebrow">실습 · CLAUDE.md</p>
 
-# /memory
+# 실습 ② after 폴더에 지침 저장
 
+<p class="lead">파일 이름은 정확히 <code>CLAUDE.md</code></p>
 
+```text
+claudemd-lab/
+  before/현장메모.txt
+  after/현장메모.txt
+  after/CLAUDE.md       ← 여기에 새로 작성
+```
 
-<div class="deflist">
-<div><b>여는 법</b><span><code>/memory</code> — 지침 파일들과 메모리 폴더가 목록으로</span></div>
-<div><b>고치기</b><span>골라서 편집기로 엽니다. 지워도 됩니다</span></div>
-<div><b>끄기</b><span>같은 화면의 자동 메모리 토글</span></div>
-<div><b>지금 올라온 것</b><span><code>/context</code> 의 Memory files</span></div>
-</div>
+```markdown
+# 주간 보고 기준
+- 제목은 요약, 조치 대상, 확인 필요 순서로 쓴다.
+- 조치 대상에는 정지 시간이 10분 이상인 기록만 넣는다.
+- 기록에 없는 원인은 추정하지 말고 미확인으로 적는다.
+- 모든 기록의 정지 시간을 합산하고 분 단위로 표시한다.
+```
 
-<p class="thesis">「이건 기억해 둬」라고 하면 <em>자동 메모리</em>로 갑니다. CLAUDE.md 에 넣으려면 「CLAUDE.md 에 넣어 줘」라고 짚어 말합니다.</p>
+<p class="thesis">Windows 메모장 · 다른 이름으로 저장 → 파일 형식 「모든 파일」 → UTF-8. 탐색기에서 확장자를 표시해 <code>CLAUDE.md.txt</code>가 아닌지 확인.</p>
+<p class="src">경로 예 · <code>C:&#92;Users&#92;사용자명&#92;claudemd-lab&#92;after&#92;CLAUDE.md</code> · 프로젝트 루트는 Claude에서 선택한 after 폴더</p>
 
-<p class="src">출처 — Claude Code 공식 문서 「How Claude remembers your project · Audit and edit your memory」</p>
+---
+class: top-led brand-cc compact
+---
+
+<p class="eyebrow">실습 · CLAUDE.md</p>
+
+# 실습 ③ 같은 요청, 달라진 기준
+
+<p class="lead">after를 선택하고 새 세션에서 같은 한 줄 입력</p>
+<p class="thesis"><code>/context</code>에서 CLAUDE.md 읽힘 확인 → 같은 모델·메모리 설정으로 응답 B 생성 → A와 네 항목 비교</p>
+
+| 확인할 항목 | 지침을 따른 B의 기준 |
+|---|---|
+| 제목 순서 | 요약 → 조치 대상 → 확인 필요 |
+| 조치 대상 | 12분 정지 기록만 포함 |
+| 정지 시간 합계 | 24분 · 12 + 4 + 8 |
+| 기록에 없는 원인 | 미확인으로 표시 |
+
+<p class="thesis">차이가 없어도 실패는 아닙니다. 한 번의 결과로 성능 향상을 단정하지 않고, 지침 준수 여부를 반복 확인합니다.</p>
+<p class="src">종료 · 메모리 설정 복구. 상위 폴더·개인 지침이 함께 읽힐 수 있으므로 /context에서 조건을 확인</p>
 
 ---
 class: top-led brand-cc band-page
@@ -2060,9 +2229,81 @@ class: top-led brand-cc band-page
 <figcaption>같은 답의 뒷부분 — 스스로 <em>애매한 세 곳</em>을 꺼내 놓습니다</figcaption>
 </figure>
 
-<p class="thesis">지침이 없으면 이 세 가지는 <em>조용히 채워집니다</em>. 없는 기준값을 만들거나, 빠진 이틀을 티 안 나게 넘어갑니다.</p>
+<p class="thesis">이 사례에서는 누락된 자료와 기준을 따로 밝혔습니다. 다른 작업에서도 같은 결과를 보장하지 않으므로, 지침에 맞는지 결과를 확인합니다.</p>
 
 <p class="src">근거 — CLAUDE.md 「추정. 일지에 적히지 않은 원인을 지어내지 않습니다」 · 「기준을 만들어 쓰지 않습니다」</p>
+---
+class: top-led brand-cc compact
+---
+
+<p class="eyebrow">1-F · 기억과 지침</p>
+
+# CLAUDE.md와 자동 메모리
+
+<div class="split evidence">
+<div>
+
+<p class="lead">직접 정한 지침과 Claude가 남긴 메모</p>
+
+| | CLAUDE.md | 자동 메모리 |
+|---|---|---|
+| 누가 씁니다 | 내가 | Claude 가 |
+| 무엇이 | 지시와 규칙 | 배운 것과 버릇 |
+| 범위 | 프로젝트 · 계정 · 조직 | 저장소 하나 |
+| 담을 것 | 규약 · 작업 순서 · 구조 | 내 취향, 내가 준 교정 |
+
+</div>
+<figure class="shot nochrome" data-origin="web" data-source="https://code.claude.com/docs/en/memory#claude-md-vs-auto-memory">
+<img src="./images/docs/memory.png" alt="공식 문서의 비교표. 누가 쓰는지·무엇이 담기는지·적용 범위가 CLAUDE.md 와 자동 메모리로 나뉘어 있다" />
+<figcaption>원문 · <a href="https://code.claude.com/docs/en/memory#claude-md-vs-auto-memory"><code>memory#claude-md-vs-auto-memory</code></a></figcaption>
+</figure>
+</div>
+
+<p class="thesis">팀이 합의한 규칙은 CLAUDE.md에, 대화에서 얻은 교정은 자동 메모리에. 둘 다 참고 맥락이며, 작업 권한을 강제로 제한하는 설정은 아닙니다.</p>
+
+<p class="src">출처 — Claude Code 공식 문서 「How Claude remembers your project · CLAUDE.md vs auto memory」 docs/en/memory</p>
+
+---
+class: top-led brand-cc
+---
+
+<p class="eyebrow">1-F · 기억과 지침</p>
+
+# 자동 메모리 4종
+
+<p class="lead">대화에서 발견한 내용을 네 종류로 기록</p>
+
+<div class="deflist">
+<div><b>user</b><span>내 역할 · 숙련도 · 일하는 방식</span></div>
+<div><b>feedback</b><span>내가 준 교정, 내가 좋다고 한 방식</span></div>
+<div><b>project</b><span>진행 중인 일 · 기한 · 결정</span></div>
+<div><b>reference</b><span>바깥 자료가 어디 있는지</span></div>
+</div>
+
+<p class="thesis">코드를 보면 알 수 있는 것은 <em>일부러 적지 않습니다</em>. CLAUDE.md 에 이미 있는 말도 적지 않습니다. 매 세션 남기는 것도 아닙니다.</p>
+
+<p class="src">출처 — Claude Code 공식 문서 「How Claude remembers your project · Auto memory」 docs/en/memory</p>
+
+---
+class: top-led brand-cc
+---
+
+<p class="eyebrow">1-F · 기억과 지침</p>
+
+# /memory
+
+
+
+<div class="deflist">
+<div><b>여는 법</b><span><code>/memory</code> — 지침 파일들과 메모리 폴더가 목록으로</span></div>
+<div><b>고치기</b><span>골라서 편집기로 엽니다. 지워도 됩니다</span></div>
+<div><b>끄기</b><span>같은 화면의 자동 메모리 토글</span></div>
+<div><b>지금 올라온 것</b><span><code>/context</code> 의 Memory files</span></div>
+</div>
+
+<p class="thesis">「이건 기억해 둬」라고 하면 <em>자동 메모리</em>로 갑니다. CLAUDE.md 에 넣으려면 「CLAUDE.md 에 넣어 줘」라고 짚어 말합니다.</p>
+
+<p class="src">출처 — Claude Code 공식 문서 「How Claude remembers your project · Audit and edit your memory」</p>
 
 ---
 class: top-led brand-cc
@@ -2124,9 +2365,29 @@ class: top-led brand-cc
 <div><b>알아서 부르기</b><span>설명이 지금 일과 맞으면 스스로 씁니다</span></div>
 </div>
 
-<p class="thesis">CLAUDE.md 와 갈리는 지점은 <em>쓸 때만 읽힌다</em>는 것입니다. 길게 적어 두어도 안 쓰는 동안에는 비용이 거의 없습니다.</p>
+<p class="thesis">CLAUDE.md 와 갈리는 지점은 <em>쓸 때만 읽힌다</em>는 것입니다. 이름과 설명은 발견에 쓰이고, 본문은 적용할 때 읽힙니다.</p>
 
 <p class="src">출처 — Claude Code 공식 문서 「Extend Claude with skills」 docs/en/skills</p>
+
+---
+class: top-led brand-cc compact
+---
+
+<p class="eyebrow">1-G · 스킬 사례</p>
+
+# 수업에서 만나볼 스킬
+
+<p class="lead">반복하는 작업에 맞춰 한 가지씩 선택</p>
+
+| 스킬 | 맡기는 일 | 출처 |
+|---|---|---|
+| frontend-design | 웹 화면 구성·타이포그래피·구현 | Anthropic |
+| xlsx · docx · pptx · pdf | 문서·표·슬라이드 파일 작업 | Anthropic |
+| humanize-korean | 한국어 표현·문장 리듬 다듬기 | im-not-ai 커뮤니티 |
+| design-taste-frontend | 화면 배치·여백·정보 밀도 점검 | taste-skill 커뮤니티 |
+
+<p class="thesis">오늘 구현 실습은 frontend-design부터. 문서 작업은 해당 파일용 스킬을, 한국어 윤문은 humanize-korean을 추가합니다.</p>
+<p class="src">저장소 · <a href="https://github.com/anthropics/skills">Anthropic skills</a> · <a href="https://github.com/epoko77-ai/im-not-ai">im-not-ai</a> · <a href="https://github.com/Leonxlnx/taste-skill">taste-skill</a> · 설치 후 실제 스킬 이름 확인</p>
 
 ---
 class: top-led brand-cc
@@ -2243,9 +2504,50 @@ class: top-led brand-cc
 <div><b>대가</b><span>붙인 서버마다 맥락을 조금씩 먹습니다</span></div>
 </div>
 
-<p class="thesis">안 쓰는 서버는 떼는 편이 낫습니다. 도구 이름과 설명이 <em>매 세션</em> 함께 실리기 때문입니다.</p>
+<p class="thesis">Claude Code는 도구 검색으로 필요한 MCP 도구를 불러올 수 있습니다. 연결 수보다 실제 사용·권한·맥락 사용량을 함께 봅니다.</p>
 
 <p class="src">출처 — Claude Code 공식 문서 「MCP · What you can do with MCP」 docs/en/mcp</p>
+
+---
+class: top-led brand-cc compact
+---
+
+<p class="eyebrow">1-G · MCP 사례</p>
+
+# 업무 앱을 연결하면
+
+<p class="lead">복사·붙여넣기 대신 필요한 자료를 도구로 읽기</p>
+
+| 연결 예 | 요청 예 | 먼저 확인 |
+|---|---|---|
+| Google Workspace | Drive 자료와 Sheets 수치로 보고 초안 | 공식 MCP는 Developer Preview · 제품별 서버·OAuth 설정 |
+| Notion | 프로젝트 페이지에서 미완료 항목 정리 | 공식 호스팅 MCP · OAuth·페이지 접근 권한 |
+| Playwright | 앱에 샘플을 올려 값·오류 메시지 확인 | 브라우저 실행 환경·테스트 주소 |
+
+<p class="thesis">Workspace 공식 서버는 Gmail·Drive·Docs·Sheets·Slides·Calendar·Chat 등에 연결합니다. 회사 계정은 관리자의 허용 범위를 먼저 확인합니다.</p>
+<p class="src">공식 안내 · <a href="https://developers.google.com/workspace/guides/configure-mcp-servers">Google Workspace MCP</a> · <a href="https://developers.notion.com/guides/mcp/get-started-with-mcp">Notion MCP</a> · <a href="https://github.com/microsoft/playwright-mcp">Playwright MCP</a></p>
+
+---
+class: top-led brand-cc compact
+---
+
+<p class="eyebrow">1-G · MCP 사례</p>
+
+# Notion MCP 연결 예
+
+<p class="lead">처음에는 조회부터 · 공유 가능한 실습 페이지 사용</p>
+
+```powershell
+claude mcp add --transport http notion https://mcp.notion.com/mcp
+```
+
+<div class="steps tight">
+<div><b>인증</b><span>Claude Code에서 <code>/mcp</code> → Notion 연결 → 브라우저에서 OAuth 승인</span></div>
+<div><b>범위 확인</b><span>로그인한 워크스페이스와 접근 가능한 페이지 확인</span></div>
+<div><b>첫 요청</b><span>「실습 페이지에서 미완료 항목을 읽어 요약해줘. 페이지는 수정하지 마.」</span></div>
+</div>
+<p class="thesis">연결 성공 뒤에도 실제 도구 호출과 원문을 확인합니다. 편집·공유·발송은 조회와 구분해 요청합니다.</p>
+<p class="src">공식 안내 · <a href="https://developers.notion.com/guides/mcp/get-started-with-mcp">Connect to Notion MCP</a> · <a href="https://code.claude.com/docs/en/mcp">Claude Code MCP</a> · 터미널 예. Desktop은 Connectors·MCP 설정에서 같은 공식 서버 연결</p>
 
 ---
 class: top-led brand-cc band-page
@@ -2262,7 +2564,7 @@ class: top-led brand-cc band-page
 <figcaption>같은 화면 안에서 <em>프로젝트</em>와 <em>사용자</em>가 갈립니다</figcaption>
 </figure>
 
-<p class="thesis">서버마다 도구 개수가 붙습니다. 24개, 15개처럼 <em>이 숫자가 곧 맥락 비용</em>입니다. 안 쓰면 떼는 편이 낫습니다.</p>
+<p class="thesis">서버마다 도구 개수가 붙습니다. 개수만으로 맥락 비용을 계산할 수는 없습니다. 필요한 도구가 연결됐는지 확인하고 <code>/context</code>로 실제 사용량을 봅니다.</p>
 
 <p class="src">근거 — 데모 폴더에서 <code>/mcp</code> 실행 · 프로젝트 스코프 1개와 사용자 스코프 1개</p>
 
@@ -2287,29 +2589,23 @@ class: top-led brand-cc
 <p class="src">출처 — Claude Code 공식 문서 「Discover and install prebuilt plugins」 docs/en/discover-plugins</p>
 
 ---
-class: top-led brand-cc
+class: top-led brand-cc compact
 ---
 
-<p class="eyebrow">1-G · 확장</p>
+<p class="eyebrow">1-G · 커뮤니티 확장</p>
 
-# 커뮤니티 확장 두 가지
+# Caveman · Ponytail · Superpowers
 
-<p class="lead">특정 작업을 돕는 플러그인과 스킬</p>
+<p class="lead">응답 길이, 구현 범위, 개발 절차를 각각 조정</p>
 
-<div class="duo">
-<div class="pane">
-<h3>Caveman</h3>
-<p>응답의 주변 설명을 짧게 줄이는 <em>skill</em>입니다. 코드·명령·파일 경로·정확한 오류 문구는 그대로 두고, 말로 된 부분만 압축합니다.</p>
-</div>
-<div class="pane">
-<h3>Ponytail</h3>
-<p><em>YAGNI</em>를 지키는 plugin입니다. 재사용·표준 기능·네이티브 기능을 먼저 살펴보고, 꼭 필요한 만큼만 구현하게 합니다.</p>
-</div>
-</div>
+| 확장 | 바꾸는 것 | 써 볼 때 |
+|---|---|---|
+| Caveman | 주변 설명을 간결하게. 코드·경로·오류 문구는 보존 | 답변이 길어 읽기 어려울 때 |
+| Ponytail | 기존 기능 재사용, 불필요한 구현 줄이기 | 작은 요청이 큰 개발로 번질 때 |
+| Superpowers | 질문·설계·계획·테스트를 잇는 스킬 묶음 | 여러 단계의 개발을 진행할 때 |
 
-<p class="thesis">둘 다 Anthropic 공식 기능이 아니라 커뮤니티 저장소의 사례입니다. <em>유명해서</em>가 아니라 내 작업과 맞을 때만 고릅니다.</p>
-
-<p class="src">사례 — <a href="https://github.com/juliusbrussee/caveman">github.com/juliusbrussee/caveman</a> · <a href="https://github.com/dietrichgebert/ponytail">github.com/dietrichgebert/ponytail</a></p>
+<p class="thesis">공개 커뮤니티 프로젝트입니다. Superpowers는 공식 마켓플레이스에도 등록되어 있지만 Anthropic이 만든 스킬은 아닙니다. 처음에는 하나만 적용해 차이를 봅니다.</p>
+<p class="src">제작자 저장소 · <a href="https://github.com/juliusbrussee/caveman">Caveman</a> · <a href="https://github.com/dietrichgebert/ponytail">Ponytail</a> · <a href="https://github.com/obra/superpowers">Superpowers</a> · GitHub Stars 약 10.5만·13.3만·28.4만 (2026-09-10). 설치 수나 품질 보장은 아님</p>
 
 ---
 class: top-led brand-cc compact
@@ -2361,6 +2657,28 @@ class: top-led brand-cc compact
 <p class="thesis"><em>보안:</em> 출처·설치 파일을 확인합니다. 플러그인은 내 권한으로 실행됩니다.</p>
 
 <p class="src">설치 문법·주의 — <a href="https://code.claude.com/docs/ko/discover-plugins">Claude Code 공식 문서 「플러그인 발견 및 설치」</a> · 설치 예시 — 각 저장소 README</p>
+
+---
+class: top-led brand-cc compact
+---
+
+<p class="eyebrow">1-G · 커뮤니티 확장</p>
+
+# Superpowers로 개발 절차 붙이기
+
+<p class="lead">요구사항 질문부터 계획·작업 단위 검증까지</p>
+
+```text
+/plugin install superpowers@claude-plugins-official
+```
+
+<div class="steps tight">
+<div><b>설치 확인</b><span>새 세션을 열고 <code>/plugin</code>에서 활성화 상태 확인</span></div>
+<div><b>시작 요청</b><span>「엑셀을 올리면 불량률을 보여주는 앱을 만들고 싶어. 필요한 질문부터 해줘.」</span></div>
+<div><b>관찰</b><span>설계 확인 → 구현 계획 → 작업·테스트로 이어지는지 확인</span></div>
+</div>
+<p class="thesis">오늘 배우는 역인터뷰 → 설계 → 검증과 연결됩니다. 추가 절차가 필요 없는 작은 수정에서는 설치 전후의 시간과 결과도 비교합니다.</p>
+<p class="src">제작자 안내 · <a href="https://github.com/obra/superpowers#installation">Superpowers 설치</a> · <a href="https://github.com/obra/superpowers#how-it-works">개발 흐름</a></p>
 
 ---
 class: top-led brand-cc band-page
