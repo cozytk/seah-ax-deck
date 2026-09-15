@@ -1,0 +1,6 @@
+import{L as e,T as t,Y as n,_ as r,b as i,g as a,gt as o,mt as s,x as c}from"./modules/shiki-BNBCYt0O.js";import{et as l,tt as u}from"./index-YHtyOPsX.js";import{t as d}from"./CopyPrompt-BKDPOufw.js";import{t as f}from"./slidev/default-Bqh8Difz.js";var p={__name:`day2.md__slidev_55`,setup(p){let{$slidev:m,$nav:h,$clicksContext:g,$clicks:_,$page:v,$renderContext:y,$frontmatter:b}=u();return g.setup(),(u,p)=>{let m=d;return e(),r(f,o(t(s(l)(s(b),54))),{default:n(()=>[p[1]||=a(`p`,{class:`eyebrow`},`Cloud Run > 운영으로 넘길 때`,-1),p[2]||=a(`h1`,null,`운영 인계`,-1),c(m,null,{default:n(()=>[...p[0]||=[a(`pre`,{class:`d2-prompt`},[i(`배포 결과를 정리해줘.
+프로젝트·리전·서비스 URL·허용 대상과
+`),a(`strong`,null,`허용 계정 성공, 외부 계정 차단, 비로그인 차단`),i(` 결과를 기록해줘.
+`),a(`strong`,null,`비밀 값은 기록하지 말고`),i(),a(`strong`,null,`미검증`),i(` 항목을 구분해줘.
+유지할 자원과 정리할 자원을 보여주고,
+업무 운영 전 `),a(`strong`,null,`IT 담당자`),i(`가 확인할 사항을 남겨줘.`)],-1)]]),_:1}),p[3]||=a(`p`,{class:`d2-result`},`접근 제한이 준비되지 않았으면 로컬·승인된 환경에서 이어갑니다.`,-1)]),_:1},16)}}};export{p as default};

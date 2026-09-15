@@ -1,0 +1,6 @@
+import{L as e,T as t,Y as n,_ as r,b as i,g as a,gt as o,mt as s,x as c}from"./modules/shiki-BNBCYt0O.js";import{et as l,tt as u}from"./index-YHtyOPsX.js";import{t as d}from"./CopyPrompt-BKDPOufw.js";import{t as f}from"./slidev/default-Bqh8Difz.js";var p={__name:`day2.md__slidev_19`,setup(p){let{$slidev:m,$nav:h,$clicksContext:g,$clicks:_,$page:v,$renderContext:y,$frontmatter:b}=u();return g.setup(),(u,p)=>{let m=d;return e(),r(f,o(t(s(l)(s(b),18))),{default:n(()=>[p[1]||=a(`p`,{class:`eyebrow`},`구현 실습 > 현재 상태 파악`,-1),p[2]||=a(`h1`,null,`작업 맥락 복구`,-1),c(m,null,{default:n(()=>[...p[0]||=[a(`pre`,{class:`d2-prompt`},[i(`지난주 수업에서 `),a(`strong`,null,`초기 구현을 마친 프로젝트`),i(`야.
+README와 기존 문서가 있으면 읽고 `),a(`strong`,null,`실행 방법`),i(`부터 확인해줘.
+현재 동작과 지난 작업 내용을 짧게 정리하고,
+남은 오류·사용성·데이터 검증 항목을 찾아줘.
+오늘 보완할 항목을 `),a(`strong`,null,`우선순위로 3개`),i(`만 제안해줘.
+`),a(`strong`,null,`기존 구현`),i(`을 기준으로 선택한 항목부터 수정해줘.`)],-1)]]),_:1}),p[3]||=a(`p`,{class:`d2-result`},`결과 확인: 지난 작업 내용을 떠올리고, 오늘 보완할 항목을 골랐나요?`,-1)]),_:1},16)}}};export{p as default};

@@ -1,0 +1,6 @@
+import{L as e,T as t,Y as n,_ as r,b as i,g as a,gt as o,mt as s,x as c}from"./modules/shiki-BNBCYt0O.js";import{et as l,tt as u}from"./index-YHtyOPsX.js";import{t as d}from"./CopyPrompt-BKDPOufw.js";import{t as f}from"./slidev/default-Bqh8Difz.js";var p={__name:`day2.md__slidev_15`,setup(p){let{$slidev:m,$nav:h,$clicksContext:g,$clicks:_,$page:v,$renderContext:y,$frontmatter:b}=u();return g.setup(),(u,p)=>{let m=d;return e(),r(f,o(t(s(l)(s(b),14))),{default:n(()=>[p[1]||=a(`p`,{class:`eyebrow`},`복습 > 웹 수집 요청문`,-1),p[2]||=a(`h1`,null,`웹 수집 요청문`,-1),c(m,null,{default:n(()=>[...p[0]||=[a(`pre`,{class:`d2-prompt`},[i(`이 URL을 웹 읽기 도구로 읽지 못한 이유를 확인해줘.
+접근 가능한 공개 페이지라면 `),a(`strong`,null,`Playwright`),i(`로 열고
+IR·공시 목록에 표시된 `),a(`strong`,null,`제목·날짜·원문 링크`),i(`를 수집해줘.
+로그인이 필요하면 내가 `),a(`strong`,null,`직접 로그인`),i(`할게.
+권한이 없거나 자동 수집이 제한되면 그 지점과
+`),a(`strong`,null,`공식 API·내보내기·수동 저장`),i(` 방법을 알려줘.`)],-1)]]),_:1}),p[3]||=a(`p`,{class:`d2-result`},`IR·공시 자료 예시: 원문 링크 하나를 열어 제목과 날짜를 직접 대조합니다.`,-1)]),_:1},16)}}};export{p as default};

@@ -1,0 +1,7 @@
+import{L as e,T as t,Y as n,_ as r,b as i,g as a,gt as o,mt as s,x as c}from"./modules/shiki-BNBCYt0O.js";import{et as l,tt as u}from"./index-YHtyOPsX.js";import{t as d}from"./CopyPrompt-BKDPOufw.js";import{t as f}from"./slidev/default-Bqh8Difz.js";var p={__name:`day2.md__slidev_50`,setup(p){let{$slidev:m,$nav:h,$clicksContext:g,$clicks:_,$page:v,$renderContext:y,$frontmatter:b}=u();return g.setup(),(u,p)=>{let m=d;return e(),r(f,o(t(s(l)(s(b),49))),{default:n(()=>[p[1]||=a(`p`,{class:`eyebrow`},`Cloud Run > 배포 요청문`,-1),p[2]||=a(`h1`,null,`Cloud Run 배포 요청문`,-1),c(m,null,{default:n(()=>[...p[0]||=[a(`pre`,{class:`d2-prompt`},[i(`이 앱을 `),a(`strong`,null,`회사에서 승인한 Cloud Run 프로젝트`),i(`에 배포하려고 해.
+프로젝트 ID·리전·`),a(`strong`,null,`세아 Workspace 허용 대상`),i(`을 먼저 확인해줘.
+앱의 빌드·실행 명령·PORT를 점검해줘.
+처음부터 `),a(`strong`,null,`비인증 접근을 막고`),i(` Cloud Run `),a(`strong`,null,`직접 IAP`),i(`를 적용해줘.
+키는 `),a(`strong`,null,`Secret Manager`),i(`로 연결하고 비밀 값을 출력하지 마.
+`),a(`strong`,null,`허용된 세아 계정만`),i(` 앱과 API를 쓸 수 있는지 확인해줘.
+권한이나 조직 설정이 부족하면 `),a(`strong`,null,`공개로 바꾸지 말고`),i(` 원인을 알려줘.`)],-1)]]),_:1}),p[3]||=a(`p`,{class:`d2-result`},`실행 전 확인할 것: 프로젝트 · 계정 · 허용 대상 · 공개되지 않는 구성`,-1)]),_:1},16)}}};export{p as default};

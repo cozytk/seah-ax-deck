@@ -1,0 +1,6 @@
+import{L as e,T as t,Y as n,_ as r,b as i,g as a,gt as o,mt as s,v as c,x as l}from"./modules/shiki-BNBCYt0O.js";import{et as u,tt as d}from"./index-YHtyOPsX.js";import{t as f}from"./CopyPrompt-BKDPOufw.js";import{t as p}from"./slidev/default-Bqh8Difz.js";var m={__name:`day2.md__slidev_23`,setup(m){let{$slidev:h,$nav:g,$clicksContext:_,$clicks:v,$page:y,$renderContext:b,$frontmatter:x}=d();return _.setup(),(d,m)=>{let h=f;return e(),r(p,o(t(s(u)(s(x),22))),{default:n(()=>[m[1]||=a(`p`,{class:`eyebrow`},`구현 실습 > 배포로 넘어갈 기준`,-1),m[2]||=a(`h1`,null,`배포 전 점검`,-1),l(h,null,{default:n(()=>[...m[0]||=[a(`pre`,{class:`d2-prompt`},[a(`strong`,null,`배포 전에`),i(` 이 프로젝트를 점검해줘.
+`),a(`strong`,null,`핵심 사용자 흐름`),i(`이 작동하는지 확인하고,
+프로젝트에 맞는 `),a(`strong`,null,`빌드 명령`),i(`을 실행해줘.
+공개되면 안 되는 `),a(`strong`,null,`데이터·키·로컬 경로`),i(`가 포함됐는지도 확인해줘.
+실패한 항목은 고친 뒤 재확인하고,
+직접 확인하지 못한 것은 `),a(`strong`,null,`미검증`),i(`으로 남겨줘.`)],-1)]]),_:1}),m[3]||=a(`p`,{class:`d2-result`},`완료 기준: 핵심 흐름 작동 · 빌드 성공 · 배포할 데이터 범위 확인`,-1),c(` 학생의 기존 앱에서 이번에 보완한 흐름을 확인하고 배포로 진행. 빌드 성공이 기능 검증을 대신하지 않는다. `)]),_:1},16)}}};export{m as default};
